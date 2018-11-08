@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/secretagent.iml" filepath="$PROJECT_DIR$/secretagent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.github.kotlin-graphics.secretAgent.iml" filepath="$PROJECT_DIR$/.idea/modules/com.github.kotlin-graphics.secretAgent.iml" />
     </modules>
   </component>
 </project>

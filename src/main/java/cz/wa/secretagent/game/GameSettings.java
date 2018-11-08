@@ -3,8 +3,8 @@ package cz.wa.secretagent.game;
 import java.io.Serializable;
 
 /**
- * Settings for game. 
- * 
+ * Settings for game.
+ *
  * @author Ondrej Milenovsky
  */
 public class GameSettings implements Serializable {

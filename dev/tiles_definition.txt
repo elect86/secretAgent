@@ -1,0 +1,134 @@
+Tiles definition file.
+	It can define tiles for an image. It must be in same directory as the image, the name must be same with extension .txt
+	It can define only single models (no tile size or tile types needed)
+
+Comments start with //
+If there is [tile_id] as an argument, it can be:
+	[integer >= 0] - the result tile id is from this set
+	[integer]*[integer >= 0] - tile is from set defined by the first number, the second number is tile id (the separator can also be '.')
+	Tiles in stored models or entity arguments must be fully qualified
+There are 3 types of definitions, separator is white space(s):
+	Tile size - defines size of single tile in pixels
+		tileSize=[x]*[y]
+		example:
+			tileSize=16*16
+
+	Tile type - defines function and model of a tile id(s), if some id is not defined, then is considered GHOST with simple model
+		[tile_ids] [tile_type] [model]
+		tile_ids can be defined 2 ways:
+			ids separated by commas (and spaces): 10,11, 15 , 16
+			range of ids separated by '-': 17-32
+		tile_type is one of:
+			GHOST - background tile
+			GHOST_FRONT - foreground tile
+			WALL - impenetrable wall
+			SHELF - shelf, agents can step on it, jump on it but cannot fall
+			SPIKES - spikes that impales agents
+			WATER - water that will drown agents
+			ENTITY([entity_type], [arguments]) - creates entity from the tile
+				arguments - additional arguments for the entity creator, described for every entity_type, upper case values are constants
+					direction - by default one of:
+						LEFT
+						RIGHT
+						UP
+						DOWN
+				entity_type - type of the entity, one of:
+					ITEM - pickable item (weapon, ammo, cash, key)
+						JUNK - item sold for cash
+							[price] - integer defining the price (can be 0 or negative)
+						KEY - key to open door (or floppy for PC)
+							[lock_type] - name of the lock (must be same as the door)
+								if the key is dynamite, then the key must be 'dynamite'
+						AMMO - ammo for a weapon
+							[count] - number > 0, ammo count (for current weapon will be recomputed according to its dmg)
+							[weapon_name] - ammo will be for this weapon (not required, will be for current weapon)
+					USABLE - usable entity (door, computer)
+						BUILDING - building on island map
+							[finished_model] - name of stored model, used when the level is finished
+							FINAL - if defined, it is the final building (not required)
+						DOOR - door opened by a key
+							[lock_type] - name of the key, must be same as the key (not required)
+						EXIT - open exit door from the level
+						EXIT_DOOR - closed exit door
+							[open_model] - model name of open exit
+							[tile_id], [model_name] - list of pairs of tile id and model name (from stored models)
+								when the dynamite explodes, it replaces the first tile from the pair by GHOST_FRONT with the model
+								the exit tile (lower tile) is replaced by default, the upper tile replacement needs to be defined
+						TELEPORT - teleport
+						FENCE - blocks the final level, this entity is not usable, will be removed automatically
+					SWITCH - switch that changes something in the map
+						[lock_type] - name of the key, must be same as the key (not required)
+						[description] - text displayed when player can activate it
+						[use_type] - if can be activated only once or not (ONCE or REPEAT (will not dispose the key))
+						[action] - what will the switch do
+							DISABLE_LASER - disables laser (like computer)
+							ADD_TILES - adds some tiles to the map
+								[tile_ids] - list of tile ids that will be added
+									must be specified with tile set id, the tile id is taken from model
+									these tiles are not added to the map at the beginning but after activating the switch
+									can be used for glasses to add platforms or fill a basin with water
+					PROJECTILE - launched or static projectile (spike, bullet, laser)
+					PLATFORM - some movable platform
+						MOVING - automatic lift
+							[direction] - moving direction LEFT or RIGHT (not required, will be determined)
+						CAN - can that can be pushed and stepped on
+					AGENT - moving agent (player, enemy):
+						PLAYER - player start position
+							[direction] - defines direction (not required, will be determined from model)
+								LEFT
+								RIGHT
+						HUMAN - human enemy agent
+							[type] - type of the human, agent's capabilities and inventory are determined by this type
+								WHITE_GUY - not jumping, only meelee
+								RED_GUY - not jumping
+								NINJA_GUY - fast, only meelee
+								BLUE_GUY - not jumping, strong
+								GRAY_GUY - fast, strong
+							[direction] - moving direction LEFT or RIGHT (not required, will be determined from model)
+		model is optional, it's name referring to model definition
+		examples:
+			101 WALL
+			10, 15 SPIKES
+			20-24 WATER waterModel
+
+	Models - defines models, unused if the tiles does not have special models
+		[model_name].[model_type]{
+			[property1]=[value]
+			[property2]=[value1], [value2]
+		}
+		model_name is same as in tile definition
+		model_type is one of:
+			SIMPLE - static model, properties:
+				frame=[tile_id] - defines which tile is the texture (not required for orig tiles, will be used the tile from which is the model created)
+			ANIMATED - animated model, properties:
+				frames=[tile_ids] - defines which tiles are frames (cannot refer to another tile set)
+					tile_ids has same format as in tile definition (list or range)
+				duration=[time_ms] - defines one cycle duration in milliseconds (not required, default 1000ms)
+			LASER - same as animated but with color
+				frames=[tile_ids]
+				duration=[time_ms]
+				color=[color] - color of the laser, format: 0xRRGGBB
+			AGENT - model for agent
+				stayDuration=[time_ms] - cycle duration for stay frames (not required, default 1000ms)
+				stay[direction]=[tile_ids] - frames when staying
+				move[direction]=[tile_ids] - frames when moving
+				jump[direction]=[tile_ids] - frames when jumping
+				death[direction]=[tile_ids] - frames when dying
+					If there are textures only for one direction, textures for the other one are generated by flipping the existing ones.
+					But there must be complete textures for one direction or for both!
+					direction is one of: (no space!)
+						Left
+						Right
+			WEAPON - model for weapon when wielding (not item!), images pointing to the right
+				wieldFrames=[tile_ids] - animation frames when wielding the weapon
+				wieldDuration=[time_ms] - same as for animated model (not required)
+				wieldCenter=[x], [y] - rotation center (not required, default is middle of the texture)
+					0, 0 means middle of the texture;
+					1.0, -2.5 means the center is +1 pixel from center x and -2.5 pixels from center y
+					the * or . stands for decimal separator and it is required, without it 5 means 0.5
+				shootFrames=[tile_ids] - animation frames when shooting and reloading, its duration = reload time
+				shootCenter=[x], [y] - same as wieldCenter but this is for shoot model (not required)
+				scale=[scale] - scale for both models of displayed weapon, 2.5 means 1 pixel of the weapon is 2.5 game units (should be defined, default 1)
+		If any model defines scale=[scale], then its drawn world bounds are computed as [width * scale] x [height * scale], otherwise it is considered as a tile 16 x 16. The scale should be defined for all non-tile models (weapons, projectiles).
+		The model definition must have opening '{' as last character on the first line, the closing '}' must be on separate line, each property is on separate line.
+

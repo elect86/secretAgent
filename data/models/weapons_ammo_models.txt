@@ -1,0 +1,47 @@
+pistolSilencedItem.SIMPLE {
+  frame=-9*0
+}
+
+pistolSilencedAmmo.SIMPLE {
+  frame=-9*1
+}
+
+pistolItem.SIMPLE {
+  frame=-9*2
+}
+
+pistolAmmo.SIMPLE {
+  frame=-9*3
+}
+
+shotgunItem.SIMPLE {
+  frame=-9*4
+}
+
+shotgunAmmo.SIMPLE {
+  frame=-9*5
+}
+
+sniperRifleItem.SIMPLE {
+  frame=-9*6
+}
+
+sniperRifleAmmo.SIMPLE {
+  frame=-9*7
+}
+
+machinegunItem.SIMPLE {
+  frame=-9*8
+}
+
+machinegunAmmo.SIMPLE {
+  frame=-9*9
+}
+
+rocketLauncherItem.SIMPLE {
+  frame=-9*10
+}
+
+rocketLauncherAmmo.SIMPLE {
+  frame=-9*11
+}

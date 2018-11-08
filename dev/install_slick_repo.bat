@@ -1,0 +1,1 @@
+mvn org.apache.maven.plugins:maven-install-plugin:2.3.1:install-file   -Dfile=slick.jar -DgroupId=slick -DartifactId=slick -Dversion=274 -Dpackaging=jar

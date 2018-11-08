@@ -1,0 +1,23 @@
+bulletSmall.SIMPLE {
+  frame=-51*0
+  generateBounds=1
+  scale=1.0
+}
+
+bulletLong.SIMPLE {
+  frame=-52*0
+  generateBounds=1
+  scale=1.0
+}
+
+bulletMG.SIMPLE {
+  frame=-53*0
+  generateBounds=1
+  scale=1.0
+}
+
+rocket.SIMPLE {
+  frame=-54*0
+  generateBounds=1
+  scale=1.0
+}

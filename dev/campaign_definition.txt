@@ -1,0 +1,32 @@
+Campaign definition file.
+
+The format is standard .properties file.
+The file must be in directory data/campaigns or else it won't be loaded by the game.
+The properties are:
+	title - name of the campaign
+	description - long description of the campaign
+	bgColor - background color decoded by Color.decode, preferred format is 0xRRGGBB (not required)
+	levelTilesFile - file containing default level tiles (id = 0)
+	addedTileFiles - list of additional level tile files (not required)
+		If tile file id > 0, then the tiles are used user in maps.
+		If tile file id < 0, then rewrites some existing HUG or GUI file.
+			-1: GUI window sprites
+			-2: health bar
+	modelsFiles - list of files (without id defined by *) that contain additional model definitions
+		If more files contain a model with same name, will be rewritten by the last
+	islandMapFile - file with island map
+	levelMapFiles - list of level files
+		Level maps are indexed from 1 and the sequence must be complete.
+
+	The tile and sprite files always refer to the image, not definition.
+	File list is in format: [id]*[file_path];[id]*[file_path];[id]*[file_path]
+	
+	
+	File paths are within the data/ directory.
+	
+	Example:
+		levelMapFiles=	1*orig/e1l1.sam;\
+						2*orig/e1l2.sam;\
+						3*orig/e1l3.sam;
+		addedTileFiles=	6*tiles/6set.gif; 13*tiles/13tiles.bmp
+		modelFiles=definitions/orig_models.txt; awesome_models.txt

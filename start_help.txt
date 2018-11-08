@@ -1,0 +1,38 @@
+Version 0.01
+	Can load levels, some of them are broken.
+	On island map you can move on the map (arrows), use teleport and enter buildings (space).
+	In level you can move (arrows), collect items, push cans, jump (right shift), use doors and other things (space), exit to island (escape).
+
+1. Java
+	Make sure you have JRE 7 or higher, you can download it here:
+	http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+2. LWJGL
+	The libraries should be included in the zip, if you get an error, you can download them here:
+	http://lwjgl.org/download.php
+	Or google for them.
+	
+	Download file lwjgl-2.9.0.zip (or higher version), the binaries are in:
+	lwjgl-2.9.0.zip/native/
+	
+	Find dlls for your system, i.e. win64:
+	lwjgl-2.9.0.zip/natives/windows/
+		jinput-dx8_64.dll
+		jinput-raw_64.dll
+		lwjgl64.dll
+		OpenAL64.dll
+	
+	Copy the files to the game root directory and everything should work.
+
+3. More maps
+	TODO
+
+4. Troubleshooting
+	Started application, but console window just flashed (or nothing happened):
+		Run the application from console, you will see the error
+		Probably missing Java
+	Started application, there was console window with appending text for a few seconds, then it closed:
+		Check log/log.txt, if empty, run from console to see the error
+
+Project page + source codes:
+https://sourceforge.net/projects/secretagentremake

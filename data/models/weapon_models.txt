@@ -1,0 +1,53 @@
+pistolSilenced.WEAPON {
+  wieldFrames=-11*0
+  wieldCenter=-4.5, -1.5
+  fireFrames=-11*0
+  fireCenter=-4.5, -1.5
+  scale=1.0
+}
+
+pistol.WEAPON {
+  wieldFrames=-12*0
+  wieldCenter=-2.0, -1.0
+  fireFrames=-12*0
+  fireCenter=-2.0, -1.0
+  scale=1.0
+}
+
+shotgun.WEAPON {
+  wieldFrames=-13*0
+  wieldCenter=-2.0, -0.5
+  fireFrames=-13*0
+  fireCenter=-2.0, -0.5
+  scale=1.0
+}
+
+sniperRifle.WEAPON {
+  wieldFrames=-14*0
+  wieldCenter=-6.0, 2.0
+  fireFrames=-14*0
+  fireCenter=-6.0, 2.0
+  scale=1.0
+}
+
+machinegun.WEAPON {
+  wieldFrames=-15*0
+  wieldCenter=-4.5, -1.0
+  fireFrames=-15*0
+  fireCenter=-4.5, -1.0
+  scale=1.0
+}
+
+rocketLauncher.WEAPON {
+  wieldFrames=-16*0
+  wieldCenter=-0.0, 1.5
+  fireFrames=-16*0
+  fireCenter=-0.0, 1.5
+  scale=1.0
+}
+
+laserSight.LASER {
+  frames=-3*0--3*3
+  duration=800
+  color=0xFFFFFF
+}

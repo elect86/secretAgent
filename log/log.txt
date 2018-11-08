@@ -1,0 +1,17 @@
+11:41:52 08.11.2018 ERROR GLRenderer:91	Missing LWJGL binares, see 'start_help.txt' for instructions
+java.lang.UnsatisfiedLinkError: no lwjgl in java.library.path: [C:\Program Files\Java\jdk-10.0.2\bin, C:\Windows\Sun\Java\bin, C:\Windows\system32, C:\Windows, C:\Program Files (x86)\Common Files\Oracle\Java\javapath, C:\Windows\system32, C:\Windows, C:\Windows\System32\Wbem, C:\Windows\System32\WindowsPowerShell\v1.0\, C:\Windows\System32\OpenSSH\, C:\Program Files\EMM-Check 4270\radiance\bin, C:\Program Files\Git\cmd, C:\Program Files\CMake\bin, C:\Users\gbarbieri\Documents\apache-ant-1.10.5\bin, ., C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common, C:\Program Files\TortoiseHg\, C:\Users\gbarbieri\AppData\Local\Microsoft\WindowsApps, ., .]
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2654)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:876)
+	at java.base/java.lang.System.loadLibrary(System.java:1875)
+	at org.lwjgl.Sys$1.run(Sys.java:73)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.lwjgl.Sys.doLoadLibrary(Sys.java:66)
+	at org.lwjgl.Sys.loadLibrary(Sys.java:95)
+	at org.lwjgl.Sys.<clinit>(Sys.java:112)
+	at org.lwjgl.opengl.Display.<clinit>(Display.java:135)
+	at cz.wa.secretagent.view.renderer.GLRenderer.init(GLRenderer.java:72)
+	at cz.wa.secretagent.simulation.GameRunnerImpl.runGame(GameRunnerImpl.java:102)
+	at cz.wa.secretagent.simulation.GameRunnerImpl.access$000(GameRunnerImpl.java:21)
+	at cz.wa.secretagent.simulation.GameRunnerImpl$1.run2(GameRunnerImpl.java:45)
+	at cz.wa.wautils.swing.listener.RunnableLog.run(RunnableLog.java:18)
+	at java.base/java.lang.Thread.run(Thread.java:844)

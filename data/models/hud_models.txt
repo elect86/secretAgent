@@ -1,0 +1,4 @@
+healthBar.HEALTH_BAR {
+  frame=-2*0
+  health=-2*1
+}

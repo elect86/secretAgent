@@ -1,0 +1,9 @@
+levelLaser.LASER {
+  frames=-3*0--3*3
+  duration=800
+  color=0xCC2020
+}
+
+explosion1.EXPLOSION {
+  frames=-8*0--8*14
+}

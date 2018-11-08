@@ -1,0 +1,37 @@
+The application is developed under Windows 7 64bit, not tested on other systems, but it should work.
+The bats are only for Windows, you will have to create your own scripts for other systems.
+
+1. Import project to Eclipse IDE 
+    1. Install Eclipse and JDK (7 or higher)
+    2. Install Maven to Eclipse (no need in Eclipse Kepler or higher)
+    3. Install Spring core to Eclipse (better install just the core, nothing else or it will infest your Eclipse)
+    4. Slick repository does not work, so you have to create a local repository
+        1. Copy dev/slick.jar where you want to have the repository (you can use newer version of slick if you have it)
+        2. Edit dev/install_slick_repo.bat and fill path to your slick (you also need Maven binares, described in "Building jar")
+        3. Run the bat
+	5. Download (checkout) my utils project: https://sourceforge.net/projects/wautilsjava
+    6. In Eclipse: File - Import - Maven - Existing maven projects, fill project root directory and press Finish (import this project and the WaUtils)
+    7. If you use JDK > 7, edit pom.xml and fix the version (lines 25 and 26)
+    8. Right click on WaUtils - Run As - Maven install
+    9. Right click on SecretAgent - Run As - Maven install, there should be no errors now
+	10. Copy LWJGL libraries to the project root (described in start_help.txt)
+    11. Right click on the project - Run As - Java Application, it should run with no errors
+    12. Import the included formatter
+
+2. Building jar
+    1. Download and install Maven binaries
+    2. Add path to maven/bin in your system or fill path to your mvn.exe in 1_mvn_build.bat
+		On Windows edit environment variables, find PATH and add the desired path
+	3. Build the project (better clean build)
+	4. Run Maven install on WaUtils
+		You need to do this only if something changed in the project since last install
+	5. Run Maven install on SecretAgent (it may end with error that there is no compiler, in that case run it again)
+    6. Run 1_mvn_build.bat, there should be bunch of INFO, no WARN or ERROR, it will create some jars in directory target
+    7. Run 2_copy_jar.bat (it will copy and rename the executable jar from target to project root)
+    8. (Not needed, it will only reduce jar size) Open SecretAgent.jar with a zip extractor and delete all LWJGL libraries (.dll, .jnilib, .so, .dylib)
+		They work only if they are in the project root, not if they are in the jar
+
+3. Code entry point
+    Source codes: src/main/java
+    Application context: src/main/resources
+    Main class: cz.wa.secretagent.launcher.SecretAgentMain

@@ -1,0 +1,34 @@
+dynamite.ANIMATED {
+  frames=0*284, 0*285
+  duration=250
+}
+
+exitUpper.SIMPLE {
+  frame=0*283
+}
+
+exitLower.SIMPLE {
+  frame=0*287
+}
+
+// final left
+buildingFinished1.SIMPLE {
+  frame=0*66
+}
+
+// final right
+buildingFinished2.SIMPLE {
+  frame=0*67
+}
+
+buildingFinished3.SIMPLE {
+  frame=0*68
+}
+
+buildingFinished4.SIMPLE {
+  frame=0*69
+}
+
+bulletOrig.SIMPLE {
+  frame=0*88
+}

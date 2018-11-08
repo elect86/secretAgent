@@ -1,0 +1,9 @@
+To use this project:
+1. Import to eclipse as a Maven project
+2. Maven install
+3. Use dependency:
+	<dependency>
+		<groupId>cz.wa.wautils</groupId>
+		<artifactId>wautils</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</dependency>

@@ -14,6 +14,7 @@ import cz.wa.secretagent.world.entity.explosion.Explosion;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
 import secretAgent.view.model.ExplosionModel;
+import secretAgent.view.renderer.model.AbstractModelDrawer;
 
 /**
  * Draws explosion model. 

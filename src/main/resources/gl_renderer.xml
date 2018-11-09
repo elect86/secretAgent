@@ -164,7 +164,7 @@
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.AGENT" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.model.AgentModelDrawer" parent="abstractModelDrawer">
+					<bean class="secretAgent.view.renderer.model.AgentModelDrawer" parent="abstractModelDrawer">
 						<property name="animSpeed" value="0.03" />
 						<property name="worldHolder" ref="worldHolder" />
 					</bean>

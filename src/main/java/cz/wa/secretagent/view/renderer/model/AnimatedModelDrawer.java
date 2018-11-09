@@ -13,6 +13,7 @@ import cz.wa.secretagent.world.entity.HasModelAngle;
 import cz.wa.secretagent.world.entity.HasTime;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import secretAgent.view.model.AnimatedModel;
+import secretAgent.view.renderer.model.AbstractModelDrawer;
 
 /**
  * Draws animated model. 

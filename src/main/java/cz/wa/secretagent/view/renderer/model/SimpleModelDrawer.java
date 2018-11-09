@@ -6,6 +6,7 @@ import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.HasModelAngle;
 import secretAgent.view.model.SimpleModel;
+import secretAgent.view.renderer.model.AbstractModelDrawer;
 
 /**
  * Draws simple not animated model. 

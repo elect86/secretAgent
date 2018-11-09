@@ -11,6 +11,7 @@ import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import secretAgent.view.model.AnimatedModel;
 import secretAgent.view.model.WeaponModel;
+import secretAgent.view.renderer.model.AbstractModelDrawer;
 
 /**
  * Draws weapon model, used when drawing on screen only!

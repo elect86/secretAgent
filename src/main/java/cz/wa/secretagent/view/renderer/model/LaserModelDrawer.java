@@ -17,6 +17,7 @@ import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
 import secretAgent.view.model.LaserModel;
+import secretAgent.view.renderer.model.AbstractModelDrawer;
 
 /**
  * Draws simple not animated model. 

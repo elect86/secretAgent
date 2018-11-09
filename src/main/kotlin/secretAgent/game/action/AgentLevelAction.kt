@@ -1,14 +1,13 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.game.projectile.ProjectileFactory
 import cz.wa.secretagent.game.utils.EntityObserver
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.AgentType
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.weapon.Weapon
-import org.apache.commons.lang.Validate
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
+import secretAgent.game.ProjectileFactory
 import secretAgent.plus
 import secretAgent.world.entity.EntityXDirection
 import secretAgent.world.entity.EntityYDirection

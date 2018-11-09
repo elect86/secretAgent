@@ -7,7 +7,6 @@ import org.apache.commons.math3.util.FastMath;
 import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.game.projectile.ProjectileFactory;
 import cz.wa.secretagent.game.simulator.entity.AbstractEntitySimulator;
 import cz.wa.secretagent.game.simulator.entity.projectile.ProjectileHitTypes;
 import cz.wa.secretagent.game.utils.EntitiesFinder;
@@ -36,6 +35,7 @@ import cz.wa.secretagent.world.entity.usable.UsableType;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
+import secretAgent.game.ProjectileFactory;
 import secretAgent.world.entity.EntityXDirection;
 import secretAgent.world.entity.EntityYDirection;
 

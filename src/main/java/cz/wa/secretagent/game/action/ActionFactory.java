@@ -3,10 +3,10 @@ package cz.wa.secretagent.game.action;
 import java.util.HashMap;
 import java.util.Map;
 
-import cz.wa.secretagent.game.projectile.ProjectileFactory;
 import cz.wa.secretagent.game.sensor.SensorFactory;
 import cz.wa.secretagent.game.starter.MapStarter;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
+import secretAgent.game.ProjectileFactory;
 import secretAgent.game.action.AgentAction;
 import secretAgent.world.SamWorld;
 

@@ -122,7 +122,7 @@
 		</constructor-arg>
 	</bean>
 
-	<bean id="projectileFactory" class="cz.wa.secretagent.game.projectile.ProjectileFactory">
+	<bean id="projectileFactory" class="secretAgent.game.ProjectileFactory">
 		<property name="worldHolder" ref="worldHolder" />
 	</bean>
 

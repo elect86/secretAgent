@@ -6,7 +6,6 @@ import java.util.Map;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.projectile.ProjectileFactory;
 import cz.wa.secretagent.game.simulator.entity.AbstractEntitySimulator;
 import cz.wa.secretagent.game.starter.MapStarter;
 import cz.wa.secretagent.game.utils.EntityObserver;
@@ -26,6 +25,7 @@ import cz.wa.secretagent.world.map.LevelMap;
 import cz.wa.secretagent.world.map.StoredTile;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.game.ProjectileFactory;
 
 /**
  * Simulates dynamite. At first the dynamite burns, then explodes.

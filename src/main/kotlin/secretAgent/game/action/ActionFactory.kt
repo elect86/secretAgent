@@ -1,13 +1,9 @@
 package secretAgent.game.action
 
 import cz.wa.secretagent.game.action.ActionFactory
-import cz.wa.secretagent.game.projectile.ProjectileFactory
 import cz.wa.secretagent.game.sensor.SensorFactory
-import cz.wa.secretagent.game.starter.MapStarter
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import secretAgent.world.SamWorld
-
-import java.util.HashMap
 
 /**
  * Creates actions with caching.

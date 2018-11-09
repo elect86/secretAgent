@@ -2,11 +2,11 @@ package cz.wa.secretagent.game.simulator.entity.projectile;
 
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.projectile.ProjectileFactory;
 import cz.wa.secretagent.game.simulator.entity.AbstractEntitySimulator;
 import cz.wa.secretagent.game.utils.ProjectileMover;
 import cz.wa.secretagent.world.entity.explosion.Explosion;
 import cz.wa.secretagent.world.entity.projectile.RocketProjectile;
+import secretAgent.game.ProjectileFactory;
 
 /**
  * Simulates rocket. 

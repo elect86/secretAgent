@@ -3,9 +3,9 @@ package cz.wa.secretagent.game.simulator;
 import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.simulation.GameSimulator;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import secretAgent.game.player.Camera;
 
 /**
  * Keeps the player in center of screen but does not let the camera see outside map.

@@ -2,10 +2,10 @@ package cz.wa.secretagent.view.renderer.world;
 
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.world.EntityMap;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityOrder;
+import secretAgent.game.player.Camera;
 
 /**
  * Renders all entities (items, agents, explosions). 

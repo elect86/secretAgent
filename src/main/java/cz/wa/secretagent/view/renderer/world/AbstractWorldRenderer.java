@@ -5,12 +5,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.renderer.Renderer;
 import cz.wa.secretagent.view.renderer.model.ModelRenderer;
 import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
+import secretAgent.game.player.Camera;
 
 /**
  * Abstract world renderer.

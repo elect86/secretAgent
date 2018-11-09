@@ -4,9 +4,9 @@ import org.apache.commons.lang.Validate;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.window.component.GComponent;
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
+import secretAgent.game.player.Camera;
 
 /**
  * Component drawer that has reference to useful objects. 

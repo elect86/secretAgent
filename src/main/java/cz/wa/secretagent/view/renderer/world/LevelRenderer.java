@@ -5,12 +5,12 @@ import java.util.List;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.world.map.LevelMap;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.wautils.collection.Array2D;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.game.player.Camera;
 
 /**
  * Renders the level (background, walls, spikes, tables) 

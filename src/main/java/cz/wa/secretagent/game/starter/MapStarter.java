@@ -3,7 +3,6 @@ package cz.wa.secretagent.game.starter;
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.game.action.ActionFactory;
 import cz.wa.secretagent.game.controller.menucreator.MainMenuCreator;
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.game.player.PlayerStats;
 import cz.wa.secretagent.game.projectile.ProjectileFactory;
 import cz.wa.secretagent.game.sensor.SensorFactory;
@@ -29,6 +28,7 @@ import cz.wa.wautils.math.Vector2I;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.game.player.Camera;
 import secretAgent.world.SamWorld;
 
 import java.io.File;

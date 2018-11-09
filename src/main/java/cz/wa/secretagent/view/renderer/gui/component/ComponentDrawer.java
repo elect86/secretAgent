@@ -2,9 +2,9 @@ package cz.wa.secretagent.view.renderer.gui.component;
 
 import java.io.Serializable;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.GComponent;
+import secretAgent.game.player.Camera;
 
 /**
  * Draws single GComponent. 

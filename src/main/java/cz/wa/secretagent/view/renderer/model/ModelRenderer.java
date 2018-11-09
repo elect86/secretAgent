@@ -8,11 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.model.ModelType;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.game.player.Camera;
 
 /**
  * Renders any model using single drawers, decides which drawer will be used.

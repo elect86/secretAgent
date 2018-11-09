@@ -2,11 +2,11 @@ package cz.wa.secretagent.view.renderer.gui.component;
 
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.GImage;
 import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.renderer.model.ModelRenderer;
+import secretAgent.game.player.Camera;
 
 /**
  * Draws the model of the image. 

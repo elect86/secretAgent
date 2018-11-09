@@ -7,11 +7,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.ComponentType;
 import cz.wa.secretagent.menu.window.component.GComponent;
 import cz.wa.secretagent.view.renderer.gui.component.ComponentDrawer;
+import secretAgent.game.player.Camera;
 
 /**
  * Class that renders any component (except frame). 

@@ -1,8 +1,8 @@
 package cz.wa.secretagent.view.renderer.gui.component;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.GLabel;
+import secretAgent.game.player.Camera;
 
 /**
  * Draws the string. 

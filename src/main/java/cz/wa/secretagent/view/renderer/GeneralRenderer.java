@@ -1,7 +1,6 @@
 package cz.wa.secretagent.view.renderer;
 
 import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.view.renderer.gui.GUIRenderer;
@@ -14,6 +13,7 @@ import cz.wa.wautils.math.Rectangle2I;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.game.player.Camera;
 import secretAgent.world.SamWorld;
 
 import java.io.Serializable;

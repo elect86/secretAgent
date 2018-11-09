@@ -5,11 +5,11 @@ import java.awt.Color;
 import org.apache.commons.lang.Validate;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.selectable.GSelectable;
 import cz.wa.secretagent.view.renderer.gui.ComponentRenderer;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.game.player.Camera;
 
 /**
  * Draws the display component and selected frame around it. 

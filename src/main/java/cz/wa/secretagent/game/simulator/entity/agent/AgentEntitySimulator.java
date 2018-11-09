@@ -14,7 +14,6 @@ import cz.wa.secretagent.game.utils.EntityMover;
 import cz.wa.secretagent.game.utils.EntityObserver;
 import cz.wa.secretagent.game.utils.collision.CollidedTile;
 import cz.wa.secretagent.game.utils.collision.ProjectileCollider;
-import cz.wa.secretagent.view.model.EmptyModel;
 import cz.wa.secretagent.world.EntityMap;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
@@ -36,6 +35,7 @@ import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
 import secretAgent.game.ProjectileFactory;
+import secretAgent.view.model.EmptyModel;
 import secretAgent.world.entity.EntityXDirection;
 import secretAgent.world.entity.EntityYDirection;
 

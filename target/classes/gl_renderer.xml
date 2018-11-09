@@ -95,7 +95,7 @@
 					<key>
 						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.IMAGE" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.gui.component.ImageComponentDrawer" parent="abstractComponentDrawer">
+					<bean class="secretAgent.view.renderer.gui.ImageComponentDrawer" parent="abstractComponentDrawer">
 						<property name="modelRenderer" ref="modelRenderer" />
 					</bean>
 				</entry>
@@ -103,14 +103,14 @@
 					<key>
 						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.LABEL" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.gui.component.LabelComponentDrawer" parent="abstractComponentDrawer">
+					<bean class="secretAgent.view.renderer.gui.LabelComponentDrawer" parent="abstractComponentDrawer">
 					</bean>
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.SELECTABLE" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.gui.component.SelectedComponentDrawer" parent="abstractComponentDrawer">
+					<bean class="secretAgent.view.renderer.gui.SelectedComponentDrawer" parent="abstractComponentDrawer">
 						<property name="componentRenderer" ref="componentRenderer" />
 						<property name="borderWidthSH" value="0.004" />
 						<property name="selectedColor">

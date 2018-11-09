@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Required;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.ComponentType;
 import cz.wa.secretagent.menu.window.component.GComponent;
-import cz.wa.secretagent.view.renderer.gui.component.ComponentDrawer;
 import secretAgent.game.player.Camera;
+import secretAgent.view.renderer.gui.ComponentDrawer;
 
 /**
  * Class that renders any component (except frame). 

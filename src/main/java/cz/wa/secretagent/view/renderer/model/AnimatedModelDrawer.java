@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.view.model.AnimatedModel;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.secretagent.world.entity.Entity;
@@ -13,6 +12,7 @@ import cz.wa.secretagent.world.entity.HasDuration;
 import cz.wa.secretagent.world.entity.HasModelAngle;
 import cz.wa.secretagent.world.entity.HasTime;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import secretAgent.view.model.AnimatedModel;
 
 /**
  * Draws animated model. 

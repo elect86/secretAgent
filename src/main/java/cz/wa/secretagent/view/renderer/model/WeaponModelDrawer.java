@@ -6,11 +6,11 @@ import cz.wa.secretagent.view.model.WeaponModel;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.view.model.AnimatedModel;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import secretAgent.view.model.AnimatedModel;
 
 /**
  * Draws weapon model, used when drawing on screen only!

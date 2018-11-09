@@ -7,6 +7,7 @@ import org.apache.commons.lang.Validate;
 
 import cz.wa.secretagent.view.TileId;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.view.model.AnimatedModel;
 
 /**
  * Model of laser, same as animated but is drawn different way.

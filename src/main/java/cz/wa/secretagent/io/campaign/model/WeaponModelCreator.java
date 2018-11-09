@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.AnimatedModel;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.view.model.AnimatedModel;
 import secretAgent.world.GLModel;
 
 /**

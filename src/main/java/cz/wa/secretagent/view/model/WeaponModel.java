@@ -12,6 +12,7 @@ import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.view.model.AnimatedModel;
 
 /**
  * Model of weapon, consists of two models, one for wielding the weapon, second for firing

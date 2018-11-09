@@ -8,6 +8,7 @@ import java.util.Map;
 
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Holds all graphics 
@@ -32,6 +33,7 @@ public class GLGraphics implements SAMGraphics, Serializable {
         tileSets = new HashMap<Integer, GLTileSet>();
     }
 
+    @Nullable
     public TextureToDraw getTile(TileId tileId) {
         GLTileSet tileSet = tileSets.get(tileId.getTileSetId());
         if (tileSet == null) {

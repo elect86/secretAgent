@@ -11,6 +11,7 @@ import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.texture.GLGraphics;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.view.model.AbstractModel;
 
 /**
  * Simple not animated sprite. 

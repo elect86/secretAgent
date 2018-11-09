@@ -260,7 +260,7 @@
 			<bean class="secretAgent.game.player.PlayerStats">
 				<property name="cash" value="0" />
 				<property name="weapons">
-					<bean class="cz.wa.secretagent.game.player.PlayerWeapons">
+					<bean class="secretAgent.game.player.PlayerWeapons">
 
 						<!-- Starts with silenced pistol and 5 ammo -->
 						<property name="weapons">

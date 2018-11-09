@@ -1,6 +1,5 @@
 package secretAgent.game.player
 
-import cz.wa.secretagent.game.player.PlayerWeapons
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import java.io.Serializable
 import kotlin.collections.HashSet

@@ -257,7 +257,7 @@
 		<property name="mapStarter" ref="mapStarter" />
 		<property name="playerHolder" ref="playerHolder" />
 		<property name="initialStats">
-			<bean class="cz.wa.secretagent.game.player.PlayerStats">
+			<bean class="secretAgent.game.player.PlayerStats">
 				<property name="cash" value="0" />
 				<property name="weapons">
 					<bean class="cz.wa.secretagent.game.player.PlayerWeapons">

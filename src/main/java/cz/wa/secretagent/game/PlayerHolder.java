@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.game.controller.GameIslandController;
 import cz.wa.secretagent.game.controller.GameLevelController;
-import cz.wa.secretagent.game.player.PlayerStats;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.entity.agent.Team;
 import secretAgent.game.player.Camera;
+import secretAgent.game.player.PlayerStats;
 
 /**
  * Holds classes for player. 

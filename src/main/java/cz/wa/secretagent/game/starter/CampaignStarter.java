@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.game.player.PlayerStats;
 import cz.wa.secretagent.io.SAMIO;
+import secretAgent.game.player.PlayerStats;
 
 /**
  * Starts campaign, generates all required classes and loads files.

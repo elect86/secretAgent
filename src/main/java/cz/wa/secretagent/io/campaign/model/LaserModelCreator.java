@@ -3,13 +3,13 @@ package cz.wa.secretagent.io.campaign.model;
 import java.awt.Color;
 import java.util.List;
 
-import cz.wa.secretagent.view.model.LaserModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
 import secretAgent.view.model.AnimatedModel;
+import secretAgent.view.model.LaserModel;
 
 /**
  * Creates laser model, same as animated model.

@@ -4,10 +4,10 @@ import cz.wa.secretagent.Constants
 import cz.wa.secretagent.view.SAMGraphics
 import cz.wa.secretagent.view.TileId
 import cz.wa.secretagent.view.model.AbstractModel
-import cz.wa.secretagent.view.model.ModelType
 import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
+import secretAgent.world.ModelType
 import java.util.ArrayList
 import java.util.HashSet
 

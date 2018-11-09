@@ -3,9 +3,9 @@ package secretAgent.view.model
 import cz.wa.secretagent.view.SAMGraphics
 import cz.wa.secretagent.view.TileId
 import cz.wa.secretagent.view.model.AbstractModel
-import cz.wa.secretagent.view.model.ModelType
 import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.wautils.math.Rectangle2D
+import secretAgent.world.ModelType
 import java.util.HashSet
 
 /**

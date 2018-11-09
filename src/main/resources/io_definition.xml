@@ -26,43 +26,43 @@
 			<map>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.SIMPLE" />
+						<util:constant static-field="secretAgent.world.ModelType.SIMPLE" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.SimpleModelCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.ANIMATED" />
+						<util:constant static-field="secretAgent.world.ModelType.ANIMATED" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.AnimatedModelCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.AGENT" />
+						<util:constant static-field="secretAgent.world.ModelType.AGENT" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.AgentModelCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.HEALTH_BAR" />
+						<util:constant static-field="secretAgent.world.ModelType.HEALTH_BAR" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.HealthBarModelCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.LASER" />
+						<util:constant static-field="secretAgent.world.ModelType.LASER" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.LaserModelCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.WEAPON" />
+						<util:constant static-field="secretAgent.world.ModelType.WEAPON" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.WeaponModelCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.EXPLOSION" />
+						<util:constant static-field="secretAgent.world.ModelType.EXPLOSION" />
 					</key>
 					<bean class="cz.wa.secretagent.io.campaign.model.ExplosionModelCreator" />
 				</entry>

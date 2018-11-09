@@ -12,11 +12,11 @@ import cz.wa.secretagent.io.tiles.singleproperties.EntityProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.TileProperties;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.ModelType;
 import cz.wa.secretagent.world.map.TileType;
 import cz.wa.wautils.io.AbstractParser;
 import cz.wa.wautils.math.Vector2I;
 import cz.wa.wautils.string.StringUtilsWa;
+import secretAgent.world.ModelType;
 
 /**
  * Parses tiles info file. For each tile id there is tile info,

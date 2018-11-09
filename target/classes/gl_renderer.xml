@@ -148,13 +148,13 @@
 			<map>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.SIMPLE" />
+						<util:constant static-field="secretAgent.world.SIMPLE" />
 					</key>
 					<bean class="cz.wa.secretagent.view.renderer.model.SimpleModelDrawer" parent="abstractModelDrawer" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.ANIMATED" />
+						<util:constant static-field="secretAgent.world.ANIMATED" />
 					</key>
 					<bean class="cz.wa.secretagent.view.renderer.model.AnimatedModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
@@ -162,7 +162,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.AGENT" />
+						<util:constant static-field="secretAgent.world.AGENT" />
 					</key>
 					<bean class="cz.wa.secretagent.view.renderer.model.AgentModelDrawer" parent="abstractModelDrawer">
 						<property name="animSpeed" value="0.03" />
@@ -171,7 +171,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.LASER" />
+						<util:constant static-field="secretAgent.world.LASER" />
 					</key>
 					<bean class="cz.wa.secretagent.view.renderer.model.LaserModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
@@ -179,7 +179,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.WEAPON" />
+						<util:constant static-field="secretAgent.world.WEAPON" />
 					</key>
 					<bean class="cz.wa.secretagent.view.renderer.model.WeaponModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
@@ -187,7 +187,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.EXPLOSION" />
+						<util:constant static-field="secretAgent.world.EXPLOSION" />
 					</key>
 					<bean class="cz.wa.secretagent.view.renderer.model.ExplosionModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />

@@ -2,7 +2,6 @@ package cz.wa.secretagent.view.renderer.model;
 
 import java.util.List;
 
-import cz.wa.secretagent.view.model.LaserModel;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +16,7 @@ import cz.wa.secretagent.world.entity.laser.LineLaser;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
+import secretAgent.view.model.LaserModel;
 
 /**
  * Draws simple not animated model. 

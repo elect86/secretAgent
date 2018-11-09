@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.ModelType;
+import secretAgent.world.ModelType;
 
 /**
  * Parsed properties for model. 

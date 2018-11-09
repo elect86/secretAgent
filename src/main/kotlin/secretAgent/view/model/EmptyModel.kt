@@ -2,9 +2,9 @@ package secretAgent.view.model
 
 import cz.wa.secretagent.view.SAMGraphics
 import cz.wa.secretagent.view.TileId
-import cz.wa.secretagent.view.model.ModelType
 import cz.wa.wautils.math.Rectangle2D
 import secretAgent.world.GLModel
+import secretAgent.world.ModelType
 
 /**
  * Invisible model.

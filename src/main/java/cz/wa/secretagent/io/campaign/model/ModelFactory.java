@@ -6,16 +6,16 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import cz.wa.secretagent.view.model.SimpleModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.ModelType;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.view.model.SimpleModel;
 import secretAgent.world.GLModel;
+import secretAgent.world.ModelType;
 import secretAgent.world.ObjectModel;
 
 /**

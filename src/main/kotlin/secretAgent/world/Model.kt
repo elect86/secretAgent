@@ -2,7 +2,6 @@ package secretAgent.world
 
 import cz.wa.secretagent.view.SAMGraphics
 import cz.wa.secretagent.view.TileId
-import cz.wa.secretagent.view.model.ModelType
 import cz.wa.wautils.math.Rectangle2D
 
 /**
@@ -47,4 +46,20 @@ interface ObjectModel {
  */
 interface GLModel : ObjectModel {
     val type: ModelType
+}
+
+/**
+ * Type of a model.
+ *
+ * @author Ondrej Milenovsky
+ */
+enum class ModelType {
+    SIMPLE,
+    ANIMATED,
+    AGENT,
+    LASER,
+    WEAPON,
+    EMPTY,
+    HEALTH_BAR,
+    EXPLOSION
 }

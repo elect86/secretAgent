@@ -67,7 +67,7 @@
 		<property name="textSize" value="8" />
 	</bean>
 
-	<bean id="screenHudRenderer" class="cz.wa.secretagent.view.renderer.hud.ScreenHUDRenderer">
+	<bean id="screenHudRenderer" class="secretAgent.view.renderer.hud.ScreenHudRenderer">
 		<property name="primitivesDrawer" ref="primitivesDrawer" />
 		<property name="modelRenderer" ref="modelRenderer" />
 		<property name="settings2d" ref="settings2d" />

@@ -3,7 +3,6 @@ package cz.wa.secretagent.view.renderer;
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.view.Settings2D;
-import cz.wa.secretagent.view.renderer.hud.ScreenHUDRenderer;
 import cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer;
 import cz.wa.secretagent.view.renderer.world.EntitiesRenderer;
 import cz.wa.secretagent.view.renderer.world.LevelRenderer;
@@ -14,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 import secretAgent.game.player.Camera;
 import secretAgent.view.renderer.gui.GuiRenderer;
+import secretAgent.view.renderer.hud.ScreenHudRenderer;
 import secretAgent.world.SamWorld;
 
 import java.io.Serializable;
@@ -34,7 +34,7 @@ public class GeneralRenderer implements Renderer, Serializable {
     private LevelRenderer levelRenderer;
     private EntitiesRenderer entitiesRenderer;
     private WorldHUDRenderer worldHudRenderer;
-    private ScreenHUDRenderer screenHudRenderer;
+    private ScreenHudRenderer screenHudRenderer;
     private GuiRenderer guiRenderer;
 
     @Override
@@ -165,12 +165,12 @@ public class GeneralRenderer implements Renderer, Serializable {
         this.worldHudRenderer = worldHudRenderer;
     }
 
-    public ScreenHUDRenderer getScreenHudRenderer() {
+    public ScreenHudRenderer getScreenHudRenderer() {
         return screenHudRenderer;
     }
 
     @Required
-    public void setScreenHudRenderer(ScreenHUDRenderer screenHudRenderer) {
+    public void setScreenHudRenderer(ScreenHudRenderer screenHudRenderer) {
         this.screenHudRenderer = screenHudRenderer;
     }
 

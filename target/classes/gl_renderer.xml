@@ -29,11 +29,11 @@
 		</property>
 	</bean>
 
-	<bean id="levelRenderer" class="cz.wa.secretagent.view.renderer.world.LevelRenderer">
+	<bean id="levelRenderer" class="secretAgent.view.renderer.LevelRenderer">
 		<property name="modelRenderer" ref="modelRenderer" />
 	</bean>
 
-	<bean id="entitiesRenderer" class="cz.wa.secretagent.view.renderer.world.EntitiesRenderer">
+	<bean id="entitiesRenderer" class="secretAgent.view.renderer.EntitiesRenderer">
 		<property name="modelRenderer" ref="modelRenderer" />
 		<property name="entityOrder">
 			<bean class="cz.wa.secretagent.world.entity.EntityOrder">

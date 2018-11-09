@@ -19,9 +19,9 @@ class ExplosionModelDrawer : AbstractModelDrawer<ExplosionModel>() {
 
     lateinit var worldHolder: WorldHolder
 
-    override fun draw(model: ExplosionModel, entity: Entity, pos: Vector2D, scale: Double) {
+    override fun draw(model: ExplosionModel, entity: Entity?, pos: Vector2D, scale: Double) {
         if (entity !is Explosion) {
-            logger.warn("Entity must be Explosion, but is: " + entity.javaClass.simpleName)
+            logger.warn("Entity must be Explosion, but is: ${entity?.javaClass?.simpleName}")
             return
         }
         val timeMs = Math.round(entity.timeS * 1000)

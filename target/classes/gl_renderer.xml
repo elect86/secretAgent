@@ -143,14 +143,14 @@
 		</property>
 	</bean>
 
-	<bean id="modelRenderer" class="cz.wa.secretagent.view.renderer.model.ModelRenderer">
+	<bean id="modelRenderer" class="secretAgent.view.renderer.model.ModelRenderer">
 		<property name="drawers">
 			<map>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.SIMPLE" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.model.SimpleModelDrawer" parent="abstractModelDrawer" />
+					<bean class="secretAgent.view.renderer.model.SimpleModelDrawer" parent="abstractModelDrawer" />
 				</entry>
 				<entry>
 					<key>
@@ -181,7 +181,7 @@
 					<key>
 						<util:constant static-field="secretAgent.world.WEAPON" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.model.WeaponModelDrawer" parent="abstractModelDrawer">
+					<bean class="secretAgent.view.renderer.model.WeaponModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
 					</bean>
 				</entry>

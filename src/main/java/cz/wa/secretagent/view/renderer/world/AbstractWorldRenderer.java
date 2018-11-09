@@ -5,9 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 import cz.wa.secretagent.view.renderer.Renderer;
-import cz.wa.secretagent.view.renderer.model.ModelRenderer;
 import cz.wa.secretagent.world.entity.Entity;
 import secretAgent.game.player.Camera;
+import secretAgent.view.renderer.model.ModelRenderer;
 import secretAgent.world.GLModel;
 import secretAgent.world.ObjectModel;
 

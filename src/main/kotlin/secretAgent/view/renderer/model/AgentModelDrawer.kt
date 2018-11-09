@@ -27,9 +27,9 @@ class AgentModelDrawer : AbstractModelDrawer<AgentModel>() {
     /** speed of animation (relative to agent's speed)  */
     var animSpeed: Double = 0.0
 
-    override fun draw(model: AgentModel, entity: Entity, pos: Vector2D, scale: Double) {
+    override fun draw(model: AgentModel, entity: Entity?, pos: Vector2D, scale: Double) {
         if (entity !is HumanAgent) {
-            logger.warn("The entity must be instance of Agent, but is " + entity.javaClass.simpleName)
+            logger.warn("The entity must be instance of Agent, but is ${entity?.javaClass?.simpleName}")
             return
         }
 

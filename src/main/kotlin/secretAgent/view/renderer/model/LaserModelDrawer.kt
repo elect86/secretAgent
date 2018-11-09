@@ -23,9 +23,9 @@ class LaserModelDrawer : AbstractModelDrawer<LaserModel>() {
 
     lateinit var worldHolder: WorldHolder
 
-    override fun draw(model: LaserModel, entity: Entity, pos: Vector2D, scale: Double) {
+    override fun draw(model: LaserModel, entity: Entity?, pos: Vector2D, scale: Double) {
         if (entity !is LaserEntity) {
-            logger.warn("Entity must be laser, but is: " + entity.javaClass.simpleName)
+            logger.warn("Entity must be laser, but is: ${entity?.javaClass?.simpleName}")
             return
         }
 

@@ -7,16 +7,14 @@ import cz.wa.secretagent.menu.window.component.GLabel
 import cz.wa.secretagent.menu.window.component.selectable.GSelectable
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer
 import cz.wa.secretagent.view.renderer.gui.ComponentRenderer
-import cz.wa.secretagent.view.renderer.model.ModelRenderer
 import cz.wa.wautils.math.Rectangle2D
-import org.apache.commons.lang.Validate
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.player.Camera
+import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import java.awt.Color
 import java.io.Serializable
-import kotlin.properties.Delegates
 
 abstract class AbstractComponentDrawer<C : GComponent> : ComponentDrawer<C> {
 

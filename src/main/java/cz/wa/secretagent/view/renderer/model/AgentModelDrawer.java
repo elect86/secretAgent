@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.view.model.AgentTextures;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.secretagent.world.entity.Entity;
@@ -19,6 +18,7 @@ import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
 import secretAgent.view.model.AgentModel;
+import secretAgent.view.model.AgentTextures;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 

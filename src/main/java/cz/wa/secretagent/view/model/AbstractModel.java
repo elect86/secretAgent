@@ -100,7 +100,7 @@ public abstract class AbstractModel implements GLModel {
      */
     protected abstract Rectangle2D linkTexturesInternal(SAMGraphics graphics);
 
-    protected static List<TextureToDraw> extractTextures(SAMGraphics graphics, List<TileId> tileIds) {
+    public static List<TextureToDraw> extractTextures(SAMGraphics graphics, List<TileId> tileIds) {
         GLGraphics gr = (GLGraphics) graphics;
         List<TextureToDraw> textures = new ArrayList<TextureToDraw>(tileIds.size());
         for (TileId tileId : tileIds) {

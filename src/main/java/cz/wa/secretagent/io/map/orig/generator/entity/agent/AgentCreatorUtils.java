@@ -1,8 +1,8 @@
 package cz.wa.secretagent.io.map.orig.generator.entity.agent;
 
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.AgentTextures;
 import secretAgent.view.model.AgentModel;
+import secretAgent.view.model.AgentTextures;
 import secretAgent.world.entity.EntityXDirection;
 
 /**

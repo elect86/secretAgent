@@ -156,7 +156,7 @@
 					<key>
 						<util:constant static-field="secretAgent.world.ANIMATED" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.model.AnimatedModelDrawer" parent="abstractModelDrawer">
+					<bean class="secretAgent.view.renderer.model.AnimatedModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
 					</bean>
 				</entry>
@@ -173,7 +173,7 @@
 					<key>
 						<util:constant static-field="secretAgent.world.LASER" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.model.LaserModelDrawer" parent="abstractModelDrawer">
+					<bean class="secretAgent.view.renderer.model.LaserModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
 					</bean>
 				</entry>
@@ -189,7 +189,7 @@
 					<key>
 						<util:constant static-field="secretAgent.world.EXPLOSION" />
 					</key>
-					<bean class="cz.wa.secretagent.view.renderer.model.ExplosionModelDrawer" parent="abstractModelDrawer">
+					<bean class="secretAgent.view.renderer.model.ExplosionModelDrawer" parent="abstractModelDrawer">
 						<property name="worldHolder" ref="worldHolder" />
 					</bean>
 				</entry>

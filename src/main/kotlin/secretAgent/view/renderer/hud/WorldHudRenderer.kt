@@ -2,12 +2,11 @@ package secretAgent.view.renderer.hud
 
 import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer
-import cz.wa.secretagent.view.renderer.Renderer
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import org.apache.commons.lang.StringUtils
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.player.Camera
+import secretAgent.view.renderer.Renderer
 import secretAgent.world.SamWorld
 import java.awt.Color
 

@@ -1,12 +1,12 @@
 package cz.wa.secretagent.simulation;
 
-import cz.wa.secretagent.view.renderer.SAMRenderer;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.swing.listener.RunnableLog;
 import org.apache.commons.math3.util.FastMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.view.renderer.SamRenderer;
 import secretAgent.world.SamWorld;
 
 import java.io.Serializable;
@@ -27,7 +27,7 @@ public class GameRunnerImpl implements GameRunner, Serializable {
     private long maxStepMs = 40;
 
     private WorldHolder worldHolder;
-    private SAMRenderer renderer;
+    private SamRenderer renderer;
     private GameController controller;
     private GameSimulator simulator;
 
@@ -63,12 +63,12 @@ public class GameRunnerImpl implements GameRunner, Serializable {
         this.worldHolder = worldHolder;
     }
 
-    public SAMRenderer getRenderer() {
+    public SamRenderer getRenderer() {
         return renderer;
     }
 
     @Required
-    public void setRenderer(SAMRenderer renderer) {
+    public void setRenderer(SamRenderer renderer) {
         this.renderer = renderer;
     }
 

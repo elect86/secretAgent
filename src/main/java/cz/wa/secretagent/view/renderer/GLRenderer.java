@@ -21,13 +21,14 @@ import org.springframework.beans.factory.annotation.Required;
 import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher;
 import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import secretAgent.view.renderer.SamRenderer;
 
 /**
  * Renders the world using LWJGL.
  * 
  * @author Ondrej Milenovsky
  */
-public class GLRenderer implements SAMRenderer, Serializable {
+public class GLRenderer implements SamRenderer, Serializable {
     private static final long serialVersionUID = -5530236746180863704L;
 
     private static final Logger logger = LoggerFactory.getLogger(GLRenderer.class);

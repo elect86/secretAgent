@@ -1,6 +1,5 @@
 package secretAgent.view.renderer
 
-import cz.wa.secretagent.view.renderer.Renderer
 import cz.wa.secretagent.world.EntityMap
 import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.EntityOrder

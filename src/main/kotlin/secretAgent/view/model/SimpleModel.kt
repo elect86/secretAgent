@@ -6,16 +6,17 @@ import cz.wa.secretagent.view.model.ModelType
 import cz.wa.secretagent.view.texture.GLGraphics
 import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.wautils.math.Rectangle2D
-import org.apache.commons.lang.Validate
 
 /**
  * Simple not animated sprite.
  *
  * @author Ondrej Milenovsky
  */
-class SimpleModel(
+class SimpleModel
+
+@JvmOverloads constructor(
         /** tile id to the texture  */
-        val tileId: TileId,
+        val tileId: TileId?,
         /** model draw bounds, if null, will be computed from the texture */
         bounds: Rectangle2D? = AbstractModel.DEFAULT_BOUNDS,
         scale: Double = 0.0) : AbstractModel(bounds, scale) {
@@ -26,56 +27,33 @@ class SimpleModel(
         protected set
 
     override val allTileIds: Set<TileId>
-        get() = setOf<TileId>(tileId)
+        get() = tileId?.let { setOf(tileId) } ?: setOf() // TODO check
 
     override val type: ModelType
         get() = ModelType.SIMPLE
 
     override val allTextures: Collection<TextureToDraw>?
-        get() = listOf<TextureToDraw>(texture)
+        get() = texture?.let { listOf(it) }
 
     constructor(tileId: TileId, scale: Double) : this(tileId, AbstractModel.DEFAULT_BOUNDS.takeIf { scale == 0.0 }, scale)
 
     override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
         val tile = (graphics as GLGraphics).getTile(tileId)
         texture = tile
-        return if (tile != null) {
-            AbstractModel.getModelBounds(tile.tileBounds)
-        } else {
-            null
-        }
+        return tile?.let { AbstractModel.getModelBounds(tile.tileBounds) }
     }
 
-    override fun hasLinkedTextures(): Boolean {
-        return texture != null
-    }
+    override fun hasLinkedTextures() = texture != null
 
-    override fun hashCode(): Int {
-        val prime = 31
-        var result = super.hashCode()
-        result = prime * result + (tileId?.hashCode() ?: 0)
-        return result
-    }
+    override fun hashCode() = 31 * super.hashCode() + (tileId?.hashCode() ?: 0)
 
-    override fun equals(obj: Any?): Boolean {
-        if (this === obj) {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) {
             return true
         }
-        if (!super.equals(obj)) {
+        if (!super.equals(other)) {
             return false
         }
-        if (javaClass != obj.javaClass) {
-            return false
-        }
-        val other = obj as SimpleModel?
-        if (tileId == null) {
-            if (other!!.tileId != null) {
-                return false
-            }
-        } else if (tileId != other!!.tileId) {
-            return false
-        }
-        return true
+        return other is SimpleModel && tileId == other.tileId
     }
-
 }

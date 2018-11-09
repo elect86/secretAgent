@@ -74,7 +74,7 @@ public class ExplosionModel extends AbstractModel {
     }
 
     @Override
-    protected Collection<TextureToDraw> getAllTextures() {
+    public Collection<TextureToDraw> getAllTextures() {
         return textures;
     }
 

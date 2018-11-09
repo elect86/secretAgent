@@ -7,7 +7,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.view.model.LaserModel;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.secretagent.world.entity.Entity;
@@ -17,6 +16,7 @@ import cz.wa.secretagent.world.entity.laser.LineLaser;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
+import secretAgent.view.model.LaserModel;
 
 /**
  * Draws simple not animated model. 

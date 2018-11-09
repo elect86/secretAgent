@@ -13,7 +13,6 @@ import cz.wa.secretagent.Constants;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.AnimatedModel;
-import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.map.AnimatedTile;
 import cz.wa.secretagent.world.map.Tile;
@@ -23,6 +22,7 @@ import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import cz.wa.secretagent.worldinfo.graphics.TileInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.view.model.SimpleModel;
 import secretAgent.world.ObjectModel;
 
 /**

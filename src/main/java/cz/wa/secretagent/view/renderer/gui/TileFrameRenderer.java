@@ -10,7 +10,6 @@ import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.GComponent;
 import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.view.model.ModelType;
-import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
 import cz.wa.secretagent.view.renderer.model.ModelRenderer;
 import cz.wa.secretagent.view.texture.DrawBounds;
@@ -19,6 +18,7 @@ import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
 import secretAgent.game.player.Camera;
+import secretAgent.view.model.SimpleModel;
 import secretAgent.world.GLModel;
 import secretAgent.world.ObjectModel;
 

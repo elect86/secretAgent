@@ -1,7 +1,6 @@
 package secretAgent.game
 
 import cz.wa.secretagent.view.model.ExplosionModel
-import cz.wa.secretagent.view.model.LaserModel
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.AgentType
 import cz.wa.secretagent.world.entity.agent.HumanAgent
@@ -15,6 +14,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import org.slf4j.LoggerFactory
 import secretAgent.plus
+import secretAgent.view.model.LaserModel
 import secretAgent.world.entity.EntityXDirection
 import java.awt.Color
 import java.io.IOException

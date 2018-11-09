@@ -79,12 +79,12 @@ abstract class AbstractModel : GLModel {
         val MAX_BOUNDS = Rectangle2D(-10000.0, -10000.0, 100000.0, 100000.0)
 
         @JvmStatic
-        fun extractTextures(graphics: SAMGraphics, tileIds: List<TileId>): List<TextureToDraw>? {
+        fun extractTextures(graphics: SAMGraphics, tileIds: List<TileId>): List<TextureToDraw> {
             val gr = graphics as GLGraphics
             val textures = ArrayList<TextureToDraw>(tileIds.size)
             for (tileId in tileIds)
                 gr.getTile(tileId)?.let { textures += it }
-            return textures.takeUnless { it.isEmpty() }
+            return textures
         }
 
         @JvmStatic

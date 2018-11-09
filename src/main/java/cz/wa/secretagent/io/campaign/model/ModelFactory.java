@@ -13,8 +13,8 @@ import org.springframework.beans.factory.annotation.Required;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.ModelType;
-import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.view.model.SimpleModel;
 import secretAgent.world.GLModel;
 import secretAgent.world.ObjectModel;
 

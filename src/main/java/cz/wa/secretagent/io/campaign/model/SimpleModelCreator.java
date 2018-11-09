@@ -5,8 +5,8 @@ import java.util.Map;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.view.model.SimpleModel;
 import secretAgent.world.GLModel;
 
 /**

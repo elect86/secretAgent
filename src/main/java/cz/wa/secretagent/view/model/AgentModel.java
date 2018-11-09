@@ -125,7 +125,7 @@ public class AgentModel extends AbstractModel {
     }
 
     @Override
-    protected Collection<TextureToDraw> getAllTextures() {
+    public Collection<TextureToDraw> getAllTextures() {
         List<TextureToDraw> ret = new ArrayList<TextureToDraw>();
         if (leftTextures != null) {
             ret.addAll(leftTextures.getAllTextures());

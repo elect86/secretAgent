@@ -2,10 +2,10 @@ package cz.wa.secretagent.view.renderer.model;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
-import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.HasModelAngle;
+import secretAgent.view.model.SimpleModel;
 
 /**
  * Draws simple not animated model. 

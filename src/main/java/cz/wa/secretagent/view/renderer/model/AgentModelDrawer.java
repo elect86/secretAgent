@@ -2,13 +2,13 @@ package cz.wa.secretagent.view.renderer.model;
 
 import java.util.List;
 
+import cz.wa.secretagent.view.model.WeaponModel;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.view.model.AgentModel;
 import cz.wa.secretagent.view.model.AgentTextures;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
@@ -18,7 +18,7 @@ import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
-import secretAgent.view.model.WeaponModel;
+import secretAgent.view.model.AgentModel;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 

@@ -47,9 +47,9 @@ public class ActionFactory {
             }
             AgentAction<AgentEntity> object = (AgentAction<AgentEntity>) instance;
             object.setAgent(agent);
-            object.setWorld$secretAgent(world);
-            object.setActionFactory$secretAgent(this);
-            object.setSensorFactory$secretAgent(sensorFactory);
+            object.setWorld(world);
+            object.setActionFactory(this);
+            object.setSensorFactory(sensorFactory);
             object.init();
             cache.put(clazz, object);
             return instance;

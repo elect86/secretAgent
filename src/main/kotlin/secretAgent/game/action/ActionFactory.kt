@@ -42,11 +42,11 @@ abstract class AgentAction<E : AgentEntity> {
     var agent: E? = null
 
     var world: SamWorld? = null
-        internal set
+//        internal set
     var actionFactory: ActionFactory? = null
-        internal set
+//        internal set
     var sensorFactory: SensorFactory? = null
-        internal set
+//        internal set
 
     abstract fun init()
 }

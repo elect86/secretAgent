@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import cz.wa.secretagent.view.model.SimpleModel;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
 import cz.wa.secretagent.Constants;
@@ -22,7 +23,6 @@ import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import cz.wa.secretagent.worldinfo.graphics.TileInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
-import secretAgent.view.model.SimpleModel;
 import secretAgent.world.ObjectModel;
 
 /**

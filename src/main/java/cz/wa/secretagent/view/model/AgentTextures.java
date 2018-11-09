@@ -9,7 +9,6 @@ import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.secretagent.world.entity.agent.AgentAction;
-import secretAgent.view.model.AbstractModel;
 
 /**
  * Textures for AgentModel for one direction. 

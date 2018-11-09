@@ -2,6 +2,7 @@ package cz.wa.secretagent.io.campaign.model;
 
 import java.util.List;
 
+import cz.wa.secretagent.view.model.WeaponModel;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +11,6 @@ import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.AnimatedModel;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
-import secretAgent.view.model.WeaponModel;
 import secretAgent.world.GLModel;
 
 /**

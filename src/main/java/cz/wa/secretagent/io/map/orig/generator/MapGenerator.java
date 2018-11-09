@@ -6,6 +6,7 @@ import cz.wa.secretagent.io.map.orig.generator.mapping.TileIdMapper;
 import cz.wa.secretagent.io.map.orig.generator.mapping.TileMap;
 import cz.wa.secretagent.io.map.orig.generator.mapping.TileMap.Item;
 import cz.wa.secretagent.view.TileId;
+import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.map.LevelMap;
 import cz.wa.secretagent.world.map.Tile;
@@ -14,7 +15,6 @@ import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.wautils.math.Vector2I;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import secretAgent.view.model.SimpleModel;
 import secretAgent.world.SamWorld;
 
 import java.util.ArrayList;

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -9,8 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="com.github.kotlin-graphics.secretAgent" target="1.7" />
-      <module name="secretagent" target="1.7" />
+      <module name="com.github.kotlin-graphics.secretAgent" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

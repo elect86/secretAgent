@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Required;
 import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.renderer.Renderer;
 import cz.wa.secretagent.view.renderer.model.ModelRenderer;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import secretAgent.game.player.Camera;
+import secretAgent.world.ObjectModel;
 
 /**
  * Abstract world renderer.

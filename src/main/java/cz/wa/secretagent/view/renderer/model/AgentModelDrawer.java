@@ -13,13 +13,13 @@ import cz.wa.secretagent.view.model.AgentTextures;
 import cz.wa.secretagent.view.model.WeaponModel;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.agent.AgentAction;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 
 /**

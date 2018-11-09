@@ -1,9 +1,8 @@
 package cz.wa.secretagent.world.entity.platform;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.ObjectModel;
 
 /**
  * Moving platform. 

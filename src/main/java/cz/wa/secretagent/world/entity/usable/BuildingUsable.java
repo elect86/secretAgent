@@ -1,8 +1,7 @@
 package cz.wa.secretagent.world.entity.usable;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Building on island map.

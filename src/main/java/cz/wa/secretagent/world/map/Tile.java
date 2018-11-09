@@ -1,7 +1,7 @@
 package cz.wa.secretagent.world.map;
 
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Single static tile. 

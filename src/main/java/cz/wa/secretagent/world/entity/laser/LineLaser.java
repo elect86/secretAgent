@@ -2,9 +2,8 @@ package cz.wa.secretagent.world.entity.laser;
 
 import org.apache.commons.lang.Validate;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.agent.Team;
+import secretAgent.world.ObjectModel;
 
 /**
  * Laser defined by two points. 
@@ -18,7 +17,7 @@ public class LineLaser extends LaserEntity {
     private double width;
 
     public LineLaser(ObjectModel model, Vector2D pos, Team team, double damage, Vector2D pos2, double width,
-            boolean levelLaser) {
+                     boolean levelLaser) {
         super(model, pos, team, damage, levelLaser);
         setPos2(pos2);
         this.setWidth(width);

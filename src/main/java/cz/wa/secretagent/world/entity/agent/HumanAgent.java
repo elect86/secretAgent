@@ -1,12 +1,11 @@
 package cz.wa.secretagent.world.entity.agent;
-
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.agent.inventory.AgentInventory;
 import cz.wa.secretagent.world.entity.laser.LineLaser;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.wautils.math.Rectangle2D;
 import org.apache.commons.lang.Validate;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 import secretAgent.world.entity.EntityYDirection;
 
@@ -32,7 +31,7 @@ public class HumanAgent extends AgentEntity {
     private LineLaser laserSights;
 
     public HumanAgent(ObjectModel model, Vector2D pos, Team team, EntityXDirection direction,
-            Rectangle2D sizeBounds) {
+                      Rectangle2D sizeBounds) {
         super(model, pos, team, direction, sizeBounds, Vector2D.ZERO, false);
         inventory = new AgentInventory();
         setAimAngle(0);

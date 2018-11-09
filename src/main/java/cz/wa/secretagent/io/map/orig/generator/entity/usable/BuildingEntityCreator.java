@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.usable.BuildingUsable;
+import secretAgent.world.ObjectModel;
 
 /**
  * Generates island map building. 

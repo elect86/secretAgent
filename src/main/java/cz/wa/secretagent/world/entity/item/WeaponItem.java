@@ -2,9 +2,8 @@ package cz.wa.secretagent.world.entity.item;
 
 import org.apache.commons.lang.Validate;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.weapon.Weapon;
+import secretAgent.world.ObjectModel;
 
 /**
  * Weapon item, can contain ammo. 

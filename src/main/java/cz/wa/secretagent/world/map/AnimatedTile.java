@@ -1,6 +1,6 @@
 package cz.wa.secretagent.world.map;
 
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Animated tile with offset in seconds. 

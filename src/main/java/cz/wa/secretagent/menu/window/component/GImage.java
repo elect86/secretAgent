@@ -1,6 +1,6 @@
 package cz.wa.secretagent.menu.window.component;
 
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Image with some model (can only handle models that don't need entity). 

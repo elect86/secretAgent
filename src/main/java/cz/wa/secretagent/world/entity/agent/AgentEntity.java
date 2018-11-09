@@ -4,11 +4,11 @@ import org.apache.commons.lang.Validate;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
 import cz.wa.secretagent.view.model.AgentModel;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 
 /**
@@ -44,7 +44,7 @@ public abstract class AgentEntity extends Entity {
     private boolean firing;
 
     public AgentEntity(ObjectModel model, Vector2D pos, Team team, EntityXDirection direction,
-            Rectangle2D sizeBounds, Vector2D speed, boolean staticPos) {
+                       Rectangle2D sizeBounds, Vector2D speed, boolean staticPos) {
         super(model, pos, sizeBounds, speed, staticPos);
         this.team = team;
         setDirection(direction);

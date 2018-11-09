@@ -3,10 +3,9 @@ package cz.wa.secretagent.world.entity.usable;
 import java.util.Map;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.map.Tile;
+import secretAgent.world.ObjectModel;
 
 /**
  * Closed exit door. 

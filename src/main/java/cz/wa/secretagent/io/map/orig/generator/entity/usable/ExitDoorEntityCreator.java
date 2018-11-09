@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Required;
 import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.usable.ExitDoorUsable;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.secretagent.world.map.TileType;
+import secretAgent.world.ObjectModel;
 
 /**
  * Creates closed exit door. 

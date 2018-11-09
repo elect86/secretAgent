@@ -8,7 +8,6 @@ import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.world.EntityMap;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
@@ -29,6 +28,7 @@ import org.springframework.beans.factory.annotation.Required;
 import secretAgent.game.ProjectileFactory;
 import secretAgent.game.player.Camera;
 import secretAgent.game.player.PlayerStats;
+import secretAgent.world.ObjectModel;
 import secretAgent.world.SamWorld;
 
 import java.io.File;

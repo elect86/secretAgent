@@ -1,8 +1,7 @@
 package cz.wa.secretagent.worldinfo.graphics;
 
 import org.apache.commons.lang.Validate;
-
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Info about model for tile or entity.

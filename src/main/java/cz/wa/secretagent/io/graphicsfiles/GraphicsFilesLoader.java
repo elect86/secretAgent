@@ -20,10 +20,10 @@ import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.view.texture.GLGraphics;
 import cz.wa.secretagent.view.texture.GLTileSet;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.world.ObjectModel;
 
 /**
  * Parses graphics files definition and creates graphics info. 

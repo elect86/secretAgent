@@ -15,12 +15,12 @@ import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
 import cz.wa.secretagent.view.renderer.model.ModelRenderer;
 import cz.wa.secretagent.view.texture.DrawBounds;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
 import secretAgent.game.player.Camera;
+import secretAgent.world.ObjectModel;
 
 /**
  * Renders frame made of tiles. 

@@ -22,7 +22,6 @@ import cz.wa.secretagent.view.renderer.Renderer;
 import cz.wa.secretagent.view.renderer.model.ModelRenderer;
 import cz.wa.secretagent.view.texture.DrawBounds;
 import cz.wa.secretagent.view.texture.TextureToDraw;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
@@ -36,6 +35,7 @@ import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Rectangle2I;
 import cz.wa.wautils.math.Vector2I;
 import secretAgent.game.player.Camera;
+import secretAgent.world.ObjectModel;
 
 /**
  * Renders health, weapons, keys on the screen 

@@ -6,7 +6,7 @@ import java.util.Map;
 
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Information about tile sets. 

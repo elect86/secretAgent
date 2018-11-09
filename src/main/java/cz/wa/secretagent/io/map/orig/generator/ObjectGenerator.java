@@ -14,7 +14,6 @@ import cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.AnimatedModel;
 import cz.wa.secretagent.view.model.SimpleModel;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.map.AnimatedTile;
 import cz.wa.secretagent.world.map.Tile;
@@ -24,6 +23,7 @@ import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import cz.wa.secretagent.worldinfo.graphics.TileInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.world.ObjectModel;
 
 /**
  * Generates object from tile id. The object can be tile, back tile or entity.

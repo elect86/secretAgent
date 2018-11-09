@@ -2,9 +2,8 @@ package cz.wa.secretagent.world.entity.usable;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.LockedEntity;
+import secretAgent.world.ObjectModel;
 
 /**
  * Door that is opened by a key. 

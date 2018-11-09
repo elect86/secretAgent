@@ -11,11 +11,11 @@ import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.bgswitch.SimpleSwitch;
 import cz.wa.secretagent.world.entity.bgswitch.switchaction.AddTilesSwitchAction;
 import cz.wa.secretagent.world.entity.bgswitch.switchaction.DisableLaserSwitchAction;
 import cz.wa.secretagent.world.entity.bgswitch.switchaction.SwitchAction;
+import secretAgent.world.ObjectModel;
 
 /**
  * Creates simple switch.

@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
+import secretAgent.world.ObjectModel;
 
 /**
  * Creates entity by creator from map retrieved by arg0 as an enum 

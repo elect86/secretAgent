@@ -1,8 +1,8 @@
 package cz.wa.secretagent.world.entity.projectile;
 
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.EntityType2;
 import cz.wa.secretagent.world.entity.agent.Team;
+import secretAgent.world.ObjectModel;
 
 /**
  * Type of projectile 

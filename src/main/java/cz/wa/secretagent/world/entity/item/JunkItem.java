@@ -1,8 +1,7 @@
 package cz.wa.secretagent.world.entity.item;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
+import secretAgent.world.ObjectModel;
 
 /**
  * Item that is sold for cash. 

@@ -7,10 +7,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.worldinfo.graphics.EntityInfo;
+import secretAgent.world.ObjectModel;
 
 /**
  * Creates entities from parsed info. Has map of creators for each entity type.

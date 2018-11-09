@@ -5,7 +5,6 @@ import cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory;
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.EntityMap;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityComparator;
 import cz.wa.secretagent.world.entity.EntityType;
@@ -33,6 +32,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import secretAgent.world.ObjectModel;
 import secretAgent.world.SamWorld;
 
 import java.io.File;

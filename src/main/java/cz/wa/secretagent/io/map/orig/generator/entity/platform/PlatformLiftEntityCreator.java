@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.platform.PlatformLift;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityDirection;
 
 /**

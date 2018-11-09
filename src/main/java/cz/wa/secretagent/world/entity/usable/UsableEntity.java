@@ -1,10 +1,9 @@
 package cz.wa.secretagent.world.entity.usable;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
+import secretAgent.world.ObjectModel;
 
 /**
  * Some usable entity that creates wall (door, building), drawn behind player and is a ghost.

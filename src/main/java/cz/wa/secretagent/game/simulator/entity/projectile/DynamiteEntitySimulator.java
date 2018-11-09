@@ -13,7 +13,6 @@ import cz.wa.secretagent.game.utils.TileWithPosition;
 import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.EntityMap;
-import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.explosion.Explosion;
@@ -26,6 +25,7 @@ import cz.wa.secretagent.world.map.StoredTile;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.wautils.math.Vector2I;
 import secretAgent.game.ProjectileFactory;
+import secretAgent.world.ObjectModel;
 
 /**
  * Simulates dynamite. At first the dynamite burns, then explodes.

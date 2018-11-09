@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+	<!-- Single weapons -->
+	<!-- ********** -->
+
+	<bean id="wPistolSilenced" class="cz.wa.secretagent.world.weapon.Weapon">
+		<constructor-arg>
+			<bean class="cz.wa.secretagent.world.weapon.WeaponTmp">
+				<property name="name" value="pistolSilenced" />
+				<property name="modelName" value="pistolSilenced" />
+				<property name="itemModelName" value="pistolSilencedItem" />
+				<property name="ammoModelName" value="pistolSilencedAmmo" />
+				<property name="projectileType">
+					<util:constant
+						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+				</property>
+				<property name="projectileModelName" value="bulletOrig" />
+				<property name="projectileDamage" value="35" />
+				<property name="projectileSpeed" value="160" />
+				<property name="reloadTimeS" value="0.7" />
+				<property name="soundDist" value="32" />
+				<property name="range" value="96" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="wPistol" class="cz.wa.secretagent.world.weapon.Weapon">
+		<constructor-arg>
+			<bean class="cz.wa.secretagent.world.weapon.WeaponTmp">
+				<property name="name" value="pistol" />
+				<property name="modelName" value="pistol" />
+				<property name="itemModelName" value="pistolItem" />
+				<property name="ammoModelName" value="pistolAmmo" />
+				<property name="projectileType">
+					<util:constant
+						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+				</property>
+				<property name="projectileModelName" value="bulletSmall" />
+				<property name="projectileDamage" value="35" />
+				<property name="projectileSpeed" value="160" />
+				<property name="reloadTimeS" value="-1" />
+				<property name="soundDist" value="96" />
+				<property name="range" value="96" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="wShotgun" class="cz.wa.secretagent.world.weapon.Weapon">
+		<constructor-arg>
+			<bean class="cz.wa.secretagent.world.weapon.WeaponTmp">
+				<property name="name" value="shotgun" />
+				<property name="modelName" value="shotgun" />
+				<property name="itemModelName" value="shotgunItem" />
+				<property name="ammoModelName" value="shotgunAmmo" />
+				<property name="projectileType">
+					<util:constant
+						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET_FALL" />
+				</property>
+				<property name="projectileModelName" value="bulletSmall" />
+				<property name="projectileDamage" value="20" />
+				<property name="projectileSpeed" value="128" />
+				<property name="reloadTimeS" value="1" />
+				<property name="soundDist" value="128" />
+				<property name="range" value="128" />
+				<property name="inaccuracyDg" value="30" />
+				<property name="projectileCount" value="5" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="wSniperRifle" class="cz.wa.secretagent.world.weapon.Weapon">
+		<constructor-arg>
+			<bean class="cz.wa.secretagent.world.weapon.WeaponTmp">
+				<property name="name" value="sniperRifle" />
+				<property name="modelName" value="sniperRifle" />
+				<property name="itemModelName" value="sniperRifleItem" />
+				<property name="ammoModelName" value="sniperRifleAmmo" />
+				<property name="projectileType">
+					<util:constant
+						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+				</property>
+				<property name="projectileModelName" value="bulletLong" />
+				<property name="projectileDamage" value="80" />
+				<property name="projectileSpeed" value="256" />
+				<property name="reloadTimeS" value="2" />
+				<property name="soundDist" value="192" />
+				<property name="range" value="224" />
+				<property name="aimMove" value="false" />
+				<property name="aimRotate" value="true" />
+				<property name="laserSights">
+					<bean class="java.awt.Color" factory-method="decode">
+						<constructor-arg value="0x10FF10" />
+					</bean>
+				</property>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="wMachinegun" class="cz.wa.secretagent.world.weapon.Weapon">
+		<constructor-arg>
+			<bean class="cz.wa.secretagent.world.weapon.WeaponTmp">
+				<property name="name" value="machinegun" />
+				<property name="modelName" value="machinegun" />
+				<property name="itemModelName" value="machinegunItem" />
+				<property name="ammoModelName" value="machinegunAmmo" />
+				<property name="projectileType">
+					<util:constant
+						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+				</property>
+				<property name="projectileModelName" value="bulletMG" />
+				<property name="projectileDamage" value="7" />
+				<property name="projectileSpeed" value="192" />
+				<property name="reloadTimeS" value="0.05" />
+				<property name="soundDist" value="144" />
+				<property name="range" value="128" />
+				<property name="inaccuracyDg" value="15" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="wRocketLauncher" class="cz.wa.secretagent.world.weapon.Weapon">
+		<constructor-arg>
+			<bean class="cz.wa.secretagent.world.weapon.WeaponTmp">
+				<property name="name" value="rocketLauncher" />
+				<property name="modelName" value="rocketLauncher" />
+				<property name="itemModelName" value="rocketLauncherItem" />
+				<property name="ammoModelName" value="rocketLauncherAmmo" />
+				<property name="projectileType">
+					<util:constant
+						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.ROCKET" />
+				</property>
+				<property name="projectileModelName" value="rocket" />
+				<property name="projectileDamage" value="15" />
+				<property name="projectileSpeed" value="128" />
+				<property name="reloadTimeS" value="2" />
+				<property name="soundDist" value="200" />
+				<property name="range" value="144" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+
+	<!-- Weapons in map -->
+
+	<bean id="weaponsMap" class="cz.wa.secretagent.world.weapon.WeaponsMapCreator"
+		factory-method="createMap">
+		<constructor-arg>
+			<list>
+				<ref bean="wPistolSilenced" />
+				<ref bean="wPistol" />
+				<ref bean="wShotgun" />
+				<ref bean="wSniperRifle" />
+				<ref bean="wMachinegun" />
+				<ref bean="wRocketLauncher" />
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>

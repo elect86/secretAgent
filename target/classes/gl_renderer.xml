@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+	<bean id="renderer" class="cz.wa.secretagent.view.renderer.GLRenderer">
+		<property name="settings" ref="settings2d" />
+		<property name="fullScreenSwitcher" ref="fullScreenSwitcher" />
+		<property name="generalRenderer">
+			<bean class="cz.wa.secretagent.view.renderer.GeneralRenderer">
+				<property name="settings" ref="settings2d" />
+				<property name="primitivesDrawer" ref="primitivesDrawer" />
+
+				<property name="levelRenderer" ref="levelRenderer" />
+				<property name="entitiesRenderer" ref="entitiesRenderer" />
+				<property name="worldHudRenderer" ref="worldHudRenderer" />
+				<property name="screenHudRenderer" ref="screenHudRenderer" />
+				<property name="guiRenderer" ref="guiRenderer" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="levelRenderer" class="cz.wa.secretagent.view.renderer.world.LevelRenderer">
+		<property name="modelRenderer" ref="modelRenderer" />
+	</bean>
+
+	<bean id="entitiesRenderer" class="cz.wa.secretagent.view.renderer.world.EntitiesRenderer">
+		<property name="modelRenderer" ref="modelRenderer" />
+		<property name="entityOrder">
+			<bean class="cz.wa.secretagent.world.entity.EntityOrder">
+				<constructor-arg>
+					<list>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.SWITCH" />
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.LASER" />
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PROJECTILE" />
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.ITEM" />
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.AGENT" />
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.USABLE" />
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PLATFORM" />
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+
+		<property name="entityOverOrder">
+			<bean class="cz.wa.secretagent.world.entity.EntityOrder">
+				<constructor-arg>
+					<list>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.EXPLOSION" />
+					</list>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="worldHudRenderer" class="cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer">
+		<property name="primitivesDrawer" ref="primitivesDrawer" />
+		<property name="textSize" value="8" />
+	</bean>
+
+	<bean id="screenHudRenderer" class="cz.wa.secretagent.view.renderer.hud.ScreenHUDRenderer">
+		<property name="primitivesDrawer" ref="primitivesDrawer" />
+		<property name="modelRenderer" ref="modelRenderer" />
+		<property name="settings2d" ref="settings2d" />
+		<property name="weaponOrder" ref="playerWeapons" />
+	</bean>
+
+	<bean id="guiRenderer" class="cz.wa.secretagent.view.renderer.gui.GUIRenderer">
+		<property name="settings2d" ref="settings2d" />
+		<property name="primitivesDrawer" ref="primitivesDrawer" />
+		<property name="frameRenderer">
+			<bean class="cz.wa.secretagent.view.renderer.gui.TileFrameRenderer">
+				<property name="modelRenderer" ref="modelRenderer" />
+				<property name="primitivesDrawer" ref="primitivesDrawer" />
+				<property name="worldHolder" ref="worldHolder" />
+				<property name="settings2d" ref="settings2d" />
+				<property name="componentRenderer" ref="componentRenderer" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="componentRenderer" class="cz.wa.secretagent.view.renderer.gui.ComponentRenderer">
+		<property name="componentDrawers">
+			<map>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.IMAGE" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.gui.component.ImageComponentDrawer" parent="abstractComponentDrawer">
+						<property name="modelRenderer" ref="modelRenderer" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.LABEL" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.gui.component.LabelComponentDrawer" parent="abstractComponentDrawer">
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.SELECTABLE" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.gui.component.SelectedComponentDrawer" parent="abstractComponentDrawer">
+						<property name="componentRenderer" ref="componentRenderer" />
+						<property name="borderWidthSH" value="0.004" />
+						<property name="selectedColor">
+							<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+								<constructor-arg value="#FFFFFF" />
+							</bean>
+						</property>
+						<property name="notSelectedColor">
+							<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+								<constructor-arg value="#80808080" />
+							</bean>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="primitivesDrawer" class="cz.wa.secretagent.view.renderer.PrimitivesDrawer">
+		<property name="settings" ref="settings2d" />
+		<property name="srcFont">
+			<bean class="java.awt.Font">
+				<!-- Font name -->
+				<constructor-arg value="Courier new" />
+				<!-- Style: 1 - bold, 2 - italic -->
+				<constructor-arg value="1" />
+				<!-- Size -->
+				<constructor-arg value="16" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="modelRenderer" class="cz.wa.secretagent.view.renderer.model.ModelRenderer">
+		<property name="drawers">
+			<map>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.SIMPLE" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.model.SimpleModelDrawer" parent="abstractModelDrawer" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.ANIMATED" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.model.AnimatedModelDrawer" parent="abstractModelDrawer">
+						<property name="worldHolder" ref="worldHolder" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.AGENT" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.model.AgentModelDrawer" parent="abstractModelDrawer">
+						<property name="animSpeed" value="0.03" />
+						<property name="worldHolder" ref="worldHolder" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.LASER" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.model.LaserModelDrawer" parent="abstractModelDrawer">
+						<property name="worldHolder" ref="worldHolder" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.WEAPON" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.model.WeaponModelDrawer" parent="abstractModelDrawer">
+						<property name="worldHolder" ref="worldHolder" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.EXPLOSION" />
+					</key>
+					<bean class="cz.wa.secretagent.view.renderer.model.ExplosionModelDrawer" parent="abstractModelDrawer">
+						<property name="worldHolder" ref="worldHolder" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="abstractModelDrawer" abstract="true">
+		<property name="primitivesDrawer" ref="primitivesDrawer" />
+	</bean>
+
+	<bean id="abstractComponentDrawer" abstract="true">
+		<property name="primitivesDrawer" ref="primitivesDrawer" />
+	</bean>
+
+</beans>

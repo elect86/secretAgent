@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+	<import resource="gl_renderer.xml" />
+	<import resource="io_definition.xml" />
+	<import resource="weapons.xml" />
+
+
+	<!-- Init settings -->
+	<!-- ************* -->
+	<bean id="propertiesLoader" class="cz.wa.secretagent.utils.PropertiesLoader" />
+
+	<bean id="fileSettings" class="cz.wa.secretagent.io.FileSettings" factory-bean="propertiesLoader" factory-method="loadProperties">
+		<constructor-arg value="classpath:fileSettings.properties" />
+		<constructor-arg value="cz.wa.secretagent.io.FileSettings" />
+	</bean>
+
+	<bean id="settings2d" class="cz.wa.secretagent.view.Settings2D" />
+
+	<bean id="gameSettings" class="cz.wa.secretagent.game.GameSettings" />
+
+	<!-- OI classes -->
+	<!-- ********** -->
+
+	<bean id="samIO" class="cz.wa.secretagent.io.SAMIO">
+		<property name="fileSettings" ref="fileSettings" />
+		<property name="settings2d" ref="settings2d" />
+		<property name="gameSettings" ref="gameSettings" />
+		<property name="gameRunner" ref="gameRunner" />
+		<property name="graphics" ref="glGraphics" />
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="modelFactory" ref="modelFactory" />
+		<property name="entityFactory" ref="entityFactory" />
+		<property name="allWeapons" ref="weaponsMap" />
+	</bean>
+
+
+	<!-- Game classes -->
+	<!-- ************ -->
+
+	<bean id="worldHolder" class="cz.wa.secretagent.worldinfo.WorldHolder">
+		<property name="menuHolder" ref="menuHolder" />
+		<property name="playerHolder" ref="playerHolder" />
+	</bean>
+
+	<bean id="playerHolder" class="cz.wa.secretagent.game.PlayerHolder">
+		<property name="team" ref="playerTeam" />
+		<property name="islandController" ref="islandController" />
+		<property name="levelController" ref="levelController" />
+	</bean>
+
+	<bean id="playerTeam" class="cz.wa.secretagent.world.entity.agent.Team">
+		<constructor-arg value="Players" />
+	</bean>
+	<bean id="enemyTeam" class="cz.wa.secretagent.world.entity.agent.Team">
+		<constructor-arg value="Enemies" />
+	</bean>
+
+	<bean id="glGraphics" class="cz.wa.secretagent.view.texture.GLGraphics" />
+
+	<bean id="fullScreenSwitcher" class="cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher">
+		<property name="settings" ref="settings2d" />
+	</bean>
+
+	<bean id="gameRunner" class="cz.wa.secretagent.simulation.GameRunnerImpl">
+		<property name="renderer" ref="renderer" />
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="controller" ref="gameController" />
+		<property name="simulator" ref="gameSimulator" />
+		<property name="maxStepMs" value="50" />
+	</bean>
+
+	<bean id="menuHolder" class="cz.wa.secretagent.menu.MenuHolder">
+		<property name="settings2d" ref="settings2d" />
+	</bean>
+
+	<bean id="gameController" class="cz.wa.secretagent.game.controller.GeneralController">
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="levelController" ref="levelController" />
+		<property name="islandController" ref="islandController" />
+		<property name="menuController">
+			<bean class="cz.wa.secretagent.game.controller.GameMenuController">
+				<property name="worldHolder" ref="worldHolder" />
+			</bean>
+		</property>
+		<property name="fullScreenSwitcher" ref="fullScreenSwitcher" />
+	</bean>
+
+	<bean id="levelController" class="cz.wa.secretagent.game.controller.GameLevelController">
+		<property name="playerHolder" ref="playerHolder" />
+		<property name="weaponOrder" ref="playerWeapons" />
+		<property name="gameMenuCreator" ref="gameMenuCreator" />
+		<property name="worldHolder" ref="worldHolder" />
+	</bean>
+	<bean id="islandController" class="cz.wa.secretagent.game.controller.GameIslandController">
+		<property name="playerHolder" ref="playerHolder" />
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="gameMenuCreator" ref="gameMenuCreator" />
+	</bean>
+
+	<bean id="playerWeapons" class="cz.wa.secretagent.world.weapon.WeaponOrder">
+		<constructor-arg>
+			<list>
+				<ref bean="wPistolSilenced" />
+				<ref bean="wPistol" />
+				<ref bean="wShotgun" />
+				<ref bean="wSniperRifle" />
+				<ref bean="wMachinegun" />
+				<ref bean="wRocketLauncher" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="projectileFactory" class="secretAgent.game.ProjectileFactory">
+		<property name="worldHolder" ref="worldHolder" />
+	</bean>
+
+	<!-- Simulators -->
+	<!-- ********** -->
+	<bean id="gameSimulator" class="cz.wa.secretagent.game.simulator.EntitiesSimulator">
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="cameraSimulator">
+			<bean class="cz.wa.secretagent.game.simulator.SimpleCameraSimulator">
+				<property name="playerHolder" ref="playerHolder" />
+				<property name="worldHolder" ref="worldHolder" />
+			</bean>
+		</property>
+		<property name="simulators">
+			<map>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.ITEM" />
+					</key>
+					<bean class="cz.wa.secretagent.game.simulator.entity.item.ItemEntitySimulator" parent="abstractEntitySimulator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PLATFORM" />
+					</key>
+					<bean class="cz.wa.secretagent.game.simulator.entity.MultipleEntitySimulator">
+						<property name="simulators">
+							<map>
+								<entry>
+									<key>
+										<util:constant static-field="cz.wa.secretagent.world.entity.platform.PlatformType.LIFT" />
+									</key>
+									<bean class="cz.wa.secretagent.game.simulator.entity.platform.LiftEntitySimulator" parent="abstractEntitySimulator" />
+								</entry>
+								<entry>
+									<key>
+										<util:constant static-field="cz.wa.secretagent.world.entity.platform.PlatformType.CAN" />
+									</key>
+									<bean class="cz.wa.secretagent.game.simulator.entity.platform.CanEntitySimulator" parent="abstractEntitySimulator">
+										<property name="canFallG" value="500" />
+										<property name="canMaxSpeed" value="800" />
+									</bean>
+								</entry>
+							</map>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.AGENT" />
+					</key>
+					<bean class="cz.wa.secretagent.game.simulator.entity.agent.AgentEntitySimulator" parent="abstractEntitySimulator">
+						<property name="projectileFactory" ref="projectileFactory" />
+						<property name="worldHolder" ref="worldHolder" />
+						<property name="fallG" value="300" />
+						<property name="maxTotalSpeed" value="500" />
+						<property name="aimSpeedDS" value="75" />
+						<property name="slowMove" value="40" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PROJECTILE" />
+					</key>
+					<bean class="cz.wa.secretagent.game.simulator.entity.MultipleEntitySimulator">
+						<property name="simulators">
+							<map>
+								<entry>
+									<key>
+										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.DYNAMITE" />
+									</key>
+									<bean class="cz.wa.secretagent.game.simulator.entity.projectile.DynamiteEntitySimulator" parent="abstractEntitySimulator">
+										<property name="mapStarter" ref="mapStarter" />
+										<property name="samIO" ref="samIO" />
+										<property name="projectileFactory" ref="projectileFactory" />
+										<property name="explosionDamage" value="150" />
+										<property name="explosionDurationS" value="1" />
+										<property name="explosionRadius" value="32" />
+										<property name="explosionModel" value="explosion1" />
+									</bean>
+								</entry>
+								<entry>
+									<key>
+										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+									</key>
+									<bean class="cz.wa.secretagent.game.simulator.entity.projectile.BulletEntitySimulator" parent="abstractEntitySimulator" />
+								</entry>
+								<entry>
+									<key>
+										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET_FALL" />
+									</key>
+									<bean class="cz.wa.secretagent.game.simulator.entity.projectile.BulletFallEntitySimulator" parent="abstractEntitySimulator">
+										<property name="fallG" value="200" />
+									</bean>
+								</entry>
+								<entry>
+									<key>
+										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.ROCKET" />
+									</key>
+									<bean class="cz.wa.secretagent.game.simulator.entity.projectile.RocketEntitySimulator" parent="abstractEntitySimulator">
+										<property name="projectileFactory" ref="projectileFactory" />
+										<property name="explosionDamage" value="100" />
+										<property name="explosionDurationS" value="1" />
+										<property name="explosionRadius" value="32" />
+										<property name="explosionModel" value="explosion1" />
+									</bean>
+								</entry>
+							</map>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.EXPLOSION" />
+					</key>
+					<bean class="cz.wa.secretagent.game.simulator.entity.explosion.ExplosionEntitySimulator" parent="abstractEntitySimulator">
+						<property name="blastStrength" value="150" />
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="abstractEntitySimulator" abstract="true">
+		<property name="worldHolder" ref="worldHolder" />
+	</bean>
+
+	<!-- Starter classes -->
+	<!-- ************ -->
+	<bean id="campaignStarter" class="cz.wa.secretagent.game.starter.CampaignStarter">
+		<property name="samIO" ref="samIO" />
+		<property name="mapStarter" ref="mapStarter" />
+		<property name="playerHolder" ref="playerHolder" />
+		<property name="initialStats">
+			<bean class="secretAgent.game.player.PlayerStats">
+				<property name="cash" value="0" />
+				<property name="weapons">
+					<bean class="secretAgent.game.player.PlayerWeapons">
+
+						<!-- Starts with silenced pistol and 5 ammo -->
+						<property name="weapons">
+							<set>
+								<ref bean="wPistolSilenced" />
+								<ref bean="wPistol" />
+								<ref bean="wShotgun" />
+								<ref bean="wSniperRifle" />
+								<ref bean="wMachinegun" />
+								<ref bean="wRocketLauncher" />
+							</set>
+						</property>
+						<property name="ammo">
+							<map>
+								<entry key-ref="wPistolSilenced" value="50" />
+								<entry key-ref="wPistol" value="100" />
+								<entry key-ref="wShotgun" value="50" />
+								<entry key-ref="wSniperRifle" value="50" />
+								<entry key-ref="wMachinegun" value="500" />
+								<entry key-ref="wRocketLauncher" value="50" />
+							</map>
+						</property>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="mapStarter" class="cz.wa.secretagent.game.starter.MapStarter">
+		<property name="io" ref="samIO"></property>
+		<property name="cameraInfo" ref="cameraInfo" />
+		<property name="playerHolder" ref="playerHolder" />
+		<property name="projectileFactory" ref="projectileFactory" />
+		<property name="mainMenuCreator" ref="mainMenuCreator" />
+		<property name="weaponOrder" ref="playerWeapons" />
+	</bean>
+
+	<bean id="cameraInfo" class="cz.wa.secretagent.game.starter.CameraInfo">
+		<property name="settings2d" ref="settings2d" />
+		<property name="preferredVisibleTilesNum">
+			<bean class="org.apache.commons.math3.geometry.euclidean.twod.Vector2D">
+				<constructor-arg value="20" />
+				<constructor-arg value="12" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<!-- Menu -->
+	<!-- ************ -->
+
+	<bean id="dialogBuilder" class="cz.wa.secretagent.menu.builder.DialogMenuBuilder">
+		<property name="primitivesDrawer" ref="primitivesDrawer" />
+		<property name="borderWidthTH" value="1" />
+		<property name="textVGapTH" value="0.1" />
+		<property name="afterMessageGapTH" value="1" />
+		<property name="screenBorderGapTH" value="1" />
+		<property name="buttonsHGapTH" value="2" />
+		<property name="minFrameLines" value="16" />
+	</bean>
+
+	<bean id="gameMenuCreator" class="cz.wa.secretagent.game.controller.menucreator.GameMenuCreator">
+		<property name="dialogBuilder" ref="dialogBuilder" />
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="mapStarter" ref="mapStarter" />
+		<property name="gameSettings" ref="gameSettings" />
+		<property name="frameColor">
+			<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+				<constructor-arg value="#800000" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="mainMenuCreator" class="cz.wa.secretagent.game.controller.menucreator.MainMenuCreator">
+		<property name="dialogBuilder" ref="dialogBuilder" />
+		<property name="worldHolder" ref="worldHolder" />
+		<property name="gameSettings" ref="gameSettings" />
+		<property name="fileSettings" ref="fileSettings" />
+		<property name="campaignStarter" ref="campaignStarter" />
+		<property name="frameColor">
+			<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+				<constructor-arg value="#008000" />
+			</bean>
+		</property>
+	</bean>
+
+</beans>

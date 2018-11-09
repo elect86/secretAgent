@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<context:annotation-config />
+
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+	<bean id="enemyHumanPropertiesCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.agent.EnemyHumanPropertiesCreator">
+	</bean>
+
+	<!-- Model factory -->
+	<!-- ********** -->
+
+	<bean id="modelFactory" class="cz.wa.secretagent.io.campaign.model.ModelFactory">
+		<property name="modelCreators">
+			<map>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.SIMPLE" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.SimpleModelCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.ANIMATED" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.AnimatedModelCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.AGENT" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.AgentModelCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.HEALTH_BAR" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.HealthBarModelCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.LASER" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.LaserModelCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.WEAPON" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.WeaponModelCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.view.model.ModelType.EXPLOSION" />
+					</key>
+					<bean class="cz.wa.secretagent.io.campaign.model.ExplosionModelCreator" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- Entity factory -->
+	<!-- ********** -->
+
+	<bean id="entityFactory"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory">
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.AGENT" />
+					</key>
+					<ref bean="agentEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.USABLE" />
+					</key>
+					<ref bean="usableEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.SWITCH" />
+					</key>
+					<ref bean="switchEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.ITEM" />
+					</key>
+					<ref bean="itemEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.EntityType.PLATFORM" />
+					</key>
+					<ref bean="platformEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.EntityType.PROJECTILE" />
+					</key>
+					<ref bean="projectileEntityCreator" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<!-- Single creators -->
+
+	<bean id="agentEntityCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.agent.AgentEntityCreator">
+		<property name="playerCreator">
+			<bean
+				class="cz.wa.secretagent.io.map.orig.generator.entity.agent.PlayerEntityCreator">
+				<property name="team" ref="playerTeam" />
+				<property name="sizeBounds">
+					<bean class="cz.wa.wautils.math.Rectangle2D">
+						<constructor-arg value="-5, -8, 10, 16" />
+					</bean>
+				</property>
+				<property name="playerHolder" ref="playerHolder" />
+				<property name="capabilities">
+					<bean
+						class="cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities">
+						<constructor-arg>
+							<bean
+								class="cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilitiesTmp">
+								<property name="maxHealth" value="100" />
+								<property name="canActivate" value="true" />
+								<property name="canAim" value="true" />
+								<property name="jumpStrength" value="1500" />
+								<property name="jumpTimeS" value="0.105" />
+								<property name="maxSpeed" value="80" />
+								<property name="inventoryLimits">
+									<bean
+										class="cz.wa.secretagent.world.entity.agent.capabilities.InventoryLimits">
+										<property name="picksItems">
+											<null />
+										</property>
+									</bean>
+								</property>
+							</bean>
+						</constructor-arg>
+					</bean>
+				</property>
+			</bean>
+		</property>
+
+		<!-- Enemies -->
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.agent.AgentType.HUMAN" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.agent.HumanEntityCreator">
+						<property name="propertiesCreator" ref="enemyHumanPropertiesCreator" />
+						<property name="team" ref="enemyTeam" />
+						<property name="sizeBounds">
+							<bean class="cz.wa.wautils.math.Rectangle2D">
+								<constructor-arg value="-5, -8, 10, 16" />
+							</bean>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="usableEntityCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.usable.UsableEntityCreator">
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.usable.UsableType.BUILDING" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.BuildingEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.usable.UsableType.FENCE" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.FenceEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.usable.UsableType.DOOR" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.DoorEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.usable.UsableType.EXIT" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.ExitEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.usable.UsableType.EXIT_DOOR" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.ExitDoorEntityCreator">
+						<property name="samIO" ref="samIO" />
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.usable.UsableType.TELEPORT" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.TeleportEntityCreator" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="switchEntityCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.bgswitch.SwitchEntityCreator">
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.bgswitch.SwitchType.SIMPLE" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.bgswitch.SimpleSwitchEntityCreator" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="itemEntityCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.item.ItemEntityCreator">
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.JUNK" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.item.JunkEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.KEY" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.item.KeyEntityCreator" />
+				</entry>
+				<entry>
+					<key>
+						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.AMMO" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.item.AmmoEntityCreator">
+						<property name="weapons">
+							<list>
+
+							</list>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="platformEntityCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.platform.PlatformEntityCreator">
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.platform.PlatformType.LIFT" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.platform.PlatformLiftEntityCreator">
+						<property name="defaultDirection">
+							<util:constant
+								static-field="secretAgent.world.entity.EntityDirection.RIGHT" />
+						</property>
+						<property name="speed" value="50" />
+						<property name="bounds">
+							<bean class="cz.wa.wautils.math.Rectangle2D">
+								<constructor-arg value="-8, -7.999, 16, 10" />
+							</bean>
+						</property>
+					</bean>
+				</entry>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.platform.PlatformType.CAN" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.platform.MovableCanEntityCreator">
+						<property name="bounds">
+							<bean class="cz.wa.wautils.math.Rectangle2D">
+								<constructor-arg value="-6, -8, 12, 16" />
+							</bean>
+						</property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="projectileEntityCreator"
+		class="cz.wa.secretagent.io.map.orig.generator.entity.projectile.ProjectileEntityCreator">
+		<property name="creators">
+			<map>
+				<entry>
+					<key>
+						<util:constant
+							static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.LEVEL_LASER" />
+					</key>
+					<bean
+						class="cz.wa.secretagent.io.map.orig.generator.entity.projectile.LevelLaserEntityCreator" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>

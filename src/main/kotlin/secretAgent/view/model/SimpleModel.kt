@@ -50,7 +50,7 @@ class SimpleModel
 
     override fun hasLinkedTextures() = texture != null
 
-    override fun hashCode() = 31 * super.hashCode() + (tileId?.hashCode() ?: 0)
+    override fun hashCode() = 31 * super.hashCode() + tileId.hashCode()
 
     override fun equals(other: Any?): Boolean {
         if (this === other) {

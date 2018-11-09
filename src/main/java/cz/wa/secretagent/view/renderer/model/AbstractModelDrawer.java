@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
 import cz.wa.secretagent.view.texture.TextureToDraw;
+import secretAgent.world.GLModel;
 
 /**
  * 

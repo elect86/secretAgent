@@ -2,6 +2,7 @@ package secretAgent.world
 
 import cz.wa.secretagent.view.SAMGraphics
 import cz.wa.secretagent.view.TileId
+import cz.wa.secretagent.view.model.ModelType
 import cz.wa.wautils.math.Rectangle2D
 
 /**
@@ -36,4 +37,14 @@ interface ObjectModel {
      * @return if the textures are linked
      */
     fun hasLinkedTextures(): Boolean
+}
+
+
+/**
+ * Model rendered by LWJGL. All models must override hashcode and equals!!!
+ *
+ * @author Ondrej Milenovsky
+ */
+interface GLModel : ObjectModel {
+    val type: ModelType
 }

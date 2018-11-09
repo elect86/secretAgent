@@ -14,7 +14,6 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.view.Settings2D;
-import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.model.HealthBarModel;
 import cz.wa.secretagent.view.renderer.DrawPosition;
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
@@ -35,6 +34,7 @@ import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Rectangle2I;
 import cz.wa.wautils.math.Vector2I;
 import secretAgent.game.player.Camera;
+import secretAgent.world.GLModel;
 import secretAgent.world.ObjectModel;
 
 /**

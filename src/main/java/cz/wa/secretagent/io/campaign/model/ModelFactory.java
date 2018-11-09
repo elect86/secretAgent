@@ -12,10 +12,10 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.view.model.ModelType;
 import cz.wa.secretagent.view.model.SimpleModel;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.world.GLModel;
 import secretAgent.world.ObjectModel;
 
 /**

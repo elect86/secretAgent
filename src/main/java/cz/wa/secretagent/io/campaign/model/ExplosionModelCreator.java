@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.ExplosionModel;
-import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.world.GLModel;
 
 /**
  * Creates explosion model. 

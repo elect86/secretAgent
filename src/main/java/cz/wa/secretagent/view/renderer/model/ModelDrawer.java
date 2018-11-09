@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
-import cz.wa.secretagent.view.model.GLModel;
 import cz.wa.secretagent.world.entity.Entity;
+import secretAgent.world.GLModel;
 
 /**
  * Draws some particular model on screen. 

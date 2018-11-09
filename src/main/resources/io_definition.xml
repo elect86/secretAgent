@@ -305,7 +305,7 @@
 						class="cz.wa.secretagent.io.map.orig.generator.entity.platform.PlatformLiftEntityCreator">
 						<property name="defaultDirection">
 							<util:constant
-								static-field="cz.wa.secretagent.world.entity.direction.EntityDirection.RIGHT" />
+								static-field="secretAgent.world.entity.EntityDirection.RIGHT" />
 						</property>
 						<property name="speed" value="50" />
 						<property name="bounds">

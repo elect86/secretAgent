@@ -1,11 +1,5 @@
 package cz.wa.secretagent.view.renderer;
 
-import java.io.Serializable;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.menu.MenuHolder;
@@ -15,9 +9,14 @@ import cz.wa.secretagent.view.renderer.hud.ScreenHUDRenderer;
 import cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer;
 import cz.wa.secretagent.view.renderer.world.EntitiesRenderer;
 import cz.wa.secretagent.view.renderer.world.LevelRenderer;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2I;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
+
+import java.io.Serializable;
 
 /**
  * Renders the screen.
@@ -96,7 +95,7 @@ public class GeneralRenderer implements Renderer, Serializable {
     }
 
     private void drawSceneByCamera(WorldHolder world) {
-        SAMWorld map = world.getWorld();
+        SamWorld map = world.getWorld();
         Camera camera = world.getPlayerHolder().getCamera();
         levelRenderer.drawBackground(map.getLevelMap(), camera);
         entitiesRenderer.drawEntities(map.getEntityMap(), camera);

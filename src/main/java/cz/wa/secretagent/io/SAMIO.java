@@ -1,17 +1,5 @@
 package cz.wa.secretagent.io;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang.Validate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.GameSettings;
 import cz.wa.secretagent.io.campaign.CampaignLoader;
 import cz.wa.secretagent.io.campaign.model.ModelFactory;
@@ -22,12 +10,23 @@ import cz.wa.secretagent.simulation.GameRunner;
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.world.ObjectModel;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.CampaignInfo;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.wautils.math.Vector2I;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang.Validate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Loads maps, saved games, graphics, ...
@@ -186,8 +185,8 @@ public class SAMIO implements Serializable {
         worldHolder.setWorld(createEmptyWorld());
     }
 
-    private SAMWorld createEmptyWorld() {
-        SAMWorld world = new SAMWorld(Vector2I.ZERO, null, -1);
+    private SamWorld createEmptyWorld() {
+        SamWorld world = new SamWorld(Vector2I.ZERO, null, -1);
         return world;
     }
 
@@ -212,7 +211,7 @@ public class SAMIO implements Serializable {
     }
 
     private void loadLevel(File file, int levelId) throws IOException {
-        SAMWorld world;
+        SamWorld world;
         String fileExt = FilenameUtils.getExtension(file.getName());
         if (fileExt.equalsIgnoreCase(fileSettings.mapOrigExt)) {
             world = new MapLoader(file, levelId, worldHolder.getGraphicsInfo(), graphics, entityFactory)

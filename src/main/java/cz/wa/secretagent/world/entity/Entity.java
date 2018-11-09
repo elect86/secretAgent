@@ -46,7 +46,7 @@ public abstract class Entity {
     /**
      * @return primary type of the entity (never use instanceof !)
      */
-    public abstract EntityType getEntityType();
+    public abstract EntityType getType();
 
     /**
      * @return secondary type of the entity (never use instanceof !)

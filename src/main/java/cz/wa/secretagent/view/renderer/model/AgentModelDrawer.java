@@ -17,10 +17,10 @@ import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.agent.AgentAction;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.entity.EntityXDirection;
 
 /**
  * Draws agent and his weapon. 

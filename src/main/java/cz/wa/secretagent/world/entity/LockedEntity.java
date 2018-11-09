@@ -12,7 +12,7 @@ public interface LockedEntity {
 
     void unlock();
 
-    EntityType getEntityType();
+    EntityType getType();
 
     EntityType2 getSecondType();
 }

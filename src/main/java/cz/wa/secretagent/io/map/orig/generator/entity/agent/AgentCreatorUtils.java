@@ -3,7 +3,7 @@ package cz.wa.secretagent.io.map.orig.generator.entity.agent;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.AgentModel;
 import cz.wa.secretagent.view.model.AgentTextures;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
+import secretAgent.world.entity.EntityXDirection;
 
 /**
  * Utils for creating agent entities. 

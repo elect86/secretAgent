@@ -48,7 +48,7 @@ public class Explosion extends Entity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.EXPLOSION;
     }
 

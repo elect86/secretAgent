@@ -1,19 +1,18 @@
 package cz.wa.secretagent.game.utils;
 
-import java.util.ArrayList;
-
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.agent.AgentAction;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.agent.AgentType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.entity.agent.inventory.AgentInventory;
-import cz.wa.secretagent.world.entity.direction.EntityYDirection;
 import cz.wa.secretagent.world.entity.item.ItemEntity;
 import cz.wa.secretagent.world.entity.item.ItemType;
 import cz.wa.secretagent.world.entity.projectile.ProjectileEntity;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import secretAgent.world.SamWorld;
+import secretAgent.world.entity.EntityYDirection;
+
+import java.util.ArrayList;
 
 /**
  * Class used to hurt (or heal) agents. 
@@ -21,10 +20,10 @@ import cz.wa.secretagent.world.entity.projectile.ProjectileEntity;
  * @author Ondrej Milenovsky
  */
 public class AgentHurter {
-    private final SAMWorld world;
+    private final SamWorld world;
     private final AgentEntity agent;
 
-    public AgentHurter(SAMWorld world, AgentEntity agent) {
+    public AgentHurter(SamWorld world, AgentEntity agent) {
         super();
         this.world = world;
         this.agent = agent;

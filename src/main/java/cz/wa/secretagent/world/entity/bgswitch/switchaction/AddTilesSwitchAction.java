@@ -1,14 +1,14 @@
 package cz.wa.secretagent.world.entity.bgswitch.switchaction;
 
+import cz.wa.secretagent.view.TileId;
+import cz.wa.secretagent.world.entity.agent.AgentEntity;
+import cz.wa.secretagent.world.map.StoredTile;
+import secretAgent.world.SamWorld;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-
-import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.SAMWorld;
-import cz.wa.secretagent.world.entity.agent.AgentEntity;
-import cz.wa.secretagent.world.map.StoredTile;
 
 /**
  * Adds tiles to the map. 
@@ -24,7 +24,7 @@ public class AddTilesSwitchAction implements SwitchAction {
     }
 
     @Override
-    public void execute(AgentEntity agent, SAMWorld world) {
+    public void execute(AgentEntity agent, SamWorld world) {
         for (StoredTile tile : getStoredTiles(world)) {
             world.getLevelMap().addTile(tile);
         }
@@ -37,7 +37,7 @@ public class AddTilesSwitchAction implements SwitchAction {
     /**
      * Find and remove required tiles from stored tiles.
      */
-    private List<StoredTile> getStoredTiles(SAMWorld world) {
+    private List<StoredTile> getStoredTiles(SamWorld world) {
         Set<StoredTile> storedTiles = world.getLevelMap().getStoredTiles();
         List<StoredTile> ret = new ArrayList<StoredTile>(storedTiles.size());
         for (Iterator<StoredTile> it = storedTiles.iterator(); it.hasNext();) {

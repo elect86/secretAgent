@@ -1,17 +1,16 @@
 package cz.wa.secretagent.game.utils;
 
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
 import cz.wa.secretagent.game.simulator.entity.projectile.ProjectileHitTypes;
 import cz.wa.secretagent.game.utils.collision.CollidedEntity;
 import cz.wa.secretagent.game.utils.collision.CollidedTile;
 import cz.wa.secretagent.game.utils.collision.CollisionDescriptor;
 import cz.wa.secretagent.game.utils.collision.ProjectileCollider;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.projectile.ProjectileEntity;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import secretAgent.world.SamWorld;
 
 /**
  * Util class to move and collide projectile. 
@@ -19,11 +18,11 @@ import cz.wa.secretagent.world.entity.projectile.ProjectileEntity;
  * @author Ondrej Milenovsky
  */
 public class ProjectileMover {
-    private final SAMWorld world;
+    private final SamWorld world;
     private final ProjectileEntity projectile;
     private final double timeS;
 
-    public ProjectileMover(SAMWorld world, ProjectileEntity projectile, double timeS) {
+    public ProjectileMover(SamWorld world, ProjectileEntity projectile, double timeS) {
         super();
         this.world = world;
         this.projectile = projectile;
@@ -47,7 +46,7 @@ public class ProjectileMover {
             } else if (collision instanceof CollidedEntity) {
                 // collided with entity
                 Entity entity = ((CollidedEntity) collision).getEntity();
-                if (entity.getEntityType() == EntityType.AGENT) {
+                if (entity.getType() == EntityType.AGENT) {
                     new AgentHurter(world, (AgentEntity) entity).hit(projectile);
                 }
             }

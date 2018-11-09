@@ -1,10 +1,10 @@
 package cz.wa.secretagent.game.sensor;
 
+import cz.wa.secretagent.world.entity.agent.AgentEntity;
+import secretAgent.world.SamWorld;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import cz.wa.secretagent.world.SAMWorld;
-import cz.wa.secretagent.world.entity.agent.AgentEntity;
 
 /**
  * Factory creating sensors.
@@ -13,10 +13,10 @@ import cz.wa.secretagent.world.entity.agent.AgentEntity;
  */
 public class SensorFactory {
     private final AgentEntity agent;
-    private final SAMWorld world;
+    private final SamWorld world;
     private final Map<Object, AgentSensor<AgentEntity>> cache;
 
-    public SensorFactory(AgentEntity agent, SAMWorld world) {
+    public SensorFactory(AgentEntity agent, SamWorld world) {
         this.agent = agent;
         this.world = world;
         cache = new HashMap<Object, AgentSensor<AgentEntity>>();

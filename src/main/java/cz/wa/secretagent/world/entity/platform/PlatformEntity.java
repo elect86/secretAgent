@@ -19,7 +19,7 @@ public abstract class PlatformEntity extends Entity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.PLATFORM;
     }
 

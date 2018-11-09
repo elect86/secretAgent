@@ -24,7 +24,7 @@ public abstract class UsableEntity extends Entity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.USABLE;
     }
 

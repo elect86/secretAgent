@@ -12,10 +12,12 @@ import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.agent.AgentType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
-import cz.wa.secretagent.world.entity.direction.EntityYDirection;
 import cz.wa.secretagent.world.entity.laser.LineLaser;
 import cz.wa.secretagent.world.weapon.Weapon;
+import secretAgent.game.action.AgentAction;
+import secretAgent.game.action.AgentActivateAction;
+import secretAgent.world.entity.EntityXDirection;
+import secretAgent.world.entity.EntityYDirection;
 
 /**
  * Action to control agent in level map.
@@ -35,14 +37,14 @@ public class AgentLevelAction extends AgentAction<AgentEntity> {
     }
 
     @Override
-    protected void init() {
+    public void init() {
         activateAction = getActionFactory().getAction(AgentActivateAction.class);
         posSensor = new EntityObserver(getAgent(), getWorld());
         projectileFactory = getActionFactory().getProjectileFactory();
     }
 
     public void moveX(EntityXDirection dir) {
-        Validate.notNull(dir, "dir is null");
+        Validate.notNull(dir, "vector is null");
         AgentEntity agent = getAgent();
         if (agent.isControlable()) {
             if (!isAimingWeapon()) {
@@ -59,7 +61,7 @@ public class AgentLevelAction extends AgentAction<AgentEntity> {
     }
 
     public void aimY(EntityYDirection dir) {
-        Validate.notNull(dir, "dir is null");
+        Validate.notNull(dir, "vector is null");
         AgentEntity agent = getAgent();
         if (agent.isControlable() && agent.getCapabilities().canAim()
                 && (agent.getSecondType() == AgentType.HUMAN)) {

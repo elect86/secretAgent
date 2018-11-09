@@ -1,15 +1,14 @@
 package cz.wa.secretagent.worldinfo;
 
+import cz.wa.secretagent.game.PlayerHolder;
+import cz.wa.secretagent.menu.MenuHolder;
+import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.Serializable;
-
-import org.springframework.beans.factory.annotation.Required;
-
-import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.menu.MenuHolder;
-import cz.wa.secretagent.world.SAMWorld;
-import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 
 /**
  * Holds world, player stats, graphics, current displayed GUI, ... 
@@ -23,7 +22,7 @@ public class WorldHolder implements Serializable {
     private MenuHolder menuHolder;
     private PlayerHolder playerHolder;
 
-    private transient SAMWorld world;
+    private transient SamWorld world;
     private transient GraphicsInfo graphicsInfo;
 
     public WorldHolder() {
@@ -39,11 +38,11 @@ public class WorldHolder implements Serializable {
         init();
     }
 
-    public SAMWorld getWorld() {
+    public SamWorld getWorld() {
         return world;
     }
 
-    public void setWorld(SAMWorld world) {
+    public void setWorld(SamWorld world) {
         this.world = world;
     }
 

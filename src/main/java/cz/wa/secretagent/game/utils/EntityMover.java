@@ -1,9 +1,5 @@
 package cz.wa.secretagent.game.utils;
 
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.apache.commons.math3.util.FastMath;
-
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentAction;
@@ -15,6 +11,9 @@ import cz.wa.secretagent.world.map.TileType;
 import cz.wa.wautils.collection.Array2D;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Vector2I;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.apache.commons.math3.util.FastMath;
+import secretAgent.world.SamWorld;
 
 /**
  * Class with useful methods for simulators and sensors. 
@@ -22,9 +21,9 @@ import cz.wa.wautils.math.Vector2I;
  * @author Ondrej Milenovsky
  */
 public class EntityMover {
-    private final SAMWorld world;
+    private final SamWorld world;
 
-    public EntityMover(SAMWorld world) {
+    public EntityMover(SamWorld world) {
         this.world = world;
     }
 
@@ -177,7 +176,7 @@ public class EntityMover {
         double py = agent.getPos().getY();
         // agent speed
         Vector2D speed = agent.getSpeed();
-        if (agent.getEntityType() == EntityType.AGENT) {
+        if (agent.getType() == EntityType.AGENT) {
             speed = speed.add(((AgentEntity) agent).getMoveSpeed());
         }
         double spdX = speed.getX();

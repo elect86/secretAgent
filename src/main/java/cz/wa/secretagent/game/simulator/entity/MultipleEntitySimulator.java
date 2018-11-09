@@ -28,7 +28,7 @@ public class MultipleEntitySimulator<E extends Entity> implements EntitySimulato
         if (simulators.containsKey(type2)) {
             return simulators.get(type2).move(entity, timeS);
         } else {
-            logger.warn("No simulator for " + entity.getEntityType() + "." + type2);
+            logger.warn("No simulator for " + entity.getType() + "." + type2);
             return true;
         }
     }

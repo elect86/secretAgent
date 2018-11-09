@@ -1,13 +1,5 @@
 package cz.wa.secretagent.io.map.orig.generator;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import cz.wa.secretagent.io.map.orig.MapLevel;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory;
 import cz.wa.secretagent.io.map.orig.generator.mapping.TileIdMapper;
@@ -15,19 +7,26 @@ import cz.wa.secretagent.io.map.orig.generator.mapping.TileMap;
 import cz.wa.secretagent.io.map.orig.generator.mapping.TileMap.Item;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.view.model.SimpleModel;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.map.LevelMap;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.secretagent.world.map.TileType;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.wautils.math.Vector2I;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import secretAgent.world.SamWorld;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Generates world from parsed map. Takes care of mapping and creating entities with default properties.
  * Some background tiles might not have linked textures.
  * The generated level contains too many lists and the list may contain tiles, that will never be visible, should be postprocessed.
- * 
+ *
  * @author Ondrej Milenovsky
  */
 public class MapGenerator {
@@ -37,7 +36,7 @@ public class MapGenerator {
     private final ObjectGenerator generator;
     private final TileIdMapper mapper;
 
-    private SAMWorld world;
+    private SamWorld world;
 
     private int levelId;
 
@@ -53,12 +52,12 @@ public class MapGenerator {
      * @param islandMap if the map is island map with houses or single house
      * @return generated world
      */
-    public SAMWorld generateWorld() {
+    public SamWorld generateWorld() {
         Vector2I size = level.getSize();
         // background tiles
         Tile bgTile = generateBackground();
         List<Item> bgOverTiles = Collections.emptyList(); // mapper.mapTile(level.getBgTileOver());
-        world = new SAMWorld(size, bgTile, levelId);
+        world = new SamWorld(size, bgTile, levelId);
 
         // whole map
         for (int y = 0; y < size.getY(); y++) {

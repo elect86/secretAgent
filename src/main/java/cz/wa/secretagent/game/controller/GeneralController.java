@@ -1,14 +1,13 @@
 package cz.wa.secretagent.game.controller;
 
+import cz.wa.secretagent.simulation.GameController;
+import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher;
+import cz.wa.secretagent.world.entity.agent.HumanAgent;
+import cz.wa.secretagent.worldinfo.WorldHolder;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.lwjgl.input.Keyboard;
 import org.springframework.beans.factory.annotation.Required;
-
-import cz.wa.secretagent.simulation.GameController;
-import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher;
-import cz.wa.secretagent.world.SAMWorld;
-import cz.wa.secretagent.world.entity.agent.HumanAgent;
-import cz.wa.secretagent.worldinfo.WorldHolder;
+import secretAgent.world.SamWorld;
 
 /**
  * Main game controller holding other controllers. 
@@ -41,7 +40,7 @@ public class GeneralController implements GameController {
         if (!processGeneralInput(timeS)) {
             return;
         }
-        SAMWorld world = worldHolder.getWorld();
+        SamWorld world = worldHolder.getWorld();
         if (worldHolder.getMenuHolder().isMenuActive()) {
             if (activeController != menuController) {
                 menuController.activate();

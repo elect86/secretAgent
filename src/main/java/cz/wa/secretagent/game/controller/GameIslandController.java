@@ -1,16 +1,15 @@
 package cz.wa.secretagent.game.controller;
 
-import org.lwjgl.input.Keyboard;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.PlayerKeys;
 import cz.wa.secretagent.game.action.ActionFactory;
-import cz.wa.secretagent.game.action.AgentIslandAction;
 import cz.wa.secretagent.game.controller.menucreator.GameMenuCreator;
 import cz.wa.secretagent.menu.window.GFrame;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
-import cz.wa.secretagent.world.entity.direction.EntityYDirection;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import org.lwjgl.input.Keyboard;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.game.action.AgentIslandAction;
+import secretAgent.world.entity.EntityXDirection;
+import secretAgent.world.entity.EntityYDirection;
 
 /**
  * Controller that works when the player is moving on island map. (moving, entering)

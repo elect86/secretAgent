@@ -1,14 +1,7 @@
 package cz.wa.secretagent.game.utils;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.apache.commons.math3.util.FastMath;
-
 import cz.wa.secretagent.Constants;
 import cz.wa.secretagent.world.EntityMap;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
@@ -19,6 +12,12 @@ import cz.wa.secretagent.world.entity.platform.PlatformType;
 import cz.wa.secretagent.world.entity.usable.UsableEntity;
 import cz.wa.secretagent.world.map.TileType;
 import cz.wa.wautils.math.Rectangle2D;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.apache.commons.math3.util.FastMath;
+import secretAgent.world.SamWorld;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Finds specific collections of entities from all entities. 
@@ -26,9 +25,9 @@ import cz.wa.wautils.math.Rectangle2D;
  * @author Ondrej Milenovsky
  */
 public class EntitiesFinder {
-    private final SAMWorld world;
+    private final SamWorld world;
 
-    public EntitiesFinder(SAMWorld world) {
+    public EntitiesFinder(SamWorld world) {
         this.world = world;
     }
 

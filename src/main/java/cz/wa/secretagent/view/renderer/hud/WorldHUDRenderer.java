@@ -1,17 +1,16 @@
 package cz.wa.secretagent.view.renderer.hud;
 
-import java.awt.Color;
-
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.game.player.Camera;
 import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
 import cz.wa.secretagent.view.renderer.Renderer;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
+
+import java.awt.*;
 
 /**
  * Renders game world HUD (text, symbols) into the map. 
@@ -35,7 +34,7 @@ public class WorldHUDRenderer implements Renderer {
         // empty
     }
 
-    public void drawHUD(SAMWorld world, PlayerHolder player, Camera camera) {
+    public void drawHUD(SamWorld world, PlayerHolder player, Camera camera) {
         // TODO draw thread symbols
         drawDisplayedText(player.getAgent(), player.getDisplayedText(), camera);
     }

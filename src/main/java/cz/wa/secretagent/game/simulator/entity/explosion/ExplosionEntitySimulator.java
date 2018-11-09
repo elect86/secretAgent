@@ -1,15 +1,14 @@
 package cz.wa.secretagent.game.simulator.entity.explosion;
 
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.simulator.entity.AbstractEntitySimulator;
 import cz.wa.secretagent.game.utils.AgentHurter;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.explosion.Explosion;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
 
 /**
  * Simulates a platform.
@@ -35,7 +34,7 @@ public class ExplosionEntitySimulator extends AbstractEntitySimulator<Explosion>
     }
 
     private void hurtEntities(Explosion explosion, double timeS) {
-        SAMWorld world = worldHolder.getWorld();
+        SamWorld world = worldHolder.getWorld();
         for (Entity entity : world.getEntityMap().getEntities(EntityType.AGENT)) {
             double dist = entity.getPos().distance(explosion.getPos()) / explosion.getRadius();
             // is caught by the explosion

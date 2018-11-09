@@ -1,8 +1,11 @@
 package cz.wa;
 
+import secretAgent.world.entity.EntityDirection;
+
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println("ciao");
+
+        EntityDirection a = EntityDirection.DOWN;
     }
 }

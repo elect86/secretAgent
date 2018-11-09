@@ -1,15 +1,6 @@
 package cz.wa.secretagent.game.utils.collision;
 
-import java.util.Collection;
-import java.util.Set;
-
-import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
-import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.apache.commons.math3.util.FastMath;
-
 import cz.wa.secretagent.utils.raycaster.RayHit;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
@@ -19,6 +10,14 @@ import cz.wa.secretagent.world.map.TileType;
 import cz.wa.wautils.collection.Array2D;
 import cz.wa.wautils.math.Vector2I;
 import cz.wa.wautils.math.VectorUtils;
+import org.apache.commons.math3.geometry.euclidean.threed.Rotation;
+import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.apache.commons.math3.util.FastMath;
+import secretAgent.world.SamWorld;
+
+import java.util.Collection;
+import java.util.Set;
 
 /**
  * Util class to compute collisions of projectile with objects.
@@ -29,12 +28,12 @@ import cz.wa.wautils.math.VectorUtils;
  */
 public class ProjectileCollider {
 
-    private final SAMWorld world;
+    private final SamWorld world;
     private final ProjectileEntity projectile;
     private final Vector2D moveVector;
     private final double timeS;
 
-    public ProjectileCollider(SAMWorld world, ProjectileEntity projectile, double timeS) {
+    public ProjectileCollider(SamWorld world, ProjectileEntity projectile, double timeS) {
         this.world = world;
         this.projectile = projectile;
         this.timeS = timeS;
@@ -152,7 +151,7 @@ public class ProjectileCollider {
         Rotation r = new Rotation(new Vector3D(0, 0, 1), -angle);
 
         for (Entity entity : world.getEntityMap().getEntities(entityType)) {
-            if ((entity.getEntityType() == EntityType.AGENT)
+            if ((entity.getType() == EntityType.AGENT)
                     && (((AgentEntity) entity).getTeam() == projectile.getTeam())) {
                 continue;
             }

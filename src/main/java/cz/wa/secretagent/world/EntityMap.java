@@ -28,7 +28,7 @@ public class EntityMap {
     }
 
     public boolean containsEntity(Entity entity) {
-        EntityType type = entity.getEntityType();
+        EntityType type = entity.getType();
         if (!entityMap.containsKey(type)) {
             return false;
         }
@@ -36,7 +36,7 @@ public class EntityMap {
     }
 
     public void addEntity(Entity entity) {
-        EntityType type = entity.getEntityType();
+        EntityType type = entity.getType();
         Set<Entity> entities;
         if (entityMap.containsKey(type)) {
             entities = entityMap.get(type);
@@ -55,7 +55,7 @@ public class EntityMap {
      * @throws IllegalArgumentException if the entity is not in the map
      */
     public void removeEntity(Entity entity) {
-        EntityType type = entity.getEntityType();
+        EntityType type = entity.getType();
         if (!entityMap.containsKey(type)) {
             throw new IllegalArgumentException("The map does not contain entity: " + entity);
         }

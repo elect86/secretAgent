@@ -6,12 +6,13 @@ import java.util.Map;
 import cz.wa.secretagent.game.projectile.ProjectileFactory;
 import cz.wa.secretagent.game.sensor.SensorFactory;
 import cz.wa.secretagent.game.starter.MapStarter;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
+import secretAgent.game.action.AgentAction;
+import secretAgent.world.SamWorld;
 
 /**
  * Creates actions with caching.
- * 
+ *
  * @author Ondrej Milenovsky
  */
 public class ActionFactory {
@@ -19,11 +20,11 @@ public class ActionFactory {
     private final MapStarter mapStarter;
     private final ProjectileFactory projectileFactory;
     private final SensorFactory sensorFactory;
-    private final SAMWorld world;
+    private final SamWorld world;
 
     private final Map<Object, AgentAction<AgentEntity>> cache;
 
-    public ActionFactory(AgentEntity agent, SAMWorld world, SensorFactory sensorFactory,
+    public ActionFactory(AgentEntity agent, SamWorld world, SensorFactory sensorFactory,
             MapStarter mapStarter, ProjectileFactory projectileFactory) {
         this.agent = agent;
         this.world = world;
@@ -45,10 +46,10 @@ public class ActionFactory {
                 throw new RuntimeException(e);
             }
             AgentAction<AgentEntity> object = (AgentAction<AgentEntity>) instance;
-            object.setEntity(agent);
-            object.setWorld(world);
-            object.setActionFactory(this);
-            object.setSensorFactory(sensorFactory);
+            object.setAgent(agent);
+            object.setWorld$secretAgent(world);
+            object.setActionFactory$secretAgent(this);
+            object.setSensorFactory$secretAgent(sensorFactory);
             object.init();
             cache.put(clazz, object);
             return instance;

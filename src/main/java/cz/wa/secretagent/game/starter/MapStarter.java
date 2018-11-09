@@ -1,16 +1,5 @@
 package cz.wa.secretagent.game.starter;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.game.action.ActionFactory;
 import cz.wa.secretagent.game.controller.menucreator.MainMenuCreator;
@@ -23,7 +12,6 @@ import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.world.EntityMap;
 import cz.wa.secretagent.world.ObjectModel;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
@@ -38,6 +26,17 @@ import cz.wa.secretagent.world.weapon.WeaponOrder;
 import cz.wa.secretagent.worldinfo.WorldHolder;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.wautils.math.Vector2I;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Starts single map. 
@@ -88,7 +87,7 @@ public class MapStarter implements Serializable {
             }
             // create and set game classes
             WorldHolder worldHolder = io.getWorldHolder();
-            SAMWorld world = worldHolder.getWorld();
+            SamWorld world = worldHolder.getWorld();
             Camera camera = cameraInfo.createCamera(agent.getPos());
 
             SensorFactory sensorFactory = new SensorFactory(agent, world);
@@ -177,7 +176,7 @@ public class MapStarter implements Serializable {
             }
             // create and set game classes
             Camera camera = cameraInfo.createCamera(agent.getPos());
-            SAMWorld world = io.getWorldHolder().getWorld();
+            SamWorld world = io.getWorldHolder().getWorld();
 
             SensorFactory sensorFactory = new SensorFactory(agent, world);
             ActionFactory actionFactory = new ActionFactory(agent, world, sensorFactory, this,

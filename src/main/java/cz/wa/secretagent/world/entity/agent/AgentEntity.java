@@ -8,8 +8,8 @@ import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.entity.EntityXDirection;
 
 /**
  * Some agent (human, robot).
@@ -55,7 +55,7 @@ public abstract class AgentEntity extends Entity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.AGENT;
     }
 

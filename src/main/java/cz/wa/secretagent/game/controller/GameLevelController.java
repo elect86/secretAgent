@@ -1,11 +1,5 @@
 package cz.wa.secretagent.game.controller;
 
-import java.util.Set;
-
-import org.apache.commons.lang.Validate;
-import org.lwjgl.input.Keyboard;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.PlayerKeys;
 import cz.wa.secretagent.game.action.ActionFactory;
 import cz.wa.secretagent.game.action.AgentLevelAction;
@@ -13,11 +7,16 @@ import cz.wa.secretagent.game.controller.menucreator.GameMenuCreator;
 import cz.wa.secretagent.game.sensor.AgentWeaponSensor;
 import cz.wa.secretagent.game.sensor.SensorFactory;
 import cz.wa.secretagent.menu.window.GFrame;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
-import cz.wa.secretagent.world.entity.direction.EntityYDirection;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.world.weapon.WeaponOrder;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import org.apache.commons.lang.Validate;
+import org.lwjgl.input.Keyboard;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.entity.EntityXDirection;
+import secretAgent.world.entity.EntityYDirection;
+
+import java.util.Set;
 
 /**
  * Controller that works if the player is in level map. (moving, jumping, shooting) 

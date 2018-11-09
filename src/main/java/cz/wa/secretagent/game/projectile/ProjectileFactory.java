@@ -18,7 +18,6 @@ import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.agent.AgentType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
 import cz.wa.secretagent.world.entity.explosion.Explosion;
 import cz.wa.secretagent.world.entity.laser.LineLaser;
 import cz.wa.secretagent.world.entity.projectile.DynamiteProjectile;
@@ -26,6 +25,7 @@ import cz.wa.secretagent.world.entity.projectile.ProjectileEntity;
 import cz.wa.secretagent.world.entity.projectile.ProjectileType;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.WorldHolder;
+import secretAgent.world.entity.EntityXDirection;
 
 /**
  * Factory that creates projectiles fired from weapons.

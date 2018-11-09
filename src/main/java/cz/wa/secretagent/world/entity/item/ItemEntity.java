@@ -18,7 +18,7 @@ public abstract class ItemEntity extends Entity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.ITEM;
     }
 

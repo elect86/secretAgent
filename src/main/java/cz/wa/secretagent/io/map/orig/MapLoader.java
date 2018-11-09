@@ -1,26 +1,11 @@
 package cz.wa.secretagent.io.map.orig;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.apache.commons.math3.util.FastMath;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import cz.wa.secretagent.io.map.orig.generator.MapGenerator;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory;
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.EntityMap;
 import cz.wa.secretagent.world.ObjectModel;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityComparator;
 import cz.wa.secretagent.world.entity.EntityType;
@@ -44,6 +29,15 @@ import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.wautils.collection.Array2D;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Vector2I;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.apache.commons.math3.util.FastMath;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import secretAgent.world.SamWorld;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * Loads map from file to SAMWorld. 
@@ -72,10 +66,10 @@ public class MapLoader {
         this.entityFactory = entityFactory;
     }
 
-    public SAMWorld loadMap() throws IOException {
+    public SamWorld loadMap() throws IOException {
         logger.info("Loading map: " + file.getAbsolutePath());
         MapLevel rawMap = new MapParser(file).parse();
-        SAMWorld world = new MapGenerator(rawMap, levelId, graphicsInfo, entityFactory).generateWorld();
+        SamWorld world = new MapGenerator(rawMap, levelId, graphicsInfo, entityFactory).generateWorld();
         // link textures to ghost tiles that are not defined in GraphicsInfo
         linkLevelTextures(world);
         // postprocess
@@ -93,7 +87,7 @@ public class MapLoader {
     /**
      * Create lasers from entities.
      */
-    private void createLasers(SAMWorld world) {
+    private void createLasers(SamWorld world) {
         EntityMap entityMap = world.getEntityMap();
         // get all lasers and sort them
         List<LevelLaserProjectile> entities = new ArrayList<LevelLaserProjectile>();
@@ -143,7 +137,7 @@ public class MapLoader {
     /**
      * Sets tile type to WALL to all tiles that are covered by wall usables
      */
-    private void createUsableWalls(SAMWorld world) {
+    private void createUsableWalls(SamWorld world) {
         for (Entity entity : world.getEntityMap().getEntities(EntityType.USABLE)) {
             UsableEntity usable = (UsableEntity) entity;
             if (usable.isWall()) {
@@ -155,7 +149,7 @@ public class MapLoader {
     /**
      * Sets tile type to WALL to all tiles covered by the usable
      */
-    private void createUsableWall(SAMWorld world, UsableEntity usable) {
+    private void createUsableWall(SamWorld world, UsableEntity usable) {
         Rectangle2D bounds = usable.getSizeBounds().move(usable.getPos());
         LevelMap levelMap = world.getLevelMap();
         double sx = levelMap.getTileSize().getX();
@@ -175,7 +169,7 @@ public class MapLoader {
     /**
      * Link textures to models.
      */
-    private void linkLevelTextures(SAMWorld world) {
+    private void linkLevelTextures(SamWorld world) {
         LevelMap map = world.getLevelMap();
         for (Vector2I i : map.getBackground().getIndices()) {
             linkTextures(map.getBackground(), i);
@@ -195,7 +189,7 @@ public class MapLoader {
     /**
      * If there are any tiles that are added by a switch, removes the tiles from map and stores for later use.
      */
-    private void storeTiles(SAMWorld world) {
+    private void storeTiles(SamWorld world) {
         Set<TileId> tileIds = findIdsToStore(world);
 
         // remove the tiles from map and store
@@ -239,7 +233,7 @@ public class MapLoader {
     /**
      * Finds all tile ids that will be removed and stored.
      */
-    private Set<TileId> findIdsToStore(SAMWorld world) {
+    private Set<TileId> findIdsToStore(SamWorld world) {
         Set<TileId> tileIds = new HashSet<TileId>();
         for (Entity entity : world.getEntityMap().getEntities(EntityType.SWITCH)) {
             if (entity.getSecondType() == SwitchType.SIMPLE) {
@@ -286,7 +280,7 @@ public class MapLoader {
      * Links buildings to levels.
      * All final buildings are linked to single level.
      */
-    private void linkBuildings(SAMWorld world) {
+    private void linkBuildings(SamWorld world) {
         // get all buildings and sort them
         Set<Entity> usables = world.getEntityMap().getEntities(EntityType.USABLE);
         List<BuildingUsable> buildings = new ArrayList<BuildingUsable>(32);

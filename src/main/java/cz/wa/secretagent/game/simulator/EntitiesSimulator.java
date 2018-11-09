@@ -36,7 +36,7 @@ public class EntitiesSimulator implements GameSimulator {
         }
         EntityMap entityMap = worldHolder.getWorld().getEntityMap();
         for (Entity entity : entityOrder.getOrderedEntities(entityMap)) {
-            EntityType type = entity.getEntityType();
+            EntityType type = entity.getType();
             // something could have removed the entity, so check, if it is still there
             if (entityMap.getEntities(type).contains(entity)) {
                 if (!simulators.get(type).move(entity, timeS)) {

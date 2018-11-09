@@ -1,16 +1,9 @@
 package cz.wa.secretagent.game.simulator.entity.platform;
 
-import java.util.List;
-
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.apache.commons.math3.util.FastMath;
-import org.springframework.beans.factory.annotation.Required;
-
 import cz.wa.secretagent.game.simulator.entity.AbstractEntitySimulator;
 import cz.wa.secretagent.game.utils.EntitiesFinder;
 import cz.wa.secretagent.game.utils.EntityMover;
 import cz.wa.secretagent.game.utils.EntityObserver;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
@@ -18,11 +11,17 @@ import cz.wa.secretagent.world.entity.platform.MovableCan;
 import cz.wa.secretagent.world.entity.platform.PlatformEntity;
 import cz.wa.secretagent.world.entity.platform.PlatformType;
 import cz.wa.wautils.math.Rectangle2D;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.apache.commons.math3.util.FastMath;
+import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
+
+import java.util.List;
 
 /**
  * Simulates a pushable can.
  * Can is pushed by agents and moves things stanting on it.
- * 
+ *
  * @author Ondrej Milenovsky
  */
 public class CanEntitySimulator extends AbstractEntitySimulator<PlatformEntity> {
@@ -42,7 +41,7 @@ public class CanEntitySimulator extends AbstractEntitySimulator<PlatformEntity> 
      * Can is being pushed by agents that can activate, moves entities standing on it.
      */
     private void moveCan(MovableCan can, double timeS) {
-        SAMWorld world = worldHolder.getWorld();
+        SamWorld world = worldHolder.getWorld();
         // push
         for (Entity e2 : world.getEntityMap().getEntities(EntityType.AGENT)) {
             AgentEntity agent = (AgentEntity) e2;

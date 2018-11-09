@@ -30,7 +30,7 @@ public abstract class LaserEntity extends Entity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.LASER;
     }
 

@@ -1,17 +1,16 @@
 package cz.wa.secretagent.world.entity.bgswitch;
 
-import java.util.List;
-
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
 import cz.wa.secretagent.world.ObjectModel;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.LockedEntity;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.bgswitch.switchaction.SwitchAction;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import secretAgent.world.SamWorld;
+
+import java.util.List;
 
 /**
  * Some switch.
@@ -42,7 +41,7 @@ public abstract class SwitchEntity extends Entity implements LockedEntity {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.SWITCH;
     }
 
@@ -76,7 +75,7 @@ public abstract class SwitchEntity extends Entity implements LockedEntity {
         return singleUse;
     }
 
-    public void activate(AgentEntity agent, SAMWorld world) {
+    public void activate(AgentEntity agent, SamWorld world) {
         if (isActive()) {
             for (SwitchAction action : actions) {
                 action.execute(agent, world);

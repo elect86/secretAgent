@@ -14,8 +14,8 @@ import cz.wa.secretagent.world.ObjectModel;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.entity.agent.Team;
 import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
 import cz.wa.wautils.math.Rectangle2D;
+import secretAgent.world.entity.EntityXDirection;
 
 /**
  * Creates player start position. 

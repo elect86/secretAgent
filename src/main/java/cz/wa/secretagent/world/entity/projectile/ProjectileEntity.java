@@ -34,7 +34,7 @@ public abstract class ProjectileEntity extends Entity implements HasModelAngle {
     }
 
     @Override
-    public EntityType getEntityType() {
+    public EntityType getType() {
         return EntityType.PROJECTILE;
     }
 

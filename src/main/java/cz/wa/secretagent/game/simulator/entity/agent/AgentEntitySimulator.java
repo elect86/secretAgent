@@ -25,8 +25,6 @@ import cz.wa.secretagent.world.entity.agent.AgentType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.entity.agent.inventory.AgentInventory;
 import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity;
-import cz.wa.secretagent.world.entity.direction.EntityXDirection;
-import cz.wa.secretagent.world.entity.direction.EntityYDirection;
 import cz.wa.secretagent.world.entity.item.AmmoItem;
 import cz.wa.secretagent.world.entity.item.ItemEntity;
 import cz.wa.secretagent.world.entity.item.ItemType;
@@ -38,6 +36,8 @@ import cz.wa.secretagent.world.entity.usable.UsableType;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
+import secretAgent.world.entity.EntityXDirection;
+import secretAgent.world.entity.EntityYDirection;
 
 /**
  * Simulates an agent.
@@ -108,9 +108,9 @@ public class AgentEntitySimulator extends AbstractEntitySimulator<AgentEntity> {
      * Creates text to display when about to use some entity
      */
     private String createDysplayText(Entity usable) {
-        if (usable.getEntityType() == EntityType.SWITCH) {
+        if (usable.getType() == EntityType.SWITCH) {
             return ((SwitchEntity) usable).getDescription();
-        } else if (usable.getEntityType() == EntityType.USABLE) {
+        } else if (usable.getType() == EntityType.USABLE) {
             if (usable.getSecondType() == UsableType.DOOR) {
                 return "Open door with " + ((DoorUsable) usable).getLockType();
             } else if (usable.getSecondType() == UsableType.TELEPORT) {

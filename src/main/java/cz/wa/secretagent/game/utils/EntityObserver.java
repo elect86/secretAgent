@@ -1,14 +1,6 @@
 package cz.wa.secretagent.game.utils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import org.apache.commons.math3.util.FastMath;
-
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.map.LevelMap;
 import cz.wa.secretagent.world.map.Tile;
@@ -16,6 +8,13 @@ import cz.wa.secretagent.world.map.TileType;
 import cz.wa.wautils.collection.Array2D;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Vector2I;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import org.apache.commons.math3.util.FastMath;
+import secretAgent.world.SamWorld;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * Finds some info about an entity. 
@@ -26,9 +25,9 @@ public class EntityObserver {
     public static final double FLOOR_MAX_DIST_STAND = 0.1;
 
     private final Entity entity;
-    private final SAMWorld world;
+    private final SamWorld world;
 
-    public EntityObserver(Entity entity, SAMWorld world) {
+    public EntityObserver(Entity entity, SamWorld world) {
         this.entity = entity;
         this.world = world;
     }

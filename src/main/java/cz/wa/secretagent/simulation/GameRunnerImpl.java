@@ -1,16 +1,15 @@
 package cz.wa.secretagent.simulation;
 
-import java.io.Serializable;
-
+import cz.wa.secretagent.view.renderer.SAMRenderer;
+import cz.wa.secretagent.worldinfo.WorldHolder;
+import cz.wa.wautils.swing.listener.RunnableLog;
 import org.apache.commons.math3.util.FastMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.SamWorld;
 
-import cz.wa.secretagent.view.renderer.SAMRenderer;
-import cz.wa.secretagent.world.SAMWorld;
-import cz.wa.secretagent.worldinfo.WorldHolder;
-import cz.wa.wautils.swing.listener.RunnableLog;
+import java.io.Serializable;
 
 /**
  * Game runner that starts new thread for game simulation and rendering.
@@ -120,7 +119,7 @@ public class GameRunnerImpl implements GameRunner, Serializable {
         long currentTime = System.currentTimeMillis();
         long timeDiff = FastMath.min(currentTime - lastTime, maxStepMs);
         double timeS = timeDiff / 1000.0;
-        SAMWorld world = worldHolder.getWorld();
+        SamWorld world = worldHolder.getWorld();
         boolean activeWorld = (world != null) && world.isRunning();
 
         // first add the time to the world

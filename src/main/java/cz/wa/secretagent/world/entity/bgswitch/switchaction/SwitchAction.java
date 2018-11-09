@@ -1,7 +1,7 @@
 package cz.wa.secretagent.world.entity.bgswitch.switchaction;
 
-import cz.wa.secretagent.world.SAMWorld;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
+import secretAgent.world.SamWorld;
 
 /**
  * Action of a switch. 
@@ -14,6 +14,6 @@ public interface SwitchAction {
      * @param agent
      * @param world
      */
-    void execute(AgentEntity agent, SAMWorld world);
+    void execute(AgentEntity agent, SamWorld world);
 
 }

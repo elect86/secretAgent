@@ -11,7 +11,6 @@ import cz.wa.secretagent.game.starter.MapStarter;
 import cz.wa.secretagent.game.utils.EntityObserver;
 import cz.wa.secretagent.game.utils.TileWithPosition;
 import cz.wa.secretagent.io.SAMIO;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.EntityMap;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
@@ -25,6 +24,7 @@ import cz.wa.secretagent.world.map.StoredTile;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.wautils.math.Vector2I;
 import secretAgent.game.ProjectileFactory;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

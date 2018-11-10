@@ -1,11 +1,11 @@
 package cz.wa.secretagent.io.tiles.singleproperties;
 
+import secretAgent.view.renderer.TileId;
+import secretAgent.world.ModelType;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import cz.wa.secretagent.view.TileId;
-import secretAgent.world.ModelType;
 
 /**
  * Parsed properties for model. 

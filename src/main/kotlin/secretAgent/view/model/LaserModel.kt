@@ -1,7 +1,7 @@
 package secretAgent.view.model
 
-import cz.wa.secretagent.view.TileId
 import cz.wa.wautils.math.Rectangle2D
+import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
 import java.awt.Color
 

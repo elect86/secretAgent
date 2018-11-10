@@ -11,11 +11,11 @@ import cz.wa.secretagent.Constants;
 import cz.wa.secretagent.io.tiles.singleproperties.EntityProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.TileProperties;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.map.TileType;
 import cz.wa.wautils.io.AbstractParser;
 import cz.wa.wautils.math.Vector2I;
 import cz.wa.wautils.string.StringUtilsWa;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ModelType;
 
 /**
@@ -298,7 +298,7 @@ public class TilesPropertiesParser extends AbstractParser {
                 ind = str.indexOf(ID_SEP_ALT);
             }
             if (ind >= 0) {
-                return new TileId(str);
+                return TileId.from(str);
             } else {
                 int id = Integer.decode(str);
                 if (id >= 0) {

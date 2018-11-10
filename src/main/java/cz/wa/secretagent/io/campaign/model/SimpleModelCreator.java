@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Map;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import secretAgent.view.model.SimpleModel;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.GLModel;
 
 /**

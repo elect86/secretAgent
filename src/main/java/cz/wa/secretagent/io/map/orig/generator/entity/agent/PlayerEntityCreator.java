@@ -7,13 +7,13 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.entity.agent.Team;
 import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities;
 import cz.wa.wautils.math.Rectangle2D;
 import secretAgent.game.player.PlayerWeapons;
 import secretAgent.view.model.AgentModel;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 

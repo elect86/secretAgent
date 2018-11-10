@@ -1,6 +1,5 @@
 package cz.wa.secretagent.game.utils;
 
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.map.LevelMap;
 import cz.wa.secretagent.world.map.Tile;
@@ -10,6 +9,7 @@ import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Vector2I;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.SamWorld;
 
 import java.util.ArrayList;

@@ -5,8 +5,8 @@ import java.util.List;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.projectile.LevelLaserProjectile;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

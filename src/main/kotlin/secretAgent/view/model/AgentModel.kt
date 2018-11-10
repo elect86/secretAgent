@@ -1,12 +1,12 @@
 package secretAgent.view.model
 
 import cz.wa.secretagent.Constants
-import cz.wa.secretagent.view.SAMGraphics
-import cz.wa.secretagent.view.TileId
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
+import secretAgent.view.renderer.SAMGraphics
 import secretAgent.view.renderer.TextureToDraw
+import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
 import java.util.ArrayList
 import java.util.HashSet

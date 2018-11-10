@@ -1,8 +1,8 @@
 package secretAgent.world
 
-import cz.wa.secretagent.view.SAMGraphics
-import cz.wa.secretagent.view.TileId
 import cz.wa.wautils.math.Rectangle2D
+import secretAgent.view.renderer.SAMGraphics
+import secretAgent.view.renderer.TileId
 
 /**
  * Model of tile or entity. Can be any class, the renderer must be able to process it.

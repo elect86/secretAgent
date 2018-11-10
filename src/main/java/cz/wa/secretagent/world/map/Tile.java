@@ -1,6 +1,6 @@
 package cz.wa.secretagent.world.map;
 
-import cz.wa.secretagent.view.TileId;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

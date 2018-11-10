@@ -6,8 +6,8 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.usable.DoorUsable;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

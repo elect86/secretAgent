@@ -3,8 +3,8 @@ package cz.wa.secretagent.world.entity.usable;
 import java.util.Map;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.map.Tile;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

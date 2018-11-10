@@ -9,8 +9,7 @@ import org.lwjgl.opengl.DisplayMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
-
-import cz.wa.secretagent.view.Settings2D;
+import secretAgent.view.renderer.Settings2D;
 
 /**
  * Switches to full screen.

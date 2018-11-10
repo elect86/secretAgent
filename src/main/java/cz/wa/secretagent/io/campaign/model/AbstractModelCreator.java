@@ -6,8 +6,7 @@ import java.util.Map;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import cz.wa.secretagent.view.TileId;
+import secretAgent.view.renderer.TileId;
 
 /**
  * Abstract model creator with util methods. 

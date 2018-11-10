@@ -6,10 +6,10 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.worldinfo.graphics.EntityInfo;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

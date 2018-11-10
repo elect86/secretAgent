@@ -1,7 +1,6 @@
 package secretAgent.view.renderer
 
 import cz.wa.secretagent.utils.lwjgl.Texture
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Rectangle2I
 import cz.wa.wautils.math.Vector2F

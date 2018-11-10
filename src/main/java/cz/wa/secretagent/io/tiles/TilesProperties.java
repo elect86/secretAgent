@@ -4,8 +4,8 @@ import java.util.Map;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.TileProperties;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.view.renderer.TileId;
 
 /**
  * Parsed tiles info. 

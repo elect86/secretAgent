@@ -1,11 +1,11 @@
 package secretAgent.view.model
 
-import cz.wa.secretagent.view.SAMGraphics
-import cz.wa.secretagent.view.TileId
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
 import secretAgent.view.renderer.GLGraphics
+import secretAgent.view.renderer.SAMGraphics
 import secretAgent.view.renderer.TextureToDraw
+import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
 import java.util.*
 import kotlin.collections.HashSet

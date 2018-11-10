@@ -13,11 +13,11 @@ import cz.wa.secretagent.io.campaign.model.ModelFactory;
 import cz.wa.secretagent.io.tiles.singleproperties.EntityProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.TileProperties;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.worldinfo.graphics.EntityInfo;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import cz.wa.secretagent.worldinfo.graphics.TileInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
+import secretAgent.view.renderer.TileId;
 
 /**
  * Loads tiles properties and generates TilesInfo 

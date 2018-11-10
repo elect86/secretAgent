@@ -6,9 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import secretAgent.view.model.ExplosionModel;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.GLModel;
 
 /**

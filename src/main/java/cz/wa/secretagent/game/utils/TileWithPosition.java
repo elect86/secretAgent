@@ -2,10 +2,10 @@ package cz.wa.secretagent.game.utils;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.view.renderer.TileId;
 
 /**
  * Tile with position and tile id. 

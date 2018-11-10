@@ -1,7 +1,6 @@
 package secretAgent.view.renderer.hud
 
 import cz.wa.secretagent.game.PlayerHolder
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.item.ItemType

@@ -1,8 +1,8 @@
 package cz.wa.secretagent.world.entity.bgswitch.switchaction;
 
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.map.StoredTile;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.SamWorld;
 
 import java.util.ArrayList;

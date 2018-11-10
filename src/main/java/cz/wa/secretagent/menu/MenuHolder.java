@@ -10,7 +10,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.menu.window.GFrame;
-import cz.wa.secretagent.view.Settings2D;
+import secretAgent.view.renderer.Settings2D;
 
 /**
  * Holds all menu GUI. 

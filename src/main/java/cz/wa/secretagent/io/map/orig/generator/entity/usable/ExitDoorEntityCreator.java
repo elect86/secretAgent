@@ -11,10 +11,10 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.usable.ExitDoorUsable;
 import cz.wa.secretagent.world.map.Tile;
 import cz.wa.secretagent.world.map.TileType;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**
@@ -45,7 +45,7 @@ public class ExitDoorEntityCreator implements EntityCreator<ExitDoorUsable> {
         Map<TileId, Tile> ret = new HashMap<TileId, Tile>(args.size() / 2);
         for (int i = 0; i < args.size() / 2; i++) {
             try {
-                TileId findTileId = new TileId(args.remove(0));
+                TileId findTileId = TileId.from(args.remove(0));
                 String modelName = args.remove(0);
                 ObjectModel model = getSamIO().getWorldHolder().getGraphicsInfo().getModel(modelName);
                 ret.put(findTileId, new Tile(TileType.GHOST_FRONT, model));

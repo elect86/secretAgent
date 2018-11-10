@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.io.campaign.model.ModelFactory;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

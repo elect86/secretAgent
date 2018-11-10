@@ -1,6 +1,5 @@
 package secretAgent.view.renderer
 
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.slf4j.LoggerFactory

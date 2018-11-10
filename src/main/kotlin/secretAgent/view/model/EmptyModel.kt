@@ -1,8 +1,8 @@
 package secretAgent.view.model
 
-import cz.wa.secretagent.view.SAMGraphics
-import cz.wa.secretagent.view.TileId
 import cz.wa.wautils.math.Rectangle2D
+import secretAgent.view.renderer.SAMGraphics
+import secretAgent.view.renderer.TileId
 import secretAgent.world.GLModel
 import secretAgent.world.ModelType
 

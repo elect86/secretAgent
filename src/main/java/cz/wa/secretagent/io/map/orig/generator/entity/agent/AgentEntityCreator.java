@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Required;
 
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
 import cz.wa.secretagent.io.map.orig.generator.entity.TypeEntityCreator;
-import cz.wa.secretagent.view.TileId;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.agent.AgentType;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

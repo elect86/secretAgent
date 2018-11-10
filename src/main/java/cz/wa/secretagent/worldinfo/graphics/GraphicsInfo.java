@@ -4,8 +4,8 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
-import cz.wa.secretagent.view.SAMGraphics;
-import cz.wa.secretagent.view.TileId;
+import secretAgent.view.renderer.SAMGraphics;
+import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
 /**

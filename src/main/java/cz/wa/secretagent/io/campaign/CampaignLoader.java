@@ -13,11 +13,11 @@ import org.slf4j.LoggerFactory;
 import cz.wa.secretagent.io.FileSettings;
 import cz.wa.secretagent.io.campaign.model.ModelFactory;
 import cz.wa.secretagent.io.graphicsfiles.GraphicsFilesLoader;
-import cz.wa.secretagent.view.SAMGraphics;
-import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.worldinfo.CampaignInfo;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.secretagent.worldinfo.map.MapInfo;
+import secretAgent.view.renderer.SAMGraphics;
+import secretAgent.view.renderer.Settings2D;
 
 /**
  * Parses campaign definition file, graphics definitions and loads all textures.

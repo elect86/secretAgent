@@ -1,8 +1,6 @@
 package secretAgent.view.renderer
 
 import cz.wa.secretagent.utils.lwjgl.Texture
-import cz.wa.secretagent.view.SAMGraphics
-import cz.wa.secretagent.view.TileId
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath

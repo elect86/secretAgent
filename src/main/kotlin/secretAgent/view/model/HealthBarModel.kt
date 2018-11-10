@@ -3,9 +3,9 @@ package secretAgent.view.model
 import cz.wa.secretagent.view.SAMGraphics
 import cz.wa.secretagent.view.TileId
 import cz.wa.secretagent.view.model.AbstractModel
-import cz.wa.secretagent.view.texture.GLGraphics
-import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.wautils.math.Rectangle2D
+import secretAgent.view.renderer.GLGraphics
+import secretAgent.view.renderer.TextureToDraw
 import secretAgent.world.ModelType
 import java.util.*
 import kotlin.collections.HashSet
@@ -40,8 +40,8 @@ class HealthBarModel(
     override fun hasLinkedTextures() = healthTexture != null
 
     override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
-        frameTexture = (graphics as GLGraphics).getTile(frameTileId) ?: throw Error("missing tile $frameTileId")
-        healthTexture = graphics.getTile(healthTileId) ?: throw Error("missing tile $healthTileId")
+        frameTexture = (graphics as GLGraphics).getTile(frameTileId!!) ?: throw Error("missing tile $frameTileId")
+        healthTexture = graphics.getTile(healthTileId!!) ?: throw Error("missing tile $healthTileId")
         return frameTexture?.let { AbstractModel.getModelBounds(it.tileBounds) }
     }
 

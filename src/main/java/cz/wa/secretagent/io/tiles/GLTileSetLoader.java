@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 
 import cz.wa.secretagent.utils.lwjgl.Texture;
 import cz.wa.secretagent.utils.lwjgl.TextureLoader;
-import cz.wa.secretagent.view.texture.GLTileSet;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.view.renderer.GLTileSet;
 
 /**
  * Loads image with multiple tiles. 

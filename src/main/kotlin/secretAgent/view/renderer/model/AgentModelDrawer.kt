@@ -1,7 +1,5 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.view.texture.DrawBounds
-import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.agent.AgentAction
 import cz.wa.secretagent.world.entity.agent.HumanAgent
@@ -11,9 +9,10 @@ import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.view.model.AgentModel
 import secretAgent.view.model.WeaponModel
+import secretAgent.view.renderer.DrawBounds
+import secretAgent.view.renderer.TextureToDraw
 import secretAgent.world.entity.EntityXDirection
 
 /**

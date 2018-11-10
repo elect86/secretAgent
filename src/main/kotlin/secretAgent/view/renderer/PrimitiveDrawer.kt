@@ -1,25 +1,13 @@
 package secretAgent.view.renderer
 
-import org.lwjgl.opengl.GL11.GL_QUADS
-import org.lwjgl.opengl.GL11.glBegin
-import org.lwjgl.opengl.GL11.glColor4f
-import org.lwjgl.opengl.GL11.glEnd
-import org.lwjgl.opengl.GL11.glLoadIdentity
-import org.lwjgl.opengl.GL11.glRotated
-import org.lwjgl.opengl.GL11.glScaled
-import org.lwjgl.opengl.GL11.glTexCoord2f
-import org.lwjgl.opengl.GL11.glTranslated
-import org.lwjgl.opengl.GL11.glVertex2f
 import cz.wa.secretagent.utils.lwjgl.Texture
 import cz.wa.secretagent.view.Settings2D
-import cz.wa.secretagent.view.texture.DrawBounds
-import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Rectangle2I
 import cz.wa.wautils.math.Vector2F
-import org.apache.commons.lang.Validate
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
+import org.lwjgl.opengl.GL11.*
 import org.newdawn.slick.SlickException
 import org.newdawn.slick.UnicodeFont
 import org.newdawn.slick.font.effects.ColorEffect

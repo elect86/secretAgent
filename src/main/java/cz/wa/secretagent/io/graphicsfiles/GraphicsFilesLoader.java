@@ -18,11 +18,11 @@ import cz.wa.secretagent.io.tiles.ModelsLoader;
 import cz.wa.secretagent.io.tiles.TilesPropertiesLoader;
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.Settings2D;
-import cz.wa.secretagent.view.texture.GLGraphics;
-import cz.wa.secretagent.view.texture.GLTileSet;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.view.renderer.GLGraphics;
+import secretAgent.view.renderer.GLTileSet;
 import secretAgent.world.ObjectModel;
 
 /**

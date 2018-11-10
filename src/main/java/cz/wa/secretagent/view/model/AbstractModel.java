@@ -1,19 +1,18 @@
 package cz.wa.secretagent.view.model;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.apache.commons.lang.Validate;
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
 import cz.wa.secretagent.Constants;
 import cz.wa.secretagent.view.SAMGraphics;
 import cz.wa.secretagent.view.TileId;
-import cz.wa.secretagent.view.texture.GLGraphics;
-import cz.wa.secretagent.view.texture.TextureToDraw;
 import cz.wa.wautils.math.Rectangle2D;
+import org.apache.commons.lang.Validate;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import secretAgent.view.renderer.GLGraphics;
+import secretAgent.view.renderer.TextureToDraw;
 import secretAgent.world.GLModel;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * Abstract model taking care of determining transparent model.

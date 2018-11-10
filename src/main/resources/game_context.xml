@@ -67,7 +67,7 @@
 		<constructor-arg value="Enemies" />
 	</bean>
 
-	<bean id="glGraphics" class="cz.wa.secretagent.view.texture.GLGraphics" />
+	<bean id="glGraphics" class="secretAgent.view.renderer.GLGraphics" />
 
 	<bean id="fullScreenSwitcher" class="cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher">
 		<property name="settings" ref="settings2d" />

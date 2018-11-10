@@ -2,8 +2,6 @@ package secretAgent.view.renderer.hud
 
 import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.view.Settings2D
-import cz.wa.secretagent.view.texture.DrawBounds
-import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.item.ItemType
@@ -17,9 +15,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.game.player.Camera
 import secretAgent.view.model.HealthBarModel
-import secretAgent.view.renderer.DrawPosition
-import secretAgent.view.renderer.PrimitivesDrawer
-import secretAgent.view.renderer.Renderer
+import secretAgent.view.renderer.*
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import java.awt.Color

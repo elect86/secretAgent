@@ -2,7 +2,6 @@ package secretAgent.view.renderer.hud
 
 import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.view.Settings2D
-import cz.wa.secretagent.view.renderer.PrimitivesDrawer
 import cz.wa.secretagent.view.texture.DrawBounds
 import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.secretagent.world.entity.agent.AgentEntity
@@ -19,6 +18,7 @@ import org.slf4j.LoggerFactory
 import secretAgent.game.player.Camera
 import secretAgent.view.model.HealthBarModel
 import secretAgent.view.renderer.DrawPosition
+import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.renderer.Renderer
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
@@ -64,14 +64,14 @@ class ScreenHudRenderer : Renderer {
         var drawBounds = DrawBounds(HB_BOUNDS)
         val pos = HB_POS.scalarMultiply(size).add(addPos)
         // draw frame
-        primitivesDrawer.drawTexture(model.frameTexture, pos, drawBounds, size)
+        primitivesDrawer.drawTexture(model.frameTexture!!, pos, drawBounds, size)
 
         // modify health quad and tex coords
-        var healthTex = model.healthTexture
+        var healthTex = model.healthTexture!!
         val hp = agent.health / agent.capabilities.maxHealth
         if (hp < 1) {
             // tex coords
-            val hb = healthTex!!.tileBounds
+            val hb = healthTex.tileBounds
             healthTex = TextureToDraw(healthTex.texture,
                     Rectangle2D(hb.x, hb.y, hb.width * hp, hb.height))
             // quad coords

@@ -5,12 +5,12 @@ import cz.wa.secretagent.menu.window.component.GComponent
 import cz.wa.secretagent.menu.window.component.GImage
 import cz.wa.secretagent.menu.window.component.GLabel
 import cz.wa.secretagent.menu.window.component.selectable.GSelectable
-import cz.wa.secretagent.view.renderer.PrimitivesDrawer
 import cz.wa.secretagent.view.renderer.gui.ComponentRenderer
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.player.Camera
+import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import java.awt.Color

@@ -15,9 +15,9 @@ class SimpleModelDrawer : AbstractModelDrawer<SimpleModel>() {
 
     override fun draw(model: SimpleModel, entity: Entity?, pos: Vector2D, scale: Double) {
         if (entity is HasModelAngle)
-            primitivesDrawer.drawTexture(model.texture, pos, DrawBounds(model.bounds), scale, (entity as HasModelAngle).modelAngle)
+            primitivesDrawer.drawTexture(model.texture!!, pos, DrawBounds(model.bounds), scale, (entity as HasModelAngle).modelAngle)
         else
-            primitivesDrawer.drawTexture(model.texture, pos, DrawBounds(model.bounds), scale)
+            primitivesDrawer.drawTexture(model.texture!!, pos, DrawBounds(model.bounds), scale)
     }
 
     companion object {

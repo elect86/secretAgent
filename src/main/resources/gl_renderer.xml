@@ -12,11 +12,11 @@
 
 	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 
-	<bean id="renderer" class="cz.wa.secretagent.view.renderer.GLRenderer">
+	<bean id="renderer" class="secretAgent.view.renderer.GLRenderer">
 		<property name="settings" ref="settings2d" />
 		<property name="fullScreenSwitcher" ref="fullScreenSwitcher" />
 		<property name="generalRenderer">
-			<bean class="cz.wa.secretagent.view.renderer.GeneralRenderer">
+			<bean class="secretAgent.view.renderer.GeneralRenderer">
 				<property name="settings" ref="settings2d" />
 				<property name="primitivesDrawer" ref="primitivesDrawer" />
 
@@ -129,7 +129,7 @@
 		</property>
 	</bean>
 
-	<bean id="primitivesDrawer" class="cz.wa.secretagent.view.renderer.PrimitivesDrawer">
+	<bean id="primitivesDrawer" class="secretAgent.view.renderer.PrimitivesDrawer">
 		<property name="settings" ref="settings2d" />
 		<property name="srcFont">
 			<bean class="java.awt.Font">

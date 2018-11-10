@@ -21,7 +21,7 @@ class WeaponModelDrawer : AbstractModelDrawer<WeaponModel>() {
         val model2 = model.getModel(false)
         val textures = model2.textures
         val tex = AbstractModelDrawer.getFrame(worldHolder.world.levelMap.timeMs, model2.durationMs, textures!!)
-        primitivesDrawer.drawTexture(tex, pos, DrawBounds(model.bounds), scale)
+        primitivesDrawer.drawTexture(tex!!, pos, DrawBounds(model.bounds), scale)
     }
 
     companion object {

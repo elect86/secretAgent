@@ -13,9 +13,9 @@ import cz.wa.secretagent.menu.window.GFrame;
 import cz.wa.secretagent.menu.window.component.GLabel;
 import cz.wa.secretagent.menu.window.component.selectable.GButton;
 import cz.wa.secretagent.menu.window.component.selectable.GButtonListener;
-import cz.wa.secretagent.view.renderer.PrimitivesDrawer;
 import cz.wa.wautils.math.Vector2I;
 import cz.wa.wautils.string.StringUtilsWa;
+import secretAgent.view.renderer.PrimitivesDrawer;
 
 /**
  * Creates simple question dialogs. The dialog consists of a text and some buttons under it.

@@ -34,7 +34,7 @@ class AnimatedModelDrawer : AbstractModelDrawer<AnimatedModel>() {
 
         // draw the texture
         val textures = model.textures
-        val tex = AbstractModelDrawer.getFrame(timeMs, durationMs, textures!!)
+        val tex = AbstractModelDrawer.getFrame(timeMs, durationMs, textures!!)!!
         if (entity is HasModelAngle)
             primitivesDrawer.drawTexture(tex, pos, DrawBounds(model.bounds), scale, (entity as HasModelAngle).modelAngle)
         else

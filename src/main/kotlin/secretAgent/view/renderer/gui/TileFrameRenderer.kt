@@ -2,7 +2,6 @@ package secretAgent.view.renderer.gui
 
 import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.view.Settings2D
-import cz.wa.secretagent.view.renderer.PrimitivesDrawer
 import cz.wa.secretagent.view.renderer.gui.ComponentRenderer
 import cz.wa.secretagent.view.renderer.gui.FrameRenderer
 import cz.wa.secretagent.view.texture.DrawBounds
@@ -14,6 +13,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.player.Camera
 import secretAgent.view.model.SimpleModel
+import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import secretAgent.world.ModelType
@@ -28,15 +28,10 @@ import java.io.Serializable
  */
 class TileFrameRenderer : FrameRenderer, Serializable {
 
-    @set:Required
     lateinit var worldHolder: WorldHolder
-    @set:Required
     lateinit var modelRenderer: ModelRenderer
-    @set:Required
     lateinit var primitivesDrawer: PrimitivesDrawer
-    @set:Required
     lateinit var settings2d: Settings2D
-    @set:Required
     lateinit var componentRenderer: ComponentRenderer
 
     override fun drawFrame(frame: GFrame) {
@@ -124,7 +119,7 @@ class TileFrameRenderer : FrameRenderer, Serializable {
             val glModel = model as GLModel
             if (glModel.type == ModelType.SIMPLE) {
                 val m = glModel as SimpleModel
-                primitivesDrawer.drawTexture(m.texture, pos, bounds, 1.0)
+                primitivesDrawer.drawTexture(m.texture!!, pos, bounds, 1.0)
             } else
                 modelRenderer.draw(glModel, null, pos, camera)
         }

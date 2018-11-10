@@ -1,9 +1,9 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.view.renderer.PrimitivesDrawer
 import cz.wa.secretagent.view.texture.TextureToDraw
 import cz.wa.secretagent.world.entity.Entity
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
+import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.world.GLModel
 import java.io.Serializable
 

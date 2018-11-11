@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import cz.wa.secretagent.view.Settings2D;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.Validate;
 import org.slf4j.Logger;
@@ -17,7 +18,6 @@ import cz.wa.secretagent.worldinfo.CampaignInfo;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import cz.wa.secretagent.worldinfo.map.MapInfo;
 import secretAgent.view.renderer.SAMGraphics;
-import secretAgent.view.renderer.Settings2D;
 
 /**
  * Parses campaign definition file, graphics definitions and loads all textures.

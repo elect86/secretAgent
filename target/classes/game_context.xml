@@ -26,7 +26,7 @@
 		<constructor-arg value="cz.wa.secretagent.io.FileSettings" />
 	</bean>
 
-	<bean id="settings2d" class="secretAgent.view.renderer.Settings2D" />
+	<bean id="settings2d" class="cz.wa.secretagent.view.Settings2D" />
 
 	<bean id="gameSettings" class="cz.wa.secretagent.game.GameSettings" />
 
@@ -85,25 +85,25 @@
 		<property name="settings2d" ref="settings2d" />
 	</bean>
 
-	<bean id="gameController" class="cz.wa.secretagent.game.controller.GeneralController">
+	<bean id="gameController" class="secretAgent.game.controller.GeneralController">
 		<property name="worldHolder" ref="worldHolder" />
 		<property name="levelController" ref="levelController" />
 		<property name="islandController" ref="islandController" />
 		<property name="menuController">
-			<bean class="cz.wa.secretagent.game.controller.GameMenuController">
+			<bean class="secretAgent.game.controller.GameMenuController">
 				<property name="worldHolder" ref="worldHolder" />
 			</bean>
 		</property>
 		<property name="fullScreenSwitcher" ref="fullScreenSwitcher" />
 	</bean>
 
-	<bean id="levelController" class="cz.wa.secretagent.game.controller.GameLevelController">
+	<bean id="levelController" class="secretAgent.game.controller.GameLevelController">
 		<property name="playerHolder" ref="playerHolder" />
 		<property name="weaponOrder" ref="playerWeapons" />
 		<property name="gameMenuCreator" ref="gameMenuCreator" />
 		<property name="worldHolder" ref="worldHolder" />
 	</bean>
-	<bean id="islandController" class="cz.wa.secretagent.game.controller.GameIslandController">
+	<bean id="islandController" class="secretAgent.game.controller.GameIslandController">
 		<property name="playerHolder" ref="playerHolder" />
 		<property name="worldHolder" ref="worldHolder" />
 		<property name="gameMenuCreator" ref="gameMenuCreator" />
@@ -322,7 +322,7 @@
 		<property name="minFrameLines" value="16" />
 	</bean>
 
-	<bean id="gameMenuCreator" class="cz.wa.secretagent.game.controller.menucreator.GameMenuCreator">
+	<bean id="gameMenuCreator" class="secretAgent.game.controller.menuCreator.GameMenuCreator">
 		<property name="dialogBuilder" ref="dialogBuilder" />
 		<property name="worldHolder" ref="worldHolder" />
 		<property name="mapStarter" ref="mapStarter" />
@@ -334,7 +334,7 @@
 		</property>
 	</bean>
 
-	<bean id="mainMenuCreator" class="cz.wa.secretagent.game.controller.menucreator.MainMenuCreator">
+	<bean id="mainMenuCreator" class="secretAgent.game.controller.menuCreator.MainMenuCreator">
 		<property name="dialogBuilder" ref="dialogBuilder" />
 		<property name="worldHolder" ref="worldHolder" />
 		<property name="gameSettings" ref="gameSettings" />

@@ -7,6 +7,7 @@ import cz.wa.secretagent.io.graphicsfiles.GraphicsFilesLoader;
 import cz.wa.secretagent.io.map.orig.MapLoader;
 import cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory;
 import cz.wa.secretagent.simulation.GameRunner;
+import cz.wa.secretagent.view.Settings2D;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.CampaignInfo;
 import cz.wa.secretagent.worldinfo.WorldHolder;
@@ -18,7 +19,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 import secretAgent.view.renderer.SAMGraphics;
-import secretAgent.view.renderer.Settings2D;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.SamWorld;
 

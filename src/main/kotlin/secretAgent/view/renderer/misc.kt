@@ -48,36 +48,36 @@ interface SAMGraphics {
  *
  * @author Ondrej Milenovsky
  */
-class Settings2D : Serializable {
-    @JvmField
-    var screenPosX = 0
-    @JvmField
-    var screenPosY = 0
-
-    @JvmField
-    var screenWidth = 0
-    @JvmField
-    var screenHeight = 0
-
-    @JvmField
-    var texFilter = false
-    @JvmField
-    var niceMap = false
-
-    @JvmField
-    var colorBitDepth = 0
-    @JvmField
-    var refreshRateHz = 0
-
-    @JvmField
-    var fullScreen = false
-    @JvmField
-    var vsync = false
-
-    @JvmField
-    var fps = 0
-
-    companion object {
-        private const val serialVersionUID = -4654618092028293538L
-    }
-}
+//class Settings2D : Serializable {
+//    @JvmField
+//    var screenPosX = 0
+//    @JvmField
+//    var screenPosY = 0
+//
+//    @JvmField
+//    var screenWidth = 0
+//    @JvmField
+//    var screenHeight = 0
+//
+//    @JvmField
+//    var texFilter = false
+//    @JvmField
+//    var niceMap = false
+//
+//    @JvmField
+//    var colorBitDepth = 0
+//    @JvmField
+//    var refreshRateHz = 0
+//
+//    @JvmField
+//    var fullScreen = false
+//    @JvmField
+//    var vsync = false
+//
+//    @JvmField
+//    var fps = 0
+//
+//    companion object {
+//        private const val serialVersionUID = -4654618092028293538L
+//    }
+//}

@@ -1,6 +1,7 @@
 package secretAgent.view.renderer
 
 import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher
+import cz.wa.secretagent.view.Settings2D
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.apache.commons.io.IOUtils
 import org.lwjgl.LWJGLException

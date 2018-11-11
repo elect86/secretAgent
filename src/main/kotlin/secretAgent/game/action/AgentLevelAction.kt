@@ -190,8 +190,8 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
 
     fun switchWeapon(weapon: Weapon?) {
         if (agent!!.isControlable) {
-            val agent = agent as HumanAgent?
-            if (agent!!.isFiring || agent.reloadTimeRemainingS > 0) {
+            val agent = agent as HumanAgent
+            if (agent.isFiring || agent.reloadTimeRemainingS > 0) {
                 return
             }
             val weapons = agent.inventory.weapons

@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import cz.wa.secretagent.view.Settings2D;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.Validate;
 import org.slf4j.Logger;
@@ -22,7 +23,6 @@ import cz.wa.wautils.math.Vector2I;
 import secretAgent.view.renderer.GLGraphics;
 import secretAgent.view.renderer.GLTileSet;
 import secretAgent.view.renderer.SAMGraphics;
-import secretAgent.view.renderer.Settings2D;
 import secretAgent.world.ObjectModel;
 
 /**

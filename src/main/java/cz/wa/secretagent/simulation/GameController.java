@@ -19,5 +19,4 @@ public interface GameController extends Serializable {
      * @param timeS
      */
     void processInput(double timeS);
-
 }

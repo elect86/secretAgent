@@ -4,10 +4,10 @@ import java.io.Serializable;
 
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.game.controller.GameIslandController;
-import cz.wa.secretagent.game.controller.GameLevelController;
 import cz.wa.secretagent.world.entity.agent.HumanAgent;
 import cz.wa.secretagent.world.entity.agent.Team;
+import secretAgent.game.controller.GameIslandController;
+import secretAgent.game.controller.GameLevelController;
 import secretAgent.game.player.Camera;
 import secretAgent.game.player.PlayerStats;
 

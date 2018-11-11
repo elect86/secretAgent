@@ -1,6 +1,7 @@
 package cz.wa.secretagent.game.starter;
 
 import cz.wa.secretagent.Constants;
+import cz.wa.secretagent.view.Settings2D;
 import cz.wa.wautils.math.Rectangle2I;
 import cz.wa.wautils.math.Vector2I;
 import org.apache.commons.lang.Validate;
@@ -8,7 +9,6 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
 import org.springframework.beans.factory.annotation.Required;
 import secretAgent.game.player.Camera;
-import secretAgent.view.renderer.Settings2D;
 
 import java.io.Serializable;
 

@@ -15,7 +15,7 @@
 		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 
 	<bean id="enemyHumanPropertiesCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.agent.EnemyHumanPropertiesCreator">
+		class="secretAgent.io.map.orig.generator.entity.agent.EnemyHumanPropertiesCreator">
 	</bean>
 
 	<!-- Model factory -->
@@ -122,10 +122,10 @@
 	<!-- Single creators -->
 
 	<bean id="agentEntityCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.agent.AgentEntityCreator">
+		class="secretAgent.io.map.orig.generator.entity.agent.AgentEntityCreator">
 		<property name="playerCreator">
 			<bean
-				class="cz.wa.secretagent.io.map.orig.generator.entity.agent.PlayerEntityCreator">
+				class="secretAgent.io.map.orig.generator.entity.agent.PlayerEntityCreator">
 				<property name="team" ref="playerTeam" />
 				<property name="sizeBounds">
 					<bean class="cz.wa.wautils.math.Rectangle2D">
@@ -169,7 +169,7 @@
 							static-field="cz.wa.secretagent.world.entity.agent.AgentType.HUMAN" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.agent.HumanEntityCreator">
+						class="secretAgent.io.map.orig.generator.entity.agent.HumanEntityCreator">
 						<property name="propertiesCreator" ref="enemyHumanPropertiesCreator" />
 						<property name="team" ref="enemyTeam" />
 						<property name="sizeBounds">
@@ -242,7 +242,7 @@
 	</bean>
 
 	<bean id="switchEntityCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.bgswitch.SwitchEntityCreator">
+		class="secretAgent.io.map.orig.generator.entity.SwitchEntityCreator">
 		<property name="creators">
 			<map>
 				<entry>
@@ -251,14 +251,14 @@
 							static-field="cz.wa.secretagent.world.entity.bgswitch.SwitchType.SIMPLE" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.bgswitch.SimpleSwitchEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.SimpleSwitchEntityCreator" />
 				</entry>
 			</map>
 		</property>
 	</bean>
 
 	<bean id="itemEntityCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.item.ItemEntityCreator">
+		class="secretAgent.io.map.orig.generator.entity.ItemEntityCreator">
 		<property name="creators">
 			<map>
 				<entry>
@@ -266,21 +266,21 @@
 						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.JUNK" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.item.JunkEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.JunkEntityCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.KEY" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.item.KeyEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.KeyEntityCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.AMMO" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.item.AmmoEntityCreator">
+						class="secretAgent.io.map.orig.generator.entity.AmmoEntityCreator">
 						<property name="weapons">
 							<list>
 

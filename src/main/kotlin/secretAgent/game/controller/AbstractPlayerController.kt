@@ -1,8 +1,7 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.simulation.GameController
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.game.PlayerHolder
 
 /**
  * Abstract controller of player.

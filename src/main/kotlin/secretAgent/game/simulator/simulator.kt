@@ -1,12 +1,12 @@
 package secretAgent.game.simulator
 
-import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.simulation.GameSimulator
 import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.EntityOrder
 import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.springframework.beans.factory.annotation.Required
+import secretAgent.game.PlayerHolder
 import secretAgent.game.simulator.entity.EntitySimulator
 import java.util.ArrayList
 

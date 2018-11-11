@@ -1,8 +1,8 @@
 package secretAgent.game.starter
 
-import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.io.SAMIO
 import org.slf4j.LoggerFactory
+import secretAgent.game.PlayerHolder
 import secretAgent.game.player.PlayerStats
 import java.io.File
 import java.io.IOException

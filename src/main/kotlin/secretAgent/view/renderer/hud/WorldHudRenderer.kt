@@ -1,9 +1,9 @@
 package secretAgent.view.renderer.hud
 
-import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import org.apache.commons.lang.StringUtils
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
+import secretAgent.game.PlayerHolder
 import secretAgent.game.player.Camera
 import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.renderer.Renderer
@@ -29,11 +29,11 @@ class WorldHudRenderer : Renderer {
         drawDisplayedText(player.agent, player.displayedText, camera)
     }
 
-    private fun drawDisplayedText(agent: HumanAgent, text: String, camera: Camera) {
+    private fun drawDisplayedText(agent: HumanAgent, text: String?, camera: Camera) {
         if (StringUtils.isEmpty(text))
             return
         val pos = camera.getScreenPos(agent.pos.add(Vector2D(0.0, -agent.sizeBounds.height)))
-        primitivesDrawer.drawText(text, pos, textSize * camera.scale, Color.WHITE)
+        primitivesDrawer.drawText(text!!, pos, textSize * camera.scale, Color.WHITE)
     }
 
     companion object {

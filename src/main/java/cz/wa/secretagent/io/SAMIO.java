@@ -1,6 +1,5 @@
 package cz.wa.secretagent.io;
 
-import cz.wa.secretagent.game.GameSettings;
 import cz.wa.secretagent.io.campaign.CampaignLoader;
 import cz.wa.secretagent.io.campaign.model.ModelFactory;
 import cz.wa.secretagent.io.graphicsfiles.GraphicsFilesLoader;
@@ -18,6 +17,7 @@ import org.apache.commons.lang.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.game.GameSettings;
 import secretAgent.view.renderer.SAMGraphics;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.SamWorld;

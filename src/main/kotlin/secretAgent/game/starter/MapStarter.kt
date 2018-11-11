@@ -1,8 +1,6 @@
 package secretAgent.game.starter
 
-import cz.wa.secretagent.game.PlayerHolder
 import cz.wa.secretagent.io.SAMIO
-import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.usable.BuildingUsable
@@ -12,14 +10,14 @@ import cz.wa.secretagent.world.map.Tile
 import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.world.weapon.WeaponOrder
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.game.PlayerHolder
 import secretAgent.game.ProjectileFactory
 import secretAgent.game.SensorFactory
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.controller.menuCreator.MainMenuCreator
 import java.io.IOException
 import java.io.Serializable
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Starts single map.

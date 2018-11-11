@@ -19,8 +19,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.game.PlayerKeys;
 import cz.wa.secretagent.io.FileSettings;
 import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.menu.MenuHolder;
@@ -32,6 +30,8 @@ import cz.wa.secretagent.utils.lwjgl.KeysUtils;
 import cz.wa.secretagent.utils.lwjgl.TextureLoader;
 import cz.wa.wautils.collection.TypedKey;
 import cz.wa.wautils.io.FileObjectUtils;
+import secretAgent.game.PlayerHolder;
+import secretAgent.game.PlayerKeys;
 import secretAgent.game.starter.MapStarter;
 
 /**
@@ -42,12 +42,12 @@ import secretAgent.game.starter.MapStarter;
 public class GameLauncher {
     private static final Logger logger = LoggerFactory.getLogger(GameLauncher.class);
 
-    public static final TypedKey<GameRunner> GAME_RUNNER = new TypedKey<GameRunner>("gameRunner");
-    public static final TypedKey<SAMIO> SAM_IO = new TypedKey<SAMIO>("samIO");
-    public static final TypedKey<PlayerHolder> PLAYER_HOLDER = new TypedKey<PlayerHolder>("playerHolder");
-    public static final TypedKey<MenuHolder> MENU_HOLDER = new TypedKey<MenuHolder>("menuHolder");
-    public static final TypedKey<FileSettings> FILE_SETTINGS = new TypedKey<FileSettings>("fileSettings");
-    public static final TypedKey<MapStarter> MAP_STARTER = new TypedKey<MapStarter>("mapStarter");
+    public static final TypedKey<GameRunner> GAME_RUNNER = new TypedKey<>("gameRunner");
+    public static final TypedKey<SAMIO> SAM_IO = new TypedKey<>("samIO");
+    public static final TypedKey<PlayerHolder> PLAYER_HOLDER = new TypedKey<>("playerHolder");
+    public static final TypedKey<MenuHolder> MENU_HOLDER = new TypedKey<>("menuHolder");
+    public static final TypedKey<FileSettings> FILE_SETTINGS = new TypedKey<>("fileSettings");
+    public static final TypedKey<MapStarter> MAP_STARTER = new TypedKey<>("mapStarter");
 
     // files used for caching
     public static final String CONTEXT_CACHE_FILE = "cache/game_context.dat";

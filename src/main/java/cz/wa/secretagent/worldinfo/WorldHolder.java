@@ -1,9 +1,9 @@
 package cz.wa.secretagent.worldinfo;
 
-import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.game.PlayerHolder;
 import secretAgent.world.SamWorld;
 
 import java.io.IOException;

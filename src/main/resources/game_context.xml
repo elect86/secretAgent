@@ -28,7 +28,7 @@
 
 	<bean id="settings2d" class="cz.wa.secretagent.view.Settings2D" />
 
-	<bean id="gameSettings" class="cz.wa.secretagent.game.GameSettings" />
+	<bean id="gameSettings" class="secretAgent.game.GameSettings" />
 
 	<!-- OI classes -->
 	<!-- ********** -->
@@ -54,7 +54,7 @@
 		<property name="playerHolder" ref="playerHolder" />
 	</bean>
 
-	<bean id="playerHolder" class="cz.wa.secretagent.game.PlayerHolder">
+	<bean id="playerHolder" class="secretAgent.game.PlayerHolder">
 		<property name="team" ref="playerTeam" />
 		<property name="islandController" ref="islandController" />
 		<property name="levelController" ref="levelController" />

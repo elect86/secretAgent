@@ -74,7 +74,7 @@
 	<!-- ********** -->
 
 	<bean id="entityFactory"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.EntityFactory">
+		class="secretAgent.io.map.orig.generator.entity.EntityFactory">
 		<property name="creators">
 			<map>
 				<entry>
@@ -184,7 +184,7 @@
 	</bean>
 
 	<bean id="usableEntityCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.usable.UsableEntityCreator">
+		class="secretAgent.io.map.orig.generator.entity.UsableEntityCreator">
 		<property name="creators">
 			<map>
 				<entry>
@@ -193,7 +193,7 @@
 							static-field="cz.wa.secretagent.world.entity.usable.UsableType.BUILDING" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.BuildingEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.BuildingEntityCreator" />
 				</entry>
 				<entry>
 					<key>
@@ -201,7 +201,7 @@
 							static-field="cz.wa.secretagent.world.entity.usable.UsableType.FENCE" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.FenceEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.FenceEntityCreator" />
 				</entry>
 				<entry>
 					<key>
@@ -209,7 +209,7 @@
 							static-field="cz.wa.secretagent.world.entity.usable.UsableType.DOOR" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.DoorEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.DoorEntityCreator" />
 				</entry>
 				<entry>
 					<key>
@@ -217,7 +217,7 @@
 							static-field="cz.wa.secretagent.world.entity.usable.UsableType.EXIT" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.ExitEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.ExitEntityCreator" />
 				</entry>
 				<entry>
 					<key>
@@ -225,7 +225,7 @@
 							static-field="cz.wa.secretagent.world.entity.usable.UsableType.EXIT_DOOR" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.ExitDoorEntityCreator">
+						class="secretAgent.io.map.orig.generator.entity.ExitDoorEntityCreator">
 						<property name="samIO" ref="samIO" />
 					</bean>
 				</entry>
@@ -235,7 +235,7 @@
 							static-field="cz.wa.secretagent.world.entity.usable.UsableType.TELEPORT" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.usable.TeleportEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.TeleportEntityCreator" />
 				</entry>
 			</map>
 		</property>
@@ -334,7 +334,7 @@
 	</bean>
 
 	<bean id="projectileEntityCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.projectile.ProjectileEntityCreator">
+		class="secretAgent.io.map.orig.generator.entity.ProjectileEntityCreator">
 		<property name="creators">
 			<map>
 				<entry>
@@ -343,7 +343,7 @@
 							static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.LEVEL_LASER" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.projectile.LevelLaserEntityCreator" />
+						class="secretAgent.io.map.orig.generator.entity.LevelLaserEntityCreator" />
 				</entry>
 			</map>
 		</property>

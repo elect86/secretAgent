@@ -1,7 +1,5 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator
-import cz.wa.secretagent.io.map.orig.generator.entity.TypeEntityCreator
 import cz.wa.secretagent.world.entity.item.ItemEntity
 import cz.wa.secretagent.world.entity.platform.MovableCan
 import cz.wa.secretagent.world.entity.platform.PlatformLift
@@ -9,7 +7,6 @@ import cz.wa.secretagent.world.entity.platform.PlatformType
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
 import secretAgent.world.entity.EntityDirection
@@ -23,7 +20,7 @@ class MovableCanEntityCreator : EntityCreator<MovableCan> {
 
     lateinit var bounds: Rectangle2D
 
-    override fun createEntity(args: List<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): MovableCan =
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): MovableCan =
             MovableCan(model, pos, bounds)
 
     companion object {
@@ -56,7 +53,7 @@ class PlatformLiftEntityCreator : EntityCreator<PlatformLift> {
     var speed = 0.0
     lateinit var bounds: Rectangle2D
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): PlatformLift {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): PlatformLift {
         var dir = defaultDirection
         if (!args.isEmpty()) {
             val arg0 = args.removeAt(0)

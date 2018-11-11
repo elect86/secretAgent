@@ -1,7 +1,5 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator
-import cz.wa.secretagent.io.map.orig.generator.entity.TypeEntityCreator
 import cz.wa.secretagent.world.entity.bgswitch.SimpleSwitch
 import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.bgswitch.SwitchType
@@ -35,7 +33,7 @@ class SwitchEntityCreator : TypeEntityCreator<SwitchEntity>() {
  */
 class SimpleSwitchEntityCreator : EntityCreator<SimpleSwitch> {
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): SimpleSwitch? {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): SimpleSwitch? {
         if (args.size < 4) {
             logger.warn("Not enough arguments for switch: $tileId")
         } else {

@@ -1,12 +1,11 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.agent.Team
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.io.map.orig.generator.entity.EntityCreator
 import secretAgent.view.model.AgentModel
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
@@ -23,7 +22,7 @@ class HumanEntityCreator : EntityCreator<HumanAgent> {
     lateinit var team: Team
     lateinit var propertiesCreator: EnemyHumanPropertiesCreator
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): HumanAgent? {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): HumanAgent? {
 
         if (args.isEmpty()) {
             logger.warn("Human agent model requires one more argument for human type: $tileId")

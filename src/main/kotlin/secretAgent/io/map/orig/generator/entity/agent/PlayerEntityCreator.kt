@@ -1,13 +1,12 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.agent.Team
 import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.PlayerHolder
+import secretAgent.io.map.orig.generator.entity.EntityCreator
 import secretAgent.view.model.AgentModel
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
@@ -25,7 +24,7 @@ class PlayerEntityCreator : EntityCreator<HumanAgent> {
     lateinit var team: Team
     lateinit var playerHolder: PlayerHolder
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): HumanAgent {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): HumanAgent {
         val dir: EntityXDirection = when {
             args.isEmpty() -> AgentCreatorUtils.getDirection(tileId, model as AgentModel)
             else -> EntityXDirection.valueOf(args.removeAt(0))

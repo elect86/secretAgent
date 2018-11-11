@@ -1,7 +1,5 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator
-import cz.wa.secretagent.io.map.orig.generator.entity.TypeEntityCreator
 import cz.wa.secretagent.world.entity.item.*
 import cz.wa.secretagent.world.weapon.Weapon
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
@@ -18,8 +16,8 @@ class AmmoEntityCreator : EntityCreator<AmmoItem> {
 
     lateinit var weapons: Collection<Weapon>
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): AmmoItem? {
-        var count = 0
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): AmmoItem? {
+        var count: Int
         val arg0 = args.removeAt(0)
         try {
             count = Integer.parseInt(arg0)
@@ -76,7 +74,7 @@ class ItemEntityCreator : TypeEntityCreator<ItemEntity>() {
  */
 class JunkEntityCreator : EntityCreator<JunkItem> {
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): JunkItem {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): JunkItem {
         var price = 0
         val arg0 = args.removeAt(0)
         try {
@@ -100,7 +98,7 @@ class JunkEntityCreator : EntityCreator<JunkItem> {
  */
 class KeyEntityCreator : EntityCreator<KeyItem> {
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): KeyItem? {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): KeyItem? {
         if (args.isEmpty())
             logger.warn("Not enough arguments for key: $tileId")
         else {

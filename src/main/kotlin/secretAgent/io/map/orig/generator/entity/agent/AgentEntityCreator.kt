@@ -1,12 +1,11 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator
-import cz.wa.secretagent.io.map.orig.generator.entity.TypeEntityCreator
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.AgentType
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.io.map.orig.generator.entity.EntityCreator
+import secretAgent.io.map.orig.generator.entity.TypeEntityCreator
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
 
@@ -19,7 +18,7 @@ class AgentEntityCreator : TypeEntityCreator<AgentEntity>() {
 
     lateinit var playerCreator: EntityCreator<HumanAgent>
 
-    override fun createEntity(args: MutableList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): AgentEntity? {
+    override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): AgentEntity? {
         val arg0 = args[0]
         if (PLAYER_ARG == arg0) {
             args.removeAt(0)

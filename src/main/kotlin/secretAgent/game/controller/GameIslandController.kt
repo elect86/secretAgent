@@ -36,7 +36,7 @@ class GameIslandController : AbstractPlayerController() {
         else {
             action = actionFactory.getAction(AgentIslandAction::class.java)
             if (menuFrame == null)
-                menuFrame = gameMenuCreator.islandMainMenu
+                menuFrame = gameMenuCreator.getIslandMainMenu()
         }
     }
 

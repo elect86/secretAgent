@@ -19,10 +19,22 @@ class GameMenuCreator : GeneralMenuCreator(), Serializable {
 
     @Transient
     private lateinit var quitToMenuDialog: GFrame
-    @delegate:Transient
-    val levelMainMenu: GFrame by lazy { createLevelMainMenu() }
-    @delegate:Transient
-    val islandMainMenu: GFrame by lazy { createIslandMainMenu() }
+    @Transient
+    private lateinit var levelMainMenu: GFrame
+    @Transient
+    private lateinit var islandMainMenu: GFrame
+
+    fun getLevelMainMenu(): GFrame { // TODO lazy
+        if(!::levelMainMenu.isInitialized)
+            levelMainMenu = createLevelMainMenu()
+        return levelMainMenu
+    }
+
+    fun getIslandMainMenu(): GFrame { // TODO lazy
+        if(!::islandMainMenu.isInitialized)
+            islandMainMenu = createIslandMainMenu()
+        return islandMainMenu
+    }
 
     private fun init() {
         if (!::quitToMenuDialog.isInitialized)

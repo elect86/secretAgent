@@ -88,6 +88,6 @@ class GeneralController : GameController {
     }
 
     companion object {
-        private val serialVersionUID = -1763109597070594041L
+        private const val serialVersionUID = -1763109597070594041L
     }
 }

@@ -1,9 +1,9 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.game.sensor.SensorFactory
 import cz.wa.secretagent.game.starter.MapStarter
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import secretAgent.game.ProjectileFactory
+import secretAgent.game.SensorFactory
 import secretAgent.world.SamWorld
 import java.util.HashMap
 

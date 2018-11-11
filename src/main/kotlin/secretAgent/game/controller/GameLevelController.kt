@@ -1,12 +1,12 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.game.sensor.AgentWeaponSensor
-import cz.wa.secretagent.game.sensor.SensorFactory
 import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.secretagent.world.weapon.WeaponOrder
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.lwjgl.input.Keyboard
+import secretAgent.game.AgentWeaponSensor
+import secretAgent.game.SensorFactory
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.action.AgentLevelAction
 import secretAgent.game.controller.menuCreator.GameMenuCreator
@@ -49,7 +49,7 @@ class GameLevelController : AbstractPlayerController() {
             weaponSensor = sensorFactory!!.getSensor(AgentWeaponSensor::class.java)
         }
         if (menuFrame == null)
-            menuFrame = gameMenuCreator.levelMainMenu
+            menuFrame = gameMenuCreator.getLevelMainMenu()
     }
 
     override fun activate() {

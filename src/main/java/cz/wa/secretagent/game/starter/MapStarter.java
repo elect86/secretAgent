@@ -1,7 +1,6 @@
 package cz.wa.secretagent.game.starter;
 
 import cz.wa.secretagent.game.PlayerHolder;
-import cz.wa.secretagent.game.sensor.SensorFactory;
 import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.menu.window.GFrame;
@@ -24,6 +23,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 import secretAgent.game.ProjectileFactory;
+import secretAgent.game.SensorFactory;
 import secretAgent.game.action.ActionFactory;
 import secretAgent.game.controller.menuCreator.MainMenuCreator;
 import secretAgent.game.player.Camera;

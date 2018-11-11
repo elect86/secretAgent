@@ -44,13 +44,13 @@ class MainMenuCreator : GeneralMenuCreator() {
         return dialogBuilder.createDialog("Secret Agent Remake", buttons, frameColor, null, false)
     }
 
-    fun getMainMenu(): GFrame {
+    fun getMainMenu(): GFrame { // TODO lazy
         if (!::mainMenu.isInitialized)
             mainMenu = createMainMenu()
         return mainMenu
     }
 
-    fun getAboutDialog(): GFrame {
+    fun getAboutDialog(): GFrame { // TODO lazy
         if (!::aboutDialog.isInitialized)
             aboutDialog = createAboutDialog()
         return aboutDialog

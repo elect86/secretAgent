@@ -9,7 +9,6 @@ import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import org.apache.commons.io.FileUtils
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
 import java.io.File
 import java.io.IOException
 import java.util.ArrayList

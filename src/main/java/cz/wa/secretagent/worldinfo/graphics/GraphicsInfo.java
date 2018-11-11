@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
-import secretAgent.view.renderer.SAMGraphics;
+import secretAgent.view.SAMGraphics;
 import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 

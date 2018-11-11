@@ -21,50 +21,50 @@
 	<!-- Model factory -->
 	<!-- ********** -->
 
-	<bean id="modelFactory" class="cz.wa.secretagent.io.campaign.model.ModelFactory">
+	<bean id="modelFactory" class="secretAgent.io.campaign.model.ModelFactory">
 		<property name="modelCreators">
 			<map>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.SIMPLE" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.SimpleModelCreator" />
+					<bean class="secretAgent.io.campaign.model.SimpleModelCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.ANIMATED" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.AnimatedModelCreator" />
+					<bean class="secretAgent.io.campaign.model.AnimatedModelCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.AGENT" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.AgentModelCreator" />
+					<bean class="secretAgent.io.campaign.model.AgentModelCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.HEALTH_BAR" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.HealthBarModelCreator" />
+					<bean class="secretAgent.io.campaign.model.HealthBarModelCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.LASER" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.LaserModelCreator" />
+					<bean class="secretAgent.io.campaign.model.LaserModelCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.WEAPON" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.WeaponModelCreator" />
+					<bean class="secretAgent.io.campaign.model.WeaponModelCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant static-field="secretAgent.world.ModelType.EXPLOSION" />
 					</key>
-					<bean class="cz.wa.secretagent.io.campaign.model.ExplosionModelCreator" />
+					<bean class="secretAgent.io.campaign.model.ExplosionModelCreator" />
 				</entry>
 			</map>
 		</property>

@@ -16,13 +16,16 @@ import java.io.Serializable
  */
 class GameSettings : Serializable {
 
+    @JvmField
     var effectObjects = 0.0
+    @JvmField
     var weaponEquipPolicy: WeaponEquipPolicy? = null
+    @JvmField
     var confirmDialogs: Boolean = false
 
-    companion object {
-        private const val serialVersionUID = -6943322563557755594L
-    }
+//    companion object {
+//        private val serialVersionUID = -6943322563557755594L
+//    }
 }
 
 /**

@@ -11,6 +11,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import org.slf4j.LoggerFactory
 import secretAgent.game.player.Camera
+import secretAgent.view.Renderer
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import secretAgent.world.ObjectModel

@@ -1,10 +1,12 @@
 package secretAgent.view.renderer
 
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.slf4j.LoggerFactory
 import secretAgent.game.player.Camera
+import secretAgent.view.DrawPosition
+import secretAgent.view.Renderer
+import secretAgent.view.Settings2D
 import secretAgent.view.renderer.gui.GuiRenderer
 import secretAgent.view.renderer.hud.ScreenHudRenderer
 import java.io.Serializable

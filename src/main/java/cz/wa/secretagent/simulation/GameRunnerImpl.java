@@ -6,7 +6,7 @@ import org.apache.commons.math3.util.FastMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
-import secretAgent.view.renderer.SamRenderer;
+import secretAgent.view.SamRenderer;
 import secretAgent.world.SamWorld;
 
 import java.io.Serializable;

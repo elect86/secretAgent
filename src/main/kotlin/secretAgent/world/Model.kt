@@ -1,7 +1,7 @@
 package secretAgent.world
 
 import cz.wa.wautils.math.Rectangle2D
-import secretAgent.view.renderer.SAMGraphics
+import secretAgent.view.SAMGraphics
 import secretAgent.view.renderer.TileId
 
 /**

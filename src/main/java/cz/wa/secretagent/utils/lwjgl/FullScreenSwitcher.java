@@ -2,7 +2,6 @@ package cz.wa.secretagent.utils.lwjgl;
 
 import java.io.Serializable;
 
-import cz.wa.secretagent.view.Settings2D;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
@@ -10,6 +9,7 @@ import org.lwjgl.opengl.DisplayMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.view.Settings2D;
 
 /**
  * Switches to full screen.

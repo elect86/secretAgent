@@ -21,7 +21,7 @@
 //import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher;
 //import cz.wa.secretagent.view.Settings2D;
 //import cz.wa.secretagent.worldinfo.WorldHolder;
-//import secretAgent.view.renderer.SamRenderer;
+//import secretAgent.view.SamRenderer;
 //
 ///**
 // * Renders the world using LWJGL.

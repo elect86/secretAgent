@@ -30,7 +30,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import secretAgent.view.renderer.SAMGraphics;
+import secretAgent.view.SAMGraphics;
 import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.SamWorld;

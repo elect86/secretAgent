@@ -32,7 +32,7 @@
 //import cz.wa.wautils.math.Rectangle2D;
 //import cz.wa.wautils.math.Rectangle2I;
 //import cz.wa.wautils.math.Vector2F;
-//import secretAgent.view.renderer.DrawPosition;
+//import secretAgent.view.DrawPosition;
 //
 ///**
 // * Draws primitives to canvas. No other class should draw anything because of the viewport.

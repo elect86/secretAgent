@@ -26,7 +26,7 @@
 		<constructor-arg value="cz.wa.secretagent.io.FileSettings" />
 	</bean>
 
-	<bean id="settings2d" class="cz.wa.secretagent.view.Settings2D" />
+	<bean id="settings2d" class="secretAgent.view.Settings2D" />
 
 	<bean id="gameSettings" class="secretAgent.game.GameSettings" />
 

@@ -1,7 +1,6 @@
 package secretAgent.view.renderer
 
 import cz.wa.secretagent.utils.lwjgl.Texture
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Rectangle2I
 import cz.wa.wautils.math.Vector2F
@@ -13,6 +12,8 @@ import org.newdawn.slick.UnicodeFont
 import org.newdawn.slick.font.effects.ColorEffect
 import org.newdawn.slick.font.effects.ShadowEffect
 import org.newdawn.slick.opengl.TextureImpl
+import secretAgent.view.DrawPosition
+import secretAgent.view.Settings2D
 import java.awt.Color
 import java.awt.Font
 import java.io.Serializable

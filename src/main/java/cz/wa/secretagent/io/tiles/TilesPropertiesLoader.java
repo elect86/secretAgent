@@ -9,7 +9,6 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.wa.secretagent.io.campaign.model.ModelFactory;
 import cz.wa.secretagent.io.tiles.singleproperties.EntityProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties;
 import cz.wa.secretagent.io.tiles.singleproperties.TileProperties;
@@ -17,6 +16,7 @@ import cz.wa.secretagent.worldinfo.graphics.EntityInfo;
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo;
 import cz.wa.secretagent.worldinfo.graphics.TileInfo;
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo;
+import secretAgent.io.campaign.model.ModelFactory;
 import secretAgent.view.renderer.TileId;
 
 /**

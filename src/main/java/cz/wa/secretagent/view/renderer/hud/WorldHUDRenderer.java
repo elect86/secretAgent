@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Required;
 import secretAgent.game.PlayerHolder;
 import secretAgent.game.player.Camera;
 import secretAgent.view.renderer.PrimitivesDrawer;
-import secretAgent.view.renderer.Renderer;
+import secretAgent.view.Renderer;
 import secretAgent.world.SamWorld;
 
 import java.awt.*;

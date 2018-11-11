@@ -1,7 +1,6 @@
 package secretAgent.view.renderer.gui
 
 import cz.wa.secretagent.menu.window.GFrame
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.secretagent.view.renderer.gui.ComponentRenderer
 import cz.wa.secretagent.view.renderer.gui.FrameRenderer
 import cz.wa.secretagent.worldinfo.WorldHolder
@@ -10,6 +9,7 @@ import cz.wa.secretagent.worldinfo.graphics.TilesInfo
 import cz.wa.wautils.math.Vector2I
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.game.player.Camera
+import secretAgent.view.Settings2D
 import secretAgent.view.model.SimpleModel
 import secretAgent.view.renderer.DrawBounds
 import secretAgent.view.renderer.PrimitivesDrawer

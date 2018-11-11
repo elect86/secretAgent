@@ -1,6 +1,5 @@
 package secretAgent.view.renderer.hud
 
-import cz.wa.secretagent.view.Settings2D
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.item.ItemType
@@ -14,6 +13,9 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.game.PlayerHolder
 import secretAgent.game.player.Camera
+import secretAgent.view.DrawPosition
+import secretAgent.view.Renderer
+import secretAgent.view.Settings2D
 import secretAgent.view.model.HealthBarModel
 import secretAgent.view.renderer.*
 import secretAgent.view.renderer.model.ModelRenderer

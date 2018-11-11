@@ -1,8 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.game.utils.EntitiesFinder
-import cz.wa.secretagent.game.utils.EntityMover
-import cz.wa.secretagent.game.utils.EntityObserver
 import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.agent.AgentAction
@@ -22,6 +19,9 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.ProjectileFactory
+import secretAgent.game.utils.EntitiesFinder
+import secretAgent.game.utils.EntityMover
+import secretAgent.game.utils.EntityObserver
 import secretAgent.game.utils.ProjectileCollider
 import secretAgent.view.model.EmptyModel
 import secretAgent.world.entity.EntityXDirection

@@ -1,10 +1,10 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.game.utils.AgentHurter
 import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.explosion.Explosion
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
+import secretAgent.game.utils.AgentHurter
 
 /**
  * Simulates a platform.

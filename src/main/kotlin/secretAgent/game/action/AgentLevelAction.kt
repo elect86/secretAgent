@@ -1,6 +1,5 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.game.utils.EntityObserver
 import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.agent.AgentType
 import cz.wa.secretagent.world.entity.agent.HumanAgent
@@ -8,6 +7,7 @@ import cz.wa.secretagent.world.weapon.Weapon
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.game.ProjectileFactory
+import secretAgent.game.utils.EntityObserver
 import secretAgent.plus
 import secretAgent.world.entity.EntityXDirection
 import secretAgent.world.entity.EntityYDirection
@@ -41,7 +41,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
 
     override fun init() {
         activateAction = actionFactory!!.getAction(AgentActivateAction::class.java)
-        posSensor = EntityObserver(agent, world)
+        posSensor = EntityObserver(agent!!, world!!)
         projectileFactory = actionFactory!!.projectileFactory!!
     }
 

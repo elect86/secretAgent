@@ -293,7 +293,7 @@
 	</bean>
 
 	<bean id="platformEntityCreator"
-		class="cz.wa.secretagent.io.map.orig.generator.entity.platform.PlatformEntityCreator">
+		class="secretAgent.io.map.orig.generator.entity.PlatformEntityCreator">
 		<property name="creators">
 			<map>
 				<entry>
@@ -302,7 +302,7 @@
 							static-field="cz.wa.secretagent.world.entity.platform.PlatformType.LIFT" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.platform.PlatformLiftEntityCreator">
+						class="secretAgent.io.map.orig.generator.entity.PlatformLiftEntityCreator">
 						<property name="defaultDirection">
 							<util:constant
 								static-field="secretAgent.world.entity.EntityDirection.RIGHT" />
@@ -321,7 +321,7 @@
 							static-field="cz.wa.secretagent.world.entity.platform.PlatformType.CAN" />
 					</key>
 					<bean
-						class="cz.wa.secretagent.io.map.orig.generator.entity.platform.MovableCanEntityCreator">
+						class="secretAgent.io.map.orig.generator.entity.MovableCanEntityCreator">
 						<property name="bounds">
 							<bean class="cz.wa.wautils.math.Rectangle2D">
 								<constructor-arg value="-6, -8, 12, 16" />

@@ -1,6 +1,5 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.game.starter.CampaignStarter
 import cz.wa.secretagent.io.FileSettings
 import cz.wa.secretagent.io.campaign.CampaignPropertiesParser
 import cz.wa.secretagent.launcher.SecretAgentMain
@@ -9,6 +8,7 @@ import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import org.apache.commons.io.FileUtils
 import org.slf4j.LoggerFactory
+import secretAgent.game.starter.CampaignStarter
 import java.io.File
 import java.io.IOException
 import java.util.ArrayList

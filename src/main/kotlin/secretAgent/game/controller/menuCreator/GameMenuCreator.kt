@@ -1,12 +1,10 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.game.starter.MapStarter
 import cz.wa.secretagent.menu.builder.TextButtonDescriptor
 import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.game.starter.MapStarter
 import java.io.Serializable
-import java.util.ArrayList
 
 /**
  * Methods for creating menus in game. Caches all frames.

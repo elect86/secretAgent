@@ -1,6 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.game.starter.MapStarter
 import cz.wa.secretagent.game.utils.EntityObserver
 import cz.wa.secretagent.game.utils.ProjectileMover
 import cz.wa.secretagent.io.SAMIO
@@ -16,6 +15,7 @@ import cz.wa.secretagent.world.map.StoredTile
 import cz.wa.secretagent.world.map.TileType
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.game.ProjectileFactory
+import secretAgent.game.starter.MapStarter
 import java.util.*
 
 /**

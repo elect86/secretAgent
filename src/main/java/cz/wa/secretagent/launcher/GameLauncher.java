@@ -21,7 +21,6 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import cz.wa.secretagent.game.PlayerHolder;
 import cz.wa.secretagent.game.PlayerKeys;
-import cz.wa.secretagent.game.starter.MapStarter;
 import cz.wa.secretagent.io.FileSettings;
 import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.menu.MenuHolder;
@@ -33,6 +32,7 @@ import cz.wa.secretagent.utils.lwjgl.KeysUtils;
 import cz.wa.secretagent.utils.lwjgl.TextureLoader;
 import cz.wa.wautils.collection.TypedKey;
 import cz.wa.wautils.io.FileObjectUtils;
+import secretAgent.game.starter.MapStarter;
 
 /**
  * Launches the game.

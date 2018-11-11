@@ -252,7 +252,7 @@
 
 	<!-- Starter classes -->
 	<!-- ************ -->
-	<bean id="campaignStarter" class="cz.wa.secretagent.game.starter.CampaignStarter">
+	<bean id="campaignStarter" class="secretAgent.game.starter.CampaignStarter">
 		<property name="samIO" ref="samIO" />
 		<property name="mapStarter" ref="mapStarter" />
 		<property name="playerHolder" ref="playerHolder" />
@@ -289,7 +289,7 @@
 		</property>
 	</bean>
 
-	<bean id="mapStarter" class="cz.wa.secretagent.game.starter.MapStarter">
+	<bean id="mapStarter" class="secretAgent.game.starter.MapStarter">
 		<property name="io" ref="samIO"></property>
 		<property name="cameraInfo" ref="cameraInfo" />
 		<property name="playerHolder" ref="playerHolder" />
@@ -298,7 +298,7 @@
 		<property name="weaponOrder" ref="playerWeapons" />
 	</bean>
 
-	<bean id="cameraInfo" class="cz.wa.secretagent.game.starter.CameraInfo">
+	<bean id="cameraInfo" class="secretAgent.game.starter.CameraInfo">
 		<property name="settings2d" ref="settings2d" />
 		<property name="preferredVisibleTilesNum">
 			<bean class="org.apache.commons.math3.geometry.euclidean.twod.Vector2D">

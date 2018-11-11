@@ -1,15 +1,15 @@
 package cz.wa.secretagent.game.utils;
 
-import cz.wa.secretagent.game.utils.collision.CollidedEntity;
-import cz.wa.secretagent.game.utils.collision.CollidedTile;
-import cz.wa.secretagent.game.utils.collision.CollisionDescriptor;
-import cz.wa.secretagent.game.utils.collision.ProjectileCollider;
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
 import cz.wa.secretagent.world.entity.agent.AgentEntity;
 import cz.wa.secretagent.world.entity.projectile.ProjectileEntity;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import secretAgent.game.simulator.entity.ProjectileHitTypes;
+import secretAgent.game.utils.CollidedEntity;
+import secretAgent.game.utils.CollidedTile;
+import secretAgent.game.utils.CollisionDescriptor;
+import secretAgent.game.utils.ProjectileCollider;
 import secretAgent.world.SamWorld;
 
 /**

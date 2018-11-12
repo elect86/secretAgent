@@ -3,7 +3,7 @@ package secretAgent.view.model
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
 import secretAgent.view.renderer.GLGraphics
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
@@ -42,7 +42,7 @@ class SimpleModel
 
     constructor(tileId: TileId, scale: Double) : this(tileId, AbstractModel.DEFAULT_BOUNDS.takeIf { scale == 0.0 }, scale)
 
-    override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
+    override fun linkTexturesInternal(graphics: SamGraphics): Rectangle2D? {
         val tile = (graphics as GLGraphics).getTile(tileId)
         texture = tile
         return tile?.let { AbstractModel.getModelBounds(tile.tileBounds) }

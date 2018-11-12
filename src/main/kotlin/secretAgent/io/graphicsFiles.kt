@@ -1,16 +1,14 @@
 package secretAgent.io
 
-import cz.wa.secretagent.io.FileSettings
-import cz.wa.secretagent.io.tiles.GLTileSetLoader
-import cz.wa.secretagent.io.tiles.ModelsLoader
-import cz.wa.secretagent.io.tiles.TilesPropertiesLoader
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo
 import org.apache.commons.io.FilenameUtils
-import org.apache.commons.lang.Validate
 import org.slf4j.LoggerFactory
 import secretAgent.io.campaign.model.ModelFactory
-import secretAgent.view.SAMGraphics
+import secretAgent.io.tiles.GLTileSetLoader
+import secretAgent.io.tiles.ModelsLoader
+import secretAgent.io.tiles.TilesPropertiesLoader
+import secretAgent.view.SamGraphics
 import secretAgent.view.Settings2D
 import secretAgent.view.renderer.GLGraphics
 import secretAgent.world.ObjectModel
@@ -34,7 +32,7 @@ class GraphicsFiles(val bgColor: Color,  val tilesFiles: Map<Int, File>, val mod
  */
 class GraphicsFilesLoader(private val file: File,
                           private val modelFactory: ModelFactory,
-                          private val graphics: SAMGraphics?,
+                          private val graphics: SamGraphics?,
                           private val fileSettings: FileSettings,
                           private val settings2d: Settings2D) {
 

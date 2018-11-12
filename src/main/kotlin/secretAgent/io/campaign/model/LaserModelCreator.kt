@@ -1,7 +1,7 @@
 package secretAgent.io.campaign.model
 
-import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties
 import org.slf4j.LoggerFactory
+import secretAgent.io.tiles.ModelProperties
 import secretAgent.view.model.LaserModel
 import secretAgent.view.renderer.TileId
 import java.awt.Color

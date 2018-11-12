@@ -1,6 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.io.SAMIO
 import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.projectile.BulletFallProjectile
 import cz.wa.secretagent.world.entity.projectile.BulletProjectile
@@ -16,6 +15,7 @@ import secretAgent.game.ProjectileFactory
 import secretAgent.game.starter.MapStarter
 import secretAgent.game.utils.EntityObserver
 import secretAgent.game.utils.ProjectileMover
+import secretAgent.io.SamIO
 import java.util.*
 
 /**
@@ -68,7 +68,7 @@ class BulletFallEntitySimulator : AbstractEntitySimulator<BulletFallProjectile>(
 class DynamiteEntitySimulator : AbstractEntitySimulator<DynamiteProjectile>() {
 
     lateinit var mapStarter: MapStarter
-    lateinit var samIO: SAMIO
+    lateinit var samIO: SamIO
     lateinit var projectileFactory: ProjectileFactory
 
     var explosionDamage = 0.0

@@ -1,7 +1,7 @@
 //package cz.wa.secretagent.game.starter;
 //
 //import cz.wa.secretagent.game.PlayerHolder;
-//import cz.wa.secretagent.io.SAMIO;
+//import cz.wa.secretagent.io.SamIO;
 //import cz.wa.secretagent.menu.MenuHolder;
 //import cz.wa.secretagent.menu.window.GFrame;
 //import cz.wa.secretagent.world.EntityMap;
@@ -48,7 +48,7 @@
 //
 //    private static final Logger logger = LoggerFactory.getLogger(MapStarter.class);
 //
-//    private SAMIO io;
+//    private SamIO io;
 //    private PlayerHolder playerHolder;
 //    private CameraInfo cameraInfo;
 //    private ProjectileFactory projectileFactory;
@@ -204,12 +204,12 @@
 //        }
 //    }
 //
-//    public SAMIO getIo() {
+//    public SamIO getIo() {
 //        return io;
 //    }
 //
 //    @Required
-//    public void setIo(SAMIO io) {
+//    public void setIo(SamIO io) {
 //        this.io = io;
 //    }
 //

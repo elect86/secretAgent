@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
-import secretAgent.view.SAMGraphics;
+import secretAgent.view.SamGraphics;
 import secretAgent.view.renderer.TileId;
 import secretAgent.world.ObjectModel;
 
@@ -53,7 +53,7 @@ public class GraphicsInfo {
         return tileSets.containsKey(tileSetId);
     }
 
-    public void linkTexturesToModels(SAMGraphics graphics) {
+    public void linkTexturesToModels(SamGraphics graphics) {
         for (Map.Entry<Integer, TilesInfo> entry1 : tileSets.entrySet()) {
             for (Map.Entry<Integer, TileInfo> entry2 : entry1.getValue().getTiles().entrySet()) {
                 entry2.getValue().getModelInfo().getModel().linkTextures(graphics);

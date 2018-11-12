@@ -1,7 +1,7 @@
 package secretAgent.io.campaign.model
 
-import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo
+import secretAgent.io.tiles.ModelProperties
 import secretAgent.view.model.SimpleModel
 import secretAgent.view.renderer.TileId
 import secretAgent.world.GLModel

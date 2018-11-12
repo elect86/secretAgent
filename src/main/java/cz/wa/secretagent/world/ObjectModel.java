@@ -2,7 +2,7 @@
 //
 //import java.util.Set;
 //
-//import cz.wa.secretagent.view.SAMGraphics;
+//import cz.wa.secretagent.view.SamGraphics;
 //import cz.wa.secretagent.view.TileId;
 //import cz.wa.wautils.math.Rectangle2D;
 //
@@ -22,7 +22,7 @@
 //     * Link textures from the graphics (must be performed before rendering)
 //     * @param graphics
 //     */
-//    void linkTextures(SAMGraphics graphics);
+//    void linkTextures(SamGraphics graphics);
 //
 //    /**
 //     * @return if the textures are linked

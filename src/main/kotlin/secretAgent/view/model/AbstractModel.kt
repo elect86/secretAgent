@@ -1,7 +1,7 @@
 //package secretAgent.view.model
 //
 //import cz.wa.secretagent.Constants
-//import cz.wa.secretagent.view.SAMGraphics
+//import cz.wa.secretagent.view.SamGraphics
 //import cz.wa.secretagent.view.TileId
 //import cz.wa.secretagent.view.texture.GLGraphics
 //import cz.wa.secretagent.view.texture.TextureToDraw
@@ -47,7 +47,7 @@
 //    override val maxBounds: Rectangle2D
 //        get() = bounds!!
 //
-//    override fun linkTextures(graphics: SAMGraphics) {
+//    override fun linkTextures(graphics: SamGraphics) {
 //        if (scale != 0.0)
 //            bounds = linkTexturesInternal(graphics)
 //        checkTransparency()
@@ -63,7 +63,7 @@
 //     * @param graphics textures holder
 //     * @return model bounds (used if initialized to null)
 //     */
-//    protected abstract fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D?
+//    protected abstract fun linkTexturesInternal(graphics: SamGraphics): Rectangle2D?
 //
 //    override fun hashCode(): Int {
 //        val temp = scale.toBits()
@@ -79,7 +79,7 @@
 //        val MAX_BOUNDS = Rectangle2D(-10000.0, -10000.0, 100000.0, 100000.0)
 //
 //        @JvmStatic
-//        fun extractTextures(graphics: SAMGraphics, tileIds: List<TileId>): List<TextureToDraw> {
+//        fun extractTextures(graphics: SamGraphics, tileIds: List<TileId>): List<TextureToDraw> {
 //            val gr = graphics as GLGraphics
 //            val textures = ArrayList<TextureToDraw>(tileIds.size)
 //            for (tileId in tileIds)

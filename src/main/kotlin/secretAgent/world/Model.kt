@@ -1,7 +1,7 @@
 package secretAgent.world
 
 import cz.wa.wautils.math.Rectangle2D
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TileId
 
 /**
@@ -30,7 +30,7 @@ interface ObjectModel {
      * Link textures from the graphics (must be performed before rendering)
      * @param graphics
      */
-    fun linkTextures(graphics: SAMGraphics)
+    fun linkTextures(graphics: SamGraphics)
 
     /**
      * @return if the textures are linked

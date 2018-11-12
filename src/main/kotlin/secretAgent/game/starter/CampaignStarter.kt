@@ -1,9 +1,9 @@
 package secretAgent.game.starter
 
-import cz.wa.secretagent.io.SAMIO
 import org.slf4j.LoggerFactory
 import secretAgent.game.PlayerHolder
 import secretAgent.game.player.PlayerStats
+import secretAgent.io.SamIO
 import java.io.File
 import java.io.IOException
 import java.io.Serializable
@@ -16,7 +16,7 @@ import java.io.Serializable
  */
 class CampaignStarter : Serializable {
 
-    lateinit var samIO: SAMIO
+    lateinit var samIO: SamIO
     lateinit var playerHolder: PlayerHolder
     lateinit var mapStarter: MapStarter
     lateinit var initialStats: PlayerStats

@@ -6,7 +6,7 @@
 //import java.util.HashMap;
 //import java.util.Map;
 //
-//import cz.wa.secretagent.view.SAMGraphics;
+//import cz.wa.secretagent.view.SamGraphics;
 //import cz.wa.secretagent.view.TileId;
 //import org.jetbrains.annotations.Nullable;
 //
@@ -15,7 +15,7 @@
 // *
 // * @author Ondrej Milenovsky
 // */
-//public class GLGraphics implements SAMGraphics, Serializable {
+//public class GLGraphics implements SamGraphics, Serializable {
 //    private static final long serialVersionUID = 5985274627008462545L;
 //
 //    private transient Map<Integer, GLTileSet> tileSets;

@@ -5,7 +5,7 @@
 //
 //import org.apache.commons.lang.Validate;
 //
-//import cz.wa.secretagent.view.SAMGraphics;
+//import cz.wa.secretagent.view.SamGraphics;
 //import cz.wa.secretagent.view.TileId;
 //import cz.wa.secretagent.view.texture.TextureToDraw;
 //import cz.wa.secretagent.world.entity.agent.AgentAction;
@@ -42,7 +42,7 @@
 //        return stayTxs != null;
 //    }
 //
-//    public void linkTextures(SAMGraphics graphics) {
+//    public void linkTextures(SamGraphics graphics) {
 //        stayTxs = AbstractModel.extractTextures(graphics, stayIds);
 //        moveTxs = AbstractModel.extractTextures(graphics, moveIds);
 //        jumpTxs = AbstractModel.extractTextures(graphics, jumpIds);

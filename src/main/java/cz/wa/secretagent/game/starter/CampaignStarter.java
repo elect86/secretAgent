@@ -9,7 +9,7 @@
 //import org.springframework.beans.factory.annotation.Required;
 //
 //import cz.wa.secretagent.game.PlayerHolder;
-//import cz.wa.secretagent.io.SAMIO;
+//import cz.wa.secretagent.io.SamIO;
 //import secretAgent.game.player.PlayerStats;
 //
 ///**
@@ -23,7 +23,7 @@
 //
 //    private static final Logger logger = LoggerFactory.getLogger(CampaignStarter.class);
 //
-//    private SAMIO samIO;
+//    private SamIO samIO;
 //    private PlayerHolder playerHolder;
 //    private MapStarter mapStarter;
 //    private PlayerStats initialStats;
@@ -39,12 +39,12 @@
 //        }
 //    }
 //
-//    public SAMIO getSamIO() {
+//    public SamIO getSamIO() {
 //        return samIO;
 //    }
 //
 //    @Required
-//    public void setSamIO(SAMIO samIO) {
+//    public void setSamIO(SamIO samIO) {
 //        this.samIO = samIO;
 //    }
 //

@@ -1,6 +1,5 @@
 package secretAgent.game.starter
 
-import cz.wa.secretagent.io.SAMIO
 import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.usable.BuildingUsable
@@ -15,6 +14,7 @@ import secretAgent.game.ProjectileFactory
 import secretAgent.game.SensorFactory
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.controller.menuCreator.MainMenuCreator
+import secretAgent.io.SamIO
 import java.io.IOException
 import java.io.Serializable
 import java.util.*
@@ -26,7 +26,7 @@ import java.util.*
  */
 class MapStarter : Serializable {
 
-    lateinit var io: SAMIO
+    lateinit var io: SamIO
     lateinit var playerHolder: PlayerHolder
     lateinit var cameraInfo: CameraInfo
     lateinit var projectileFactory: ProjectileFactory

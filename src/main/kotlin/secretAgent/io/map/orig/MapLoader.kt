@@ -27,7 +27,7 @@ import org.apache.commons.math3.util.FastMath
 import org.slf4j.LoggerFactory
 import secretAgent.io.map.orig.generator.MapGenerator
 import secretAgent.io.map.orig.generator.entity.EntityFactory
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
 import java.io.File
@@ -42,7 +42,7 @@ import java.util.*
 class MapLoader(private val file: File,
                 private val levelId: Int,
                 private val graphicsInfo: GraphicsInfo,
-                private val graphics: SAMGraphics,
+                private val graphics: SamGraphics,
                 private val entityFactory: EntityFactory) {
 
     @Throws(IOException::class)

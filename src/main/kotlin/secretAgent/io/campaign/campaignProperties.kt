@@ -1,7 +1,7 @@
 package secretAgent.io.campaign
 
-import cz.wa.secretagent.io.FileSettings
 import org.slf4j.LoggerFactory
+import secretAgent.io.FileSettings
 import secretAgent.io.GraphicsFilesParser
 import java.awt.Color
 import java.io.File

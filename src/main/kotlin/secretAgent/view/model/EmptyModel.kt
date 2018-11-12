@@ -1,7 +1,7 @@
 package secretAgent.view.model
 
 import cz.wa.wautils.math.Rectangle2D
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TileId
 import secretAgent.world.GLModel
 import secretAgent.world.ModelType
@@ -25,7 +25,7 @@ class EmptyModel private constructor() : GLModel {
     override val type: ModelType
         get() = ModelType.EMPTY
 
-    override fun linkTextures(graphics: SAMGraphics) {} // nothing
+    override fun linkTextures(graphics: SamGraphics) {} // nothing
 
     override fun hasLinkedTextures(): Boolean = true
 

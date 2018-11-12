@@ -10,7 +10,7 @@
 //import cz.wa.secretagent.game.starter.MapStarter;
 //import cz.wa.secretagent.game.utils.EntityObserver;
 //import cz.wa.secretagent.game.utils.TileWithPosition;
-//import cz.wa.secretagent.io.SAMIO;
+//import cz.wa.secretagent.io.SamIO;
 //import cz.wa.secretagent.world.EntityMap;
 //import cz.wa.secretagent.world.entity.Entity;
 //import cz.wa.secretagent.world.entity.EntityType;
@@ -38,7 +38,7 @@
 //    private static final long serialVersionUID = 6710267400479925390L;
 //
 //    private MapStarter mapStarter;
-//    private SAMIO samIO;
+//    private SamIO samIO;
 //    private ProjectileFactory projectileFactory;
 //
 //    private double explosionDamage;
@@ -111,12 +111,12 @@
 //        this.mapStarter = mapStarter;
 //    }
 //
-//    public SAMIO getSamIO() {
+//    public SamIO getSamIO() {
 //        return samIO;
 //    }
 //
 //    @Required
-//    public void setSamIO(SAMIO samIO) {
+//    public void setSamIO(SamIO samIO) {
 //        this.samIO = samIO;
 //    }
 //

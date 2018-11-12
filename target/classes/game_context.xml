@@ -21,9 +21,9 @@
 	<!-- ************* -->
 	<bean id="propertiesLoader" class="cz.wa.secretagent.utils.PropertiesLoader" />
 
-	<bean id="fileSettings" class="cz.wa.secretagent.io.FileSettings" factory-bean="propertiesLoader" factory-method="loadProperties">
+	<bean id="fileSettings" class="secretAgent.io.FileSettings" factory-bean="propertiesLoader" factory-method="loadProperties">
 		<constructor-arg value="classpath:fileSettings.properties" />
-		<constructor-arg value="cz.wa.secretagent.io.FileSettings" />
+		<constructor-arg value="secretAgent.io.FileSettings" />
 	</bean>
 
 	<bean id="settings2d" class="secretAgent.view.Settings2D" />
@@ -33,7 +33,7 @@
 	<!-- OI classes -->
 	<!-- ********** -->
 
-	<bean id="samIO" class="cz.wa.secretagent.io.SAMIO">
+	<bean id="samIO" class="secretAgent.io.SamIO">
 		<property name="fileSettings" ref="fileSettings" />
 		<property name="settings2d" ref="settings2d" />
 		<property name="gameSettings" ref="gameSettings" />

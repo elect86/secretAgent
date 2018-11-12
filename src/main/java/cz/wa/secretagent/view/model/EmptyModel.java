@@ -3,7 +3,7 @@
 //import java.util.Collections;
 //import java.util.Set;
 //
-//import cz.wa.secretagent.view.SAMGraphics;
+//import cz.wa.secretagent.view.SamGraphics;
 //import cz.wa.secretagent.view.TileId;
 //import cz.wa.wautils.math.Rectangle2D;
 //import secretAgent.world.GLModel;
@@ -26,7 +26,7 @@
 //    }
 //
 //    @Override
-//    public void linkTextures(SAMGraphics graphics) {
+//    public void linkTextures(SamGraphics graphics) {
 //        // nothing
 //    }
 //

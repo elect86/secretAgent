@@ -1,8 +1,8 @@
 package secretAgent.io.campaign.model
 
-import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo
 import org.slf4j.LoggerFactory
+import secretAgent.io.tiles.ModelProperties
 import secretAgent.view.model.HealthBarModel
 import secretAgent.view.renderer.TileId
 import secretAgent.world.GLModel

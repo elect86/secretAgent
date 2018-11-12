@@ -3,7 +3,7 @@ package secretAgent.view.model
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
@@ -51,7 +51,7 @@ class WeaponModel(
 
     override fun hasLinkedTextures(): Boolean = wieldModel.hasLinkedTextures() && fireModel.hasLinkedTextures()
 
-    override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
+    override fun linkTexturesInternal(graphics: SamGraphics): Rectangle2D? {
         wieldModel.linkTextures(graphics)
         fireModel.linkTextures(graphics)
         return wieldModel.bounds

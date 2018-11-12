@@ -3,7 +3,7 @@ package secretAgent.view.model
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
 import secretAgent.view.renderer.GLGraphics
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
@@ -39,7 +39,7 @@ class HealthBarModel(
 
     override fun hasLinkedTextures() = healthTexture != null
 
-    override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
+    override fun linkTexturesInternal(graphics: SamGraphics): Rectangle2D? {
         frameTexture = (graphics as GLGraphics).getTile(frameTileId!!) ?: throw Error("missing tile $frameTileId")
         healthTexture = graphics.getTile(healthTileId!!) ?: throw Error("missing tile $healthTileId")
         return frameTexture?.let { AbstractModel.getModelBounds(it.tileBounds) }

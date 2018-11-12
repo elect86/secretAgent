@@ -16,7 +16,7 @@
 //import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 //import cz.wa.secretagent.worldinfo.map.MapInfo;
 //import secretAgent.io.campaign.model.ModelFactory;
-//import secretAgent.view.SAMGraphics;
+//import secretAgent.view.SamGraphics;
 //import secretAgent.view.Settings2D;
 //
 ///**
@@ -29,7 +29,7 @@
 //    private static final Logger logger = LoggerFactory.getLogger(CampaignLoader.class);
 //
 //    private File file;
-//    private final SAMGraphics graphics;
+//    private final SamGraphics graphics;
 //    private final Settings2D settings2d;
 //    private final FileSettings fileSettings;
 //    private final ModelFactory modelFactory;
@@ -38,7 +38,7 @@
 //     * @param inputFile file containing campaign definition
 //     * @param graphics reference to graphics, used to load textures, if null, then textures are not loaded or linked with models
 //     */
-//    public CampaignLoader(File inputFile, SAMGraphics graphics, Settings2D settings2d,
+//    public CampaignLoader(File inputFile, SamGraphics graphics, Settings2D settings2d,
 //            FileSettings fileSettings, ModelFactory modelFactory) {
 //        this.file = inputFile;
 //        this.graphics = graphics;

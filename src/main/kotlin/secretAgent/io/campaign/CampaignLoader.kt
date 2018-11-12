@@ -1,14 +1,14 @@
 package secretAgent.io.campaign
 
-import cz.wa.secretagent.io.FileSettings
 import cz.wa.secretagent.worldinfo.CampaignInfo
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.secretagent.worldinfo.map.MapInfo
 import org.apache.commons.lang.StringUtils
 import org.slf4j.LoggerFactory
+import secretAgent.io.FileSettings
 import secretAgent.io.GraphicsFilesLoader
 import secretAgent.io.campaign.model.ModelFactory
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.Settings2D
 import java.io.File
 import java.io.IOException
@@ -20,13 +20,14 @@ import java.util.*
  *
  * @author Ondrej Milenovsky
  */
-class CampaignLoader
-/**
- * @param inputFile file containing campaign definition
- * @param graphics reference to graphics, used to load textures, if null, then textures are not loaded or linked with models
- */
-(private val file: File, private val graphics: SAMGraphics, private val settings2d: Settings2D,
- private val fileSettings: FileSettings, private val modelFactory: ModelFactory) {
+class CampaignLoader(
+        /** file containing campaign definition         */
+        private val file: File,
+        /** reference to graphics, used to load textures, if null, then textures are not loaded or linked with models */
+        private val graphics: SamGraphics,
+        private val settings2d: Settings2D,
+        private val fileSettings: FileSettings,
+        private val modelFactory: ModelFactory) {
 
     /**
      * Parses the campaign file and all subfiles (except maps), loads the textures and generates CampaignInfo.

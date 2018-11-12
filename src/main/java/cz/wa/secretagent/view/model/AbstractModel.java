@@ -5,7 +5,7 @@ import cz.wa.wautils.math.Rectangle2D;
 import org.apache.commons.lang.Validate;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import secretAgent.view.renderer.GLGraphics;
-import secretAgent.view.SAMGraphics;
+import secretAgent.view.SamGraphics;
 import secretAgent.view.renderer.TextureToDraw;
 import secretAgent.view.renderer.TileId;
 import secretAgent.world.GLModel;
@@ -84,7 +84,7 @@ public abstract class AbstractModel implements GLModel {
     }
 
     @Override
-    public final void linkTextures(SAMGraphics graphics) {
+    public final void linkTextures(SamGraphics graphics) {
         Rectangle2D newBounds = linkTexturesInternal(graphics);
         if (scale != 0) {
             bounds = newBounds;
@@ -97,9 +97,9 @@ public abstract class AbstractModel implements GLModel {
      * @param graphics textures holder
      * @return model bounds (used if initialized to null)
      */
-    protected abstract Rectangle2D linkTexturesInternal(SAMGraphics graphics);
+    protected abstract Rectangle2D linkTexturesInternal(SamGraphics graphics);
 
-    public static List<TextureToDraw> extractTextures(SAMGraphics graphics, List<TileId> tileIds) {
+    public static List<TextureToDraw> extractTextures(SamGraphics graphics, List<TileId> tileIds) {
         GLGraphics gr = (GLGraphics) graphics;
         List<TextureToDraw> textures = new ArrayList<TextureToDraw>(tileIds.size());
         for (TileId tileId : tileIds) {

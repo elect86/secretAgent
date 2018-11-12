@@ -30,7 +30,7 @@
 //import org.slf4j.LoggerFactory;
 //import secretAgent.io.map.orig.generator.MapGenerator;
 //import secretAgent.io.map.orig.generator.entity.EntityFactory;
-//import secretAgent.view.SAMGraphics;
+//import secretAgent.view.SamGraphics;
 //import secretAgent.view.renderer.TileId;
 //import secretAgent.world.ObjectModel;
 //import secretAgent.world.SamWorld;
@@ -54,10 +54,10 @@
 //    private final File file;
 //    private final int levelId;
 //    private final GraphicsInfo graphicsInfo;
-//    private final SAMGraphics graphics;
+//    private final SamGraphics graphics;
 //    private final EntityFactory entityFactory;
 //
-//    public MapLoader(File file, int levelId, GraphicsInfo graphicsInfo, SAMGraphics graphics,
+//    public MapLoader(File file, int levelId, GraphicsInfo graphicsInfo, SamGraphics graphics,
 //            EntityFactory entityFactory) {
 //        this.file = file;
 //        this.levelId = levelId;

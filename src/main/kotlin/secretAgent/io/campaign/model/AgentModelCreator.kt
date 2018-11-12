@@ -1,9 +1,9 @@
 package secretAgent.io.campaign.model
 
-import cz.wa.secretagent.io.tiles.singleproperties.ModelProperties
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
+import secretAgent.io.tiles.ModelProperties
 import secretAgent.view.model.AgentModel
 import secretAgent.view.model.AgentTextures
 import secretAgent.view.renderer.TileId

@@ -9,7 +9,7 @@
 //import org.slf4j.LoggerFactory;
 //import org.springframework.beans.factory.annotation.Required;
 //
-//import cz.wa.secretagent.io.SAMIO;
+//import cz.wa.secretagent.io.SamIO;
 //import cz.wa.secretagent.io.map.orig.generator.entity.EntityCreator;
 //import cz.wa.secretagent.world.entity.usable.ExitDoorUsable;
 //import cz.wa.secretagent.world.map.Tile;
@@ -27,7 +27,7 @@
 //
 //    private static final Logger logger = LoggerFactory.getLogger(ExitDoorEntityCreator.class);
 //
-//    private SAMIO samIO;
+//    private SamIO samIO;
 //
 //    @Override
 //    public ExitDoorUsable createEntity(List<String> args, Vector2D pos, TileId tileId, ObjectModel model) {
@@ -56,12 +56,12 @@
 //        return ret;
 //    }
 //
-//    public SAMIO getSamIO() {
+//    public SamIO getSamIO() {
 //        return samIO;
 //    }
 //
 //    @Required
-//    public void setSamIO(SAMIO samIO) {
+//    public void setSamIO(SamIO samIO) {
 //        this.samIO = samIO;
 //    }
 //}

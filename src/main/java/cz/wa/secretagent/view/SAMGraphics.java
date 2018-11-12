@@ -5,7 +5,7 @@
 // *
 // * @author Ondrej Milenovsky
 // */
-//public interface SAMGraphics {
+//public interface SamGraphics {
 //
 //    void dispose();
 //

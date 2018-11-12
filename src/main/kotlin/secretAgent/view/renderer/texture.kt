@@ -4,7 +4,7 @@ import cz.wa.secretagent.utils.lwjgl.Texture
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import java.io.IOException
 import java.io.ObjectInputStream
 import java.io.Serializable
@@ -32,7 +32,7 @@ class DrawBounds(val x1: Double, val y1: Double,
  *
  * @author Ondrej Milenovsky
  */
-class GLGraphics : SAMGraphics, Serializable {
+class GLGraphics : SamGraphics, Serializable {
 
     @Transient
     private lateinit var tileSets: MutableMap<Int, GLTileSet>

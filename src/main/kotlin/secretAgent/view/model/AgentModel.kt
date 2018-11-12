@@ -4,7 +4,7 @@ import cz.wa.secretagent.Constants
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
@@ -66,7 +66,7 @@ class AgentModel
 
     override fun hasLinkedTextures()= leftTextures?.hasLinkedTextures() == true || rightTextures?.hasLinkedTextures() == true
 
-    override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
+    override fun linkTexturesInternal(graphics: SamGraphics): Rectangle2D? {
         var modelBounds: Rectangle2D? = null
         leftTextures?.let {
             it.linkTextures(graphics)

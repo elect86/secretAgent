@@ -39,7 +39,7 @@ interface SamRenderer : Renderer {
  *
  * @author Ondrej Milenovsky
  */
-interface SAMGraphics {
+interface SamGraphics {
     fun dispose()
 }
 

@@ -1,11 +1,11 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.io.SAMIO
 import cz.wa.secretagent.world.entity.usable.*
 import cz.wa.secretagent.world.map.Tile
 import cz.wa.secretagent.world.map.TileType
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
+import secretAgent.io.SamIO
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
 import java.util.*
@@ -75,7 +75,7 @@ class DoorEntityCreator : EntityCreator<DoorUsable> {
  */
 class ExitDoorEntityCreator : EntityCreator<ExitDoorUsable> {
 
-    lateinit var samIO: SAMIO
+    lateinit var samIO: SamIO
 
     override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): ExitDoorUsable {
         var openModel: String? = null

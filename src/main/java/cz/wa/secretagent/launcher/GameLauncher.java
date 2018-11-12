@@ -19,8 +19,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-import cz.wa.secretagent.io.FileSettings;
-import cz.wa.secretagent.io.SAMIO;
 import cz.wa.secretagent.menu.MenuHolder;
 import cz.wa.secretagent.menu.MenuKeys;
 import cz.wa.secretagent.simulation.GameRunner;
@@ -33,6 +31,8 @@ import cz.wa.wautils.io.FileObjectUtils;
 import secretAgent.game.PlayerHolder;
 import secretAgent.game.PlayerKeys;
 import secretAgent.game.starter.MapStarter;
+import secretAgent.io.FileSettings;
+import secretAgent.io.SamIO;
 
 /**
  * Launches the game.
@@ -43,7 +43,7 @@ public class GameLauncher {
     private static final Logger logger = LoggerFactory.getLogger(GameLauncher.class);
 
     public static final TypedKey<GameRunner> GAME_RUNNER = new TypedKey<>("gameRunner");
-    public static final TypedKey<SAMIO> SAM_IO = new TypedKey<>("samIO");
+    public static final TypedKey<SamIO> SAM_IO = new TypedKey<>("samIO");
     public static final TypedKey<PlayerHolder> PLAYER_HOLDER = new TypedKey<>("playerHolder");
     public static final TypedKey<MenuHolder> MENU_HOLDER = new TypedKey<>("menuHolder");
     public static final TypedKey<FileSettings> FILE_SETTINGS = new TypedKey<>("fileSettings");
@@ -116,7 +116,7 @@ public class GameLauncher {
         PlayerHolder playerHolder = context.getBean(PLAYER_HOLDER);
         MenuHolder menuHolder = context.getBean(MENU_HOLDER);
         FileSettings fileSettings = context.getBean(FILE_SETTINGS);
-        SAMIO io = context.getBean(SAM_IO);
+        SamIO io = context.getBean(SAM_IO);
         MapStarter mapStarter = context.getBean(MAP_STARTER);
 
         return new ParsedContext(gameRunner, playerHolder, menuHolder, fileSettings, io, mapStarter);
@@ -172,7 +172,7 @@ public class GameLauncher {
         menuHolder.setKeys(keys);
     }
 
-    private void loadDefaultGraphics(SAMIO io) {
+    private void loadDefaultGraphics(SamIO io) {
         try {
             io.loadDefaultGraphics();
         } catch (IOException e) {
@@ -209,11 +209,11 @@ public class GameLauncher {
         private final PlayerHolder playerHolder;
         private final MenuHolder menuHolder;
         private final FileSettings fileSettings;
-        private final SAMIO samIO;
+        private final SamIO samIO;
         private final MapStarter mapStarter;
 
         public ParsedContext(GameRunner gameRunner, PlayerHolder playerHolder, MenuHolder menuHolder,
-                FileSettings fileSettings, SAMIO io, MapStarter mapStarter) {
+                             FileSettings fileSettings, SamIO io, MapStarter mapStarter) {
             this.gameRunner = gameRunner;
             this.playerHolder = playerHolder;
             this.menuHolder = menuHolder;

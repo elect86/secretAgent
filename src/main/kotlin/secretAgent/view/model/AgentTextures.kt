@@ -2,7 +2,7 @@ package secretAgent.view.model
 
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.secretagent.world.entity.agent.AgentAction
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
 import java.util.ArrayList
@@ -43,7 +43,7 @@ class AgentTextures(
 
     fun hasLinkedTextures() = stayTextures != null
 
-    fun linkTextures(graphics: SAMGraphics) {
+    fun linkTextures(graphics: SamGraphics) {
         stayTextures = AbstractModel.extractTextures(graphics, stayIds)
         moveTextures = AbstractModel.extractTextures(graphics, moveIds)
         jumpTextures = AbstractModel.extractTextures(graphics, jumpIds)

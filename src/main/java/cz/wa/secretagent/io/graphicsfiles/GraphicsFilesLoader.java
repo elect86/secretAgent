@@ -22,7 +22,7 @@
 //import secretAgent.view.Settings2D;
 //import secretAgent.view.renderer.GLGraphics;
 //import secretAgent.view.renderer.GLTileSet;
-//import secretAgent.view.SAMGraphics;
+//import secretAgent.view.SamGraphics;
 //import secretAgent.world.ObjectModel;
 //
 ///**
@@ -35,11 +35,11 @@
 //
 //    private final File file;
 //    private final ModelFactory modelFactory;
-//    private final SAMGraphics graphics;
+//    private final SamGraphics graphics;
 //    private final FileSettings fileSettings;
 //    private final Settings2D settings2d;
 //
-//    public GraphicsFilesLoader(File file, ModelFactory modelFactory, SAMGraphics graphics,
+//    public GraphicsFilesLoader(File file, ModelFactory modelFactory, SamGraphics graphics,
 //            FileSettings fileSettings, Settings2D settings2d) {
 //        this.file = file;
 //        this.modelFactory = modelFactory;

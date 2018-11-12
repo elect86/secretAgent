@@ -6,7 +6,7 @@
 //
 //import org.apache.commons.lang.Validate;
 //
-//import cz.wa.secretagent.view.SAMGraphics;
+//import cz.wa.secretagent.view.SamGraphics;
 //import cz.wa.secretagent.view.TileId;
 //import cz.wa.secretagent.view.texture.GLGraphics;
 //import cz.wa.secretagent.view.texture.TextureToDraw;
@@ -67,7 +67,7 @@
 //    }
 //
 //    @Override
-//    protected Rectangle2D linkTexturesInternal(SAMGraphics graphics) {
+//    protected Rectangle2D linkTexturesInternal(SamGraphics graphics) {
 //        TextureToDraw tile = ((GLGraphics) graphics).getTile(tileId);
 //        setTexture(tile);
 //        if (tile != null) {

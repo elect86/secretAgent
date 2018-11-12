@@ -2,7 +2,7 @@ package secretAgent.view.model
 
 import cz.wa.secretagent.view.model.AbstractModel
 import cz.wa.wautils.math.Rectangle2D
-import secretAgent.view.SAMGraphics
+import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
@@ -36,7 +36,7 @@ class ExplosionModel(
 
     override fun hasLinkedTextures() = textures != null
 
-    override fun linkTexturesInternal(graphics: SAMGraphics): Rectangle2D? {
+    override fun linkTexturesInternal(graphics: SamGraphics): Rectangle2D? {
         textures = AbstractModel.extractTextures(graphics, tileIds)
         return textures?.let { AbstractModel.getModelBounds(it[0].tileBounds) }
     }

@@ -24,7 +24,7 @@ class BuildingEntityCreator : EntityCreator<BuildingUsable> {
             finishedModel = args.removeAt(0)
         else
             logger.warn("BUILDING has no finished model: $tileId")
-        if (!args.isEmpty()) {
+        if (args.isNotEmpty()) {
             val arg0 = args.removeAt(0)
             if (arg0 == FINAL_BUILDING)
                 finalBuilding = true

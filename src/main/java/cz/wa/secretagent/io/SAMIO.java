@@ -1,6 +1,5 @@
 package cz.wa.secretagent.io;
 
-import cz.wa.secretagent.io.map.orig.MapLoader;
 import cz.wa.secretagent.simulation.GameRunner;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.secretagent.worldinfo.CampaignInfo;
@@ -16,6 +15,7 @@ import secretAgent.game.GameSettings;
 import secretAgent.io.GraphicsFilesLoader;
 import secretAgent.io.campaign.CampaignLoader;
 import secretAgent.io.campaign.model.ModelFactory;
+import secretAgent.io.map.orig.MapLoader;
 import secretAgent.io.map.orig.generator.entity.EntityFactory;
 import secretAgent.view.SAMGraphics;
 import secretAgent.view.Settings2D;

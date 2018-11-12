@@ -38,7 +38,7 @@ class EntityFactory : TypeEntityCreator<Entity>() {
     fun createEntity(entityInfo: EntityInfo, pos: Vector2D, tileId: TileId, model: ObjectModel): Entity? {
         val args = ArrayList(entityInfo.args)
         val entity = createEntity(args, pos, tileId, model)
-        if (!args.isEmpty())
+        if (args.isNotEmpty())
             logger.warn("Entity definition $tileId has too many arguments, ignoring: $args")
         return entity
     }

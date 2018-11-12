@@ -17,7 +17,7 @@ class LaserModelCreator : AnimatedModelCreator() {
         val model = super.createModel(modelProperties, tileId, modelName)!!
         val list = modelProperties.properties[COLOR_PROPERTY]
         var color = Color.WHITE
-        if (list != null && !list.isEmpty()) {
+        if (list != null && list.isNotEmpty()) {
             if (list.size > 1)
                 logger.warn("Laser model '$modelName' should define single color: $tileId")
             color = Color(list[0].tileId)

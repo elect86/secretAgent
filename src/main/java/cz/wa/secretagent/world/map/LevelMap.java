@@ -11,11 +11,11 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import org.apache.commons.math3.util.FastMath;
 
 import cz.wa.secretagent.Constants;
-import cz.wa.secretagent.io.map.orig.generator.ObjectGenerator;
 import cz.wa.wautils.collection.Array2D;
 import cz.wa.wautils.collection.Array2DImpl;
 import cz.wa.wautils.math.Rectangle2I;
 import cz.wa.wautils.math.Vector2I;
+import secretAgent.io.map.orig.generator.ObjectGenerator;
 
 /**
  * Level map containing all static tiles.

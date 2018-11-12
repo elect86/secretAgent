@@ -31,7 +31,7 @@ class AmmoEntityCreator : EntityCreator<AmmoItem> {
             return null
         }
         var weapon: Weapon? = null
-        if (!args.isEmpty()) {
+        if (args.isNotEmpty()) {
             val arg1 = args.removeAt(0)
             weapon = findWeapon(arg1)
             if (weapon == null)

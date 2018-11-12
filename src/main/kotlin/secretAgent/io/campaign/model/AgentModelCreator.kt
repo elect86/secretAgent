@@ -25,7 +25,7 @@ class AgentModelCreator : AbstractModelCreator() {
         if (durationList != null) {
             if (durationList.size != 1)
                 logger.warn("Agent model '$modelName'.$STAY_DURATION must have 1 value, but has ${durationList.size}")
-            if (!durationList.isEmpty())
+            if (durationList.isNotEmpty())
                 stayDuration = durationList[0].tileId.toLong()
         }
 

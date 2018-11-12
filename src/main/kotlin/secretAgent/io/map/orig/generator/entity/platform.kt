@@ -55,7 +55,7 @@ class PlatformLiftEntityCreator : EntityCreator<PlatformLift> {
 
     override fun createEntity(args: ArrayList<String>, pos: Vector2D, tileId: TileId, model: ObjectModel): PlatformLift {
         var dir = defaultDirection
-        if (!args.isEmpty()) {
+        if (args.isNotEmpty()) {
             val arg0 = args.removeAt(0)
             try {
                 dir = EntityDirection.valueOf(arg0)

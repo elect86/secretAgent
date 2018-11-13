@@ -81,7 +81,7 @@
 		<property name="maxStepMs" value="50" />
 	</bean>
 
-	<bean id="menuHolder" class="cz.wa.secretagent.menu.MenuHolder">
+	<bean id="menuHolder" class="secretAgent.menu.MenuHolder">
 		<property name="settings2d" ref="settings2d" />
 	</bean>
 

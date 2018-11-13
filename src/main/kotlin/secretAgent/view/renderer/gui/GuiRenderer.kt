@@ -1,8 +1,8 @@
 package secretAgent.view.renderer.gui
 
-import cz.wa.secretagent.menu.MenuHolder
 import cz.wa.secretagent.view.renderer.gui.FrameRenderer
 import org.springframework.beans.factory.annotation.Required
+import secretAgent.menu.MenuHolder
 import secretAgent.view.DrawPosition
 import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.Renderer
@@ -16,11 +16,8 @@ import java.io.Serializable
  */
 class GuiRenderer : Renderer, Serializable {
 
-    @set:Required
     lateinit var frameRenderer: FrameRenderer
-    @set:Required
     lateinit var settings2d: Settings2D
-    @set:Required
     lateinit var primitivesDrawer: PrimitivesDrawer
 
     override fun init() {} // empty

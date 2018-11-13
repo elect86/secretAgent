@@ -21,7 +21,7 @@ class GameMenuController : GameController {
     }
 
     override fun processInput(timeS: Double) {
-        val menuKeys = worldHolder.menuHolder.keys
+        val menuKeys = worldHolder.menuHolder.keys!!
 
         when {
             Keyboard.isKeyDown(menuKeys.kBack) -> if (canActivate) {
@@ -48,9 +48,8 @@ class GameMenuController : GameController {
             Keyboard.isKeyDown(menuKeys.kLeft) -> if (canActivate) {
                 val frame = worldHolder.menuHolder.topFrame
                 val selected = frame!!.selectedComponent
-                if (selected != null && !selected.changeLeft()) {
+                if (selected?.changeLeft() == false)
                     frame.selectPrevComponent()
-                }
                 canActivate = false
             }
             Keyboard.isKeyDown(menuKeys.kRight) -> if (canActivate) {

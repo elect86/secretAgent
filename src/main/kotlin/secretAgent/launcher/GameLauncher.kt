@@ -1,7 +1,5 @@
 package secretAgent.launcher
 
-import cz.wa.secretagent.menu.MenuHolder
-import cz.wa.secretagent.menu.MenuKeys
 import cz.wa.secretagent.simulation.GameRunner
 import cz.wa.secretagent.utils.ContextWrapper
 import cz.wa.secretagent.utils.PropertiesLoader
@@ -17,6 +15,8 @@ import secretAgent.game.PlayerKeys
 import secretAgent.game.starter.MapStarter
 import secretAgent.io.FileSettings
 import secretAgent.io.SamIO
+import secretAgent.menu.MenuHolder
+import secretAgent.menu.MenuKeys
 import java.awt.BorderLayout
 import java.awt.Color
 import java.awt.Font

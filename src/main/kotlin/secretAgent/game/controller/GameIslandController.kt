@@ -76,7 +76,7 @@ class GameIslandController : AbstractPlayerController() {
             if (canMenu) {
                 worldHolder.world.isRunning = false
                 menuFrame!!.selectedIndex = 0
-                worldHolder.menuHolder.addFrame(menuFrame)
+                worldHolder.menuHolder.addFrame(menuFrame!!)
                 canMenu = false
             }
         } else

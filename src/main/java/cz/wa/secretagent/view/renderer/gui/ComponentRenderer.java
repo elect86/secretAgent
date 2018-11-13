@@ -7,10 +7,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
-import cz.wa.secretagent.menu.window.GFrame;
-import cz.wa.secretagent.menu.window.component.ComponentType;
-import cz.wa.secretagent.menu.window.component.GComponent;
 import secretAgent.game.player.Camera;
+import secretAgent.menu.window.GFrame;
+import secretAgent.menu.window.component.ComponentType;
+import secretAgent.menu.window.component.GComponent;
 import secretAgent.view.renderer.gui.ComponentDrawer;
 
 /**

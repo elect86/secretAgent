@@ -1,6 +1,5 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.secretagent.world.weapon.WeaponOrder
 import cz.wa.secretagent.worldinfo.WorldHolder
@@ -10,6 +9,7 @@ import secretAgent.game.SensorFactory
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.action.AgentLevelAction
 import secretAgent.game.controller.menuCreator.GameMenuCreator
+import secretAgent.menu.window.GFrame
 import secretAgent.world.entity.EntityXDirection
 import secretAgent.world.entity.EntityYDirection
 

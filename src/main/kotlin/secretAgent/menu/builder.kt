@@ -1,13 +1,13 @@
 package secretAgent.menu
 
-import cz.wa.secretagent.menu.window.GFrame
-import cz.wa.secretagent.menu.window.component.GLabel
-import cz.wa.secretagent.menu.window.component.selectable.GButton
-import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import cz.wa.wautils.math.Vector2I
 import cz.wa.wautils.string.StringUtilsWa
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
+import secretAgent.menu.window.GFrame
+import secretAgent.menu.window.component.GButton
+import secretAgent.menu.window.component.GButtonListener
+import secretAgent.menu.window.component.GLabel
 import secretAgent.view.renderer.PrimitivesDrawer
 import java.awt.Color
 import java.io.Serializable
@@ -95,7 +95,7 @@ class DialogMenuBuilder : Serializable {
             btn.posSH = Vector2D(left + borderWidthTH, borderWidthTH + afterMessageGapTH - textVGapTH + i * (1 + textVGapTH))
                     .scalarMultiply(screenHeightTHInv)
             btn.sizeSH = Vector2D(textWidthTH, 1.0).scalarMultiply(screenHeightTHInv)
-            btn.setListener(button.listener)
+            btn.listener = button.listener
             btns += btn
             if (buttonsOnSingleLine)
                 left += textWidthTH + buttonsHGapTH

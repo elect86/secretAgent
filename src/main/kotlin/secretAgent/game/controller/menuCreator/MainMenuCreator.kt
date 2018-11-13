@@ -1,7 +1,5 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.menu.window.GFrame
-import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import org.apache.commons.io.FileUtils
 import org.slf4j.LoggerFactory
 import secretAgent.game.starter.CampaignStarter
@@ -9,6 +7,8 @@ import secretAgent.io.FileSettings
 import secretAgent.io.campaign.CampaignPropertiesParser
 import secretAgent.launcher.SecretAgentMain
 import secretAgent.menu.TextButtonDescriptor
+import secretAgent.menu.window.GFrame
+import secretAgent.menu.window.component.GButtonListener
 import java.io.File
 import java.io.IOException
 import java.util.ArrayList
@@ -31,12 +31,12 @@ class MainMenuCreator : GeneralMenuCreator() {
     private fun createMainMenu(): GFrame {
         // buttons
         val buttons = arrayListOf(
-                TextButtonDescriptor("Load game", GButtonListener {
+                TextButtonDescriptor("Load game") {
                     // TODO load all saved games
-                }),
-                TextButtonDescriptor("New game", GButtonListener { worldHolder.menuHolder.addFrame(createNewGameMenu()) }),
+                },
+                TextButtonDescriptor("New game") { worldHolder.menuHolder.addFrame(createNewGameMenu()) },
                 createSettingsButton(),
-                TextButtonDescriptor("About", GButtonListener { worldHolder.menuHolder.addFrame(aboutDialog) }),
+                TextButtonDescriptor("About") { worldHolder.menuHolder.addFrame(aboutDialog) },
                 createExitButton())
         // frame
 
@@ -55,18 +55,18 @@ class MainMenuCreator : GeneralMenuCreator() {
         return aboutDialog
     }
 
-    private fun createSettingsButton() = TextButtonDescriptor("Settings", GButtonListener {
+    private fun createSettingsButton() = TextButtonDescriptor("Settings") {
         settingsMenu.selectedIndex = 0
         worldHolder.menuHolder.addFrame(settingsMenu)
-    })
+    }
 
-    private fun createExitButton() = TextButtonDescriptor("Exit the game", GButtonListener {
+    private fun createExitButton() = TextButtonDescriptor("Exit the game") {
         if (gameSettings.confirmDialogs) {
             exitDialog.selectedIndex = 0
             worldHolder.menuHolder.addFrame(exitDialog)
         } else
             exitGame()
-    })
+    }
 
     private fun createNewGameMenu(): GFrame {
         // files
@@ -80,7 +80,7 @@ class MainMenuCreator : GeneralMenuCreator() {
             createCampaignButton(file)?.let { buttons += it }
 
         // frame
-        val closeListener = GButtonListener { worldHolder.menuHolder.removeTopFrame() }
+        val closeListener: GButtonListener  = { worldHolder.menuHolder.removeTopFrame() }
 
         return dialogBuilder.createDialog("Select campaign to start", buttons, frameColor, closeListener, false)
     }
@@ -93,10 +93,10 @@ class MainMenuCreator : GeneralMenuCreator() {
     private fun createCampaignButton(file: File): TextButtonDescriptor? {
         return try {
             val cp = CampaignPropertiesParser(file, fileSettings).parse()
-            TextButtonDescriptor(cp.title, GButtonListener {
+            TextButtonDescriptor(cp.title) {
                 if (campaignStarter.startCampaign(file))
                     worldHolder.menuHolder.removeAllFrames()
-            })
+            }
         } catch (e: IOException) {
             logger.error("Failed to create campaign button", e)
             null
@@ -104,14 +104,14 @@ class MainMenuCreator : GeneralMenuCreator() {
     }
 
     private fun createAboutDialog(): GFrame = dialogBuilder.createDialog(ABOUT_MESSAGE, emptyList(),
-            frameColor, GButtonListener { worldHolder.menuHolder.removeTopFrame() }, false)
+            frameColor, { worldHolder.menuHolder.removeTopFrame() }, false)
 
     companion object {
 
         private const val serialVersionUID = 3451448102156807094L
         private val logger = LoggerFactory.getLogger(MainMenuCreator::class.java)
 
-        private val ABOUT_MESSAGE = ("""
+        private const val ABOUT_MESSAGE = ("""
             About Secret Agent Remake
 
             Version: ${SecretAgentMain.VERSION}

@@ -1,12 +1,11 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.lwjgl.input.Keyboard
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.action.AgentIslandAction
 import secretAgent.game.controller.menuCreator.GameMenuCreator
+import secretAgent.menu.window.GFrame
 import secretAgent.world.entity.EntityXDirection
 import secretAgent.world.entity.EntityYDirection
 

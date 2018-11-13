@@ -93,7 +93,7 @@
 			<map>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.IMAGE" />
+						<util:constant static-field="secretAgent.menu.window.component.ComponentType.IMAGE" />
 					</key>
 					<bean class="secretAgent.view.renderer.gui.ImageComponentDrawer" parent="abstractComponentDrawer">
 						<property name="modelRenderer" ref="modelRenderer" />
@@ -101,14 +101,14 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.LABEL" />
+						<util:constant static-field="secretAgent.menu.window.component.ComponentType.LABEL" />
 					</key>
 					<bean class="secretAgent.view.renderer.gui.LabelComponentDrawer" parent="abstractComponentDrawer">
 					</bean>
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.menu.window.component.ComponentType.SELECTABLE" />
+						<util:constant static-field="secretAgent.menu.window.component.ComponentType.SELECTABLE" />
 					</key>
 					<bean class="secretAgent.view.renderer.gui.SelectedComponentDrawer" parent="abstractComponentDrawer">
 						<property name="componentRenderer" ref="componentRenderer" />

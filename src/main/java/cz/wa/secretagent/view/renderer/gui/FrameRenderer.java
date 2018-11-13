@@ -1,6 +1,6 @@
 package cz.wa.secretagent.view.renderer.gui;
 
-import cz.wa.secretagent.menu.window.GFrame;
+import secretAgent.menu.window.GFrame;
 
 /**
  * Renders whole GFrame. 

@@ -1,15 +1,13 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.menu.window.GFrame
-import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import cz.wa.secretagent.worldinfo.WorldHolder
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.GameSettings
 import secretAgent.menu.DialogMenuBuilder
 import secretAgent.menu.TextButtonDescriptor
+import secretAgent.menu.window.GFrame
+import secretAgent.menu.window.component.GButtonListener
 import java.awt.Color
 import java.io.Serializable
-import java.util.ArrayList
 
 /**
  * Creates menu dialogs.
@@ -28,14 +26,14 @@ abstract class GeneralMenuCreator : Serializable {
     @delegate:Transient
     val exitDialog: GFrame by lazy { createExitDialog() }
 
-    fun createConfirmDialog(message: String, yesListener: GButtonListener, color: Color): GFrame {
+    fun createConfirmDialog(message: String, color: Color, yesListener: GButtonListener): GFrame {
         // buttons
         val buttons = arrayListOf(
                 TextButtonDescriptor("Yes", yesListener),
-                TextButtonDescriptor("No", GButtonListener { worldHolder.menuHolder.removeTopFrame() }))
+                TextButtonDescriptor("No") { worldHolder.menuHolder.removeTopFrame() })
 
         // frame
-        val closeListener = GButtonListener { worldHolder.menuHolder.removeTopFrame() }
+        val closeListener: GButtonListener = { worldHolder.menuHolder.removeTopFrame() }
 
         return dialogBuilder.createDialog(message, buttons, color, closeListener, true)
     }
@@ -44,12 +42,12 @@ abstract class GeneralMenuCreator : Serializable {
         val saveSettingsDialog = createSaveSettingsDialog()
 
         // buttons
-        val buttons = arrayListOf(TextButtonDescriptor("Rebind keys", GButtonListener {
+        val buttons = arrayListOf(TextButtonDescriptor("Rebind keys") {
             // TODO rebind keys menu
-        }))
+        })
 
         // frame
-        val closeListener = GButtonListener {
+        val closeListener: GButtonListener = {
             // TODO check if settings changed
             if (gameSettings.confirmDialogs) {
                 saveSettingsDialog.selectedIndex = 0
@@ -62,31 +60,26 @@ abstract class GeneralMenuCreator : Serializable {
         return dialogBuilder.createDialog("Settings", buttons, frameColor, closeListener, false)
     }
 
-    private fun createExitDialog(): GFrame {
-        return createConfirmDialog("Exit the game?", GButtonListener { exitGame() }, frameColor)
-    }
+    private fun createExitDialog(): GFrame = createConfirmDialog("Exit the game?", frameColor) { exitGame() }
 
-    protected fun exitGame() {
-        System.exit(0)
-    }
+    protected fun exitGame() = System.exit(0)
 
     private fun createSaveSettingsDialog(): GFrame {
         // buttons
         val buttons = arrayListOf(
-                TextButtonDescriptor("Yes", GButtonListener {
+                TextButtonDescriptor("Yes") {
                     saveSettings()
                     worldHolder.menuHolder.removeTopFrame()
-                }),
-                TextButtonDescriptor("No", GButtonListener {
+                },
+                TextButtonDescriptor("No") {
                     worldHolder.menuHolder.removeTopFrame()
                     worldHolder.menuHolder.removeTopFrame()
-                }))
+                })
 
         // frame
-        val closeListener = GButtonListener { worldHolder.menuHolder.removeTopFrame() }
+        val closeListener: GButtonListener = { worldHolder.menuHolder.removeTopFrame() }
 
-        return dialogBuilder.createDialog("Save settings?", buttons, frameColor, closeListener,
-                true)
+        return dialogBuilder.createDialog("Save settings?", buttons, frameColor, closeListener, true)
     }
 
     private fun saveSettings() {

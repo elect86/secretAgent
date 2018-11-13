@@ -1,11 +1,11 @@
 package secretAgent.view.renderer.gui
 
-import cz.wa.secretagent.menu.window.GFrame
-import cz.wa.secretagent.menu.window.component.ComponentType
-import cz.wa.secretagent.menu.window.component.GComponent
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.player.Camera
+import secretAgent.menu.window.GFrame
+import secretAgent.menu.window.component.ComponentType
+import secretAgent.menu.window.component.GComponent
 import java.io.Serializable
 
 /**

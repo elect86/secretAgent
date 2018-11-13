@@ -1,9 +1,9 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.menu.window.GFrame
-import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import secretAgent.game.starter.MapStarter
 import secretAgent.menu.TextButtonDescriptor
+import secretAgent.menu.window.GFrame
+import secretAgent.menu.window.component.GButtonListener
 import java.io.Serializable
 
 /**
@@ -46,18 +46,18 @@ class GameMenuCreator : GeneralMenuCreator(), Serializable {
         // buttons
         val buttons = arrayListOf(
                 createSettingsButton(),
-                TextButtonDescriptor("Return to island", GButtonListener {
+                TextButtonDescriptor("Return to island") {
                     if (gameSettings.confirmDialogs) {
                         returnToIslandDialog.selectedIndex = 0
                         worldHolder.menuHolder.addFrame(returnToIslandDialog)
                     } else
                         quitToIsland()
-                }),
+                },
                 createQuitToMenuButton(),
                 createExitButton())
 
         // frame
-        val closeListener = GButtonListener {
+        val closeListener: GButtonListener = {
             worldHolder.menuHolder.removeTopFrame()
             worldHolder.world.isRunning = true
         }
@@ -71,24 +71,24 @@ class GameMenuCreator : GeneralMenuCreator(), Serializable {
     }
 
     private fun createExitButton(): TextButtonDescriptor {
-        return TextButtonDescriptor("Exit the game", GButtonListener {
+        return TextButtonDescriptor("Exit the game") {
             if (gameSettings.confirmDialogs) {
                 val exitDialog = exitDialog
                 exitDialog.selectedIndex = 0
                 worldHolder.menuHolder.addFrame(exitDialog)
             } else
                 exitGame()
-        })
+        }
     }
 
     private fun createQuitToMenuButton(): TextButtonDescriptor {
-        return TextButtonDescriptor("Quit to main menu", GButtonListener {
+        return TextButtonDescriptor("Quit to main menu") {
             if (gameSettings.confirmDialogs) {
                 quitToMenuDialog.selectedIndex = 0
                 worldHolder.menuHolder.addFrame(quitToMenuDialog)
             } else
                 quitToMenu()
-        })
+        }
     }
 
     private fun quitToMenu() {
@@ -96,11 +96,11 @@ class GameMenuCreator : GeneralMenuCreator(), Serializable {
         mapStarter.startMainMenu()
     }
 
-    private fun createSettingsButton() = TextButtonDescriptor("Settings", GButtonListener {
+    private fun createSettingsButton() = TextButtonDescriptor("Settings") {
         val settingsMenu = settingsMenu
         settingsMenu.selectedIndex = 0
         worldHolder.menuHolder.addFrame(settingsMenu)
-    })
+    }
 
     private fun createIslandMainMenu(): GFrame {
         init()
@@ -110,7 +110,7 @@ class GameMenuCreator : GeneralMenuCreator(), Serializable {
                 createQuitToMenuButton(),
                 createExitButton())
         // frame
-        val closeListener = GButtonListener {
+        val closeListener: GButtonListener = {
             worldHolder.menuHolder.removeTopFrame()
             worldHolder.world.isRunning = true
         }
@@ -118,9 +118,9 @@ class GameMenuCreator : GeneralMenuCreator(), Serializable {
         return dialogBuilder.createDialog("Game paused", buttons, frameColor, closeListener, false)
     }
 
-    private fun createQuitToMenuDialog(): GFrame = createConfirmDialog("Quit to main menu?", GButtonListener{ quitToMenu() }, frameColor)
+    private fun createQuitToMenuDialog(): GFrame = createConfirmDialog("Quit to main menu?", frameColor) { quitToMenu() }
 
-    private fun createReturnToIslandDialog(): GFrame = createConfirmDialog("Return to island map?", GButtonListener{ quitToIsland() }, frameColor)
+    private fun createReturnToIslandDialog(): GFrame = createConfirmDialog("Return to island map?", frameColor) { quitToIsland() }
 
     companion object {
         private const val serialVersionUID = 114350147422291071L

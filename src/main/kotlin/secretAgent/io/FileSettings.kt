@@ -19,8 +19,10 @@ class FileSettings : Serializable {
 
     lateinit var defaultGraphicsFile: String
 
-    lateinit var playerKeysFile: String
-    lateinit var menuKeysFile: String
+    @JvmField
+    var playerKeysFile: String? = null
+    @JvmField
+    var menuKeysFile: String? = null
     lateinit var settings2dFile: String
     lateinit var gameSettingsFile: String
 

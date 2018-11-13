@@ -312,7 +312,7 @@
 	<!-- Menu -->
 	<!-- ************ -->
 
-	<bean id="dialogBuilder" class="cz.wa.secretagent.menu.builder.DialogMenuBuilder">
+	<bean id="dialogBuilder" class="secretAgent.menu.DialogMenuBuilder">
 		<property name="primitivesDrawer" ref="primitivesDrawer" />
 		<property name="borderWidthTH" value="1" />
 		<property name="textVGapTH" value="0.1" />

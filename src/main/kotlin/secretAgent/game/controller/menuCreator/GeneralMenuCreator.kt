@@ -1,12 +1,12 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.menu.builder.DialogMenuBuilder
-import cz.wa.secretagent.menu.builder.TextButtonDescriptor
 import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.GameSettings
+import secretAgent.menu.DialogMenuBuilder
+import secretAgent.menu.TextButtonDescriptor
 import java.awt.Color
 import java.io.Serializable
 import java.util.ArrayList

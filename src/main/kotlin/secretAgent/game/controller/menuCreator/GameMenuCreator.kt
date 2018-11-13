@@ -1,9 +1,9 @@
 package secretAgent.game.controller.menuCreator
 
-import cz.wa.secretagent.menu.builder.TextButtonDescriptor
 import cz.wa.secretagent.menu.window.GFrame
 import cz.wa.secretagent.menu.window.component.selectable.GButtonListener
 import secretAgent.game.starter.MapStarter
+import secretAgent.menu.TextButtonDescriptor
 import java.io.Serializable
 
 /**

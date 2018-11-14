@@ -19,7 +19,7 @@
 
 	<!-- Init settings -->
 	<!-- ************* -->
-	<bean id="propertiesLoader" class="cz.wa.secretagent.utils.PropertiesLoader" />
+	<bean id="propertiesLoader" class="secretAgent.utils.PropertiesLoader" />
 
 	<bean id="fileSettings" class="secretAgent.io.FileSettings" factory-bean="propertiesLoader" factory-method="loadProperties">
 		<constructor-arg value="classpath:fileSettings.properties" />
@@ -69,11 +69,11 @@
 
 	<bean id="glGraphics" class="secretAgent.view.GLGraphics" />
 
-	<bean id="fullScreenSwitcher" class="cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher">
+	<bean id="fullScreenSwitcher" class="secretAgent.utils.lwjgl.FullScreenSwitcher">
 		<property name="settings" ref="settings2d" />
 	</bean>
 
-	<bean id="gameRunner" class="cz.wa.secretagent.simulation.GameRunnerImpl">
+	<bean id="gameRunner" class="secretAgent.GameRunnerImpl">
 		<property name="renderer" ref="renderer" />
 		<property name="worldHolder" ref="worldHolder" />
 		<property name="controller" ref="gameController" />
@@ -328,7 +328,7 @@
 		<property name="mapStarter" ref="mapStarter" />
 		<property name="gameSettings" ref="gameSettings" />
 		<property name="frameColor">
-			<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+			<bean class="secretAgent.utils.MiscKt" factory-method="parseColor">
 				<constructor-arg value="#800000" />
 			</bean>
 		</property>
@@ -341,7 +341,7 @@
 		<property name="fileSettings" ref="fileSettings" />
 		<property name="campaignStarter" ref="campaignStarter" />
 		<property name="frameColor">
-			<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+			<bean class="secretAgent.utils.MiscKt" factory-method="parseColor">
 				<constructor-arg value="#008000" />
 			</bean>
 		</property>

@@ -46,7 +46,7 @@ class AgentIslandAction : AgentAction<HumanAgent>() {
             return
         }
         val agent = agent!!
-        if (agent.isControlable && agent.capabilities.canActivate())
+        if (agent.isControlable && agent.capabilities.canActivate)
             agent.entityToUse?.let(activateAction::useEntity)
     }
 }

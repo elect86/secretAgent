@@ -1,15 +1,14 @@
 package cz.wa.secretagent.world.entity.agent;
 
-import org.apache.commons.lang.Validate;
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
 import cz.wa.secretagent.world.entity.Entity;
 import cz.wa.secretagent.world.entity.EntityType;
-import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities;
 import cz.wa.wautils.math.Rectangle2D;
+import org.apache.commons.lang.Validate;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import secretAgent.view.model.AgentModel;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
+import secretAgent.world.entity.agent.AgentCapabilities;
 
 /**
  * Some agent (human, robot).

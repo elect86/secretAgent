@@ -1,9 +1,8 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.simulation.GameController
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.lwjgl.input.Keyboard
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.GameController
 
 /**
  * Controls all menus. (move cursor, enter, back)

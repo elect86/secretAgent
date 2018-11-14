@@ -1,12 +1,12 @@
 package secretAgent.io
 
-import cz.wa.secretagent.simulation.GameRunner
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.secretagent.worldinfo.CampaignInfo
 import cz.wa.secretagent.worldinfo.WorldHolder
 import cz.wa.wautils.math.Vector2I
 import org.apache.commons.io.FilenameUtils
 import org.slf4j.LoggerFactory
+import secretAgent.GameRunner
 import secretAgent.game.GameSettings
 import secretAgent.io.campaign.CampaignLoader
 import secretAgent.io.campaign.model.ModelFactory

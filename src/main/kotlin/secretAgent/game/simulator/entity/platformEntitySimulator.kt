@@ -40,13 +40,13 @@ class CanEntitySimulator : AbstractEntitySimulator<PlatformEntity>() {
             val agent = e2 as AgentEntity
             // get agent's future position
             val agentPos = agent.pos.add(agent.speed.add(agent.moveSpeed).scalarMultiply(timeS))
-            if (agent.capabilities.canActivate() && isAgentPushing(can, agent, agentPos))
+            if (agent.capabilities.canActivate && isAgentPushing(can, agent, agentPos))
                 pushCan(can, agent, agentPos, timeS)
         }
         // push with other cans
         val bounds = can.sizeBounds.move(can.pos)
         for (e2 in world.entityMap.getEntities(EntityType.PLATFORM)) {
-            if (e2.secondType === PlatformType.CAN) {
+            if (e2.secondType == PlatformType.CAN) {
                 val bounds2 = e2.sizeBounds.move(e2.pos)
                 if (intersectFromSide(bounds, bounds2))
                     separateCans(can, e2)

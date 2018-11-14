@@ -1,11 +1,10 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.simulation.GameController
-import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.lwjgl.input.Keyboard
-import org.springframework.beans.factory.annotation.Required
+import secretAgent.utils.FullScreenSwitcher
+import secretAgent.GameController
 
 /**
  * Main game controller holding other controllers.
@@ -65,7 +64,7 @@ class GeneralController : GameController {
         // full screen
         if (Keyboard.isKeyDown(Keyboard.KEY_RETURN) && (Keyboard.isKeyDown(Keyboard.KEY_LMENU) || Keyboard.isKeyDown(Keyboard.KEY_RMENU))) {
             worldHolder.world.isRunning = false
-            fullScreenSwitcher.isFullScreen = !fullScreenSwitcher.isFullScreen
+            fullScreenSwitcher.setFullScreen(!fullScreenSwitcher.isFullScreen)
             worldHolder.world.isRunning = true
             return false
         }

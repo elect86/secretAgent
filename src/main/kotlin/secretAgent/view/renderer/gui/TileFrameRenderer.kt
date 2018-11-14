@@ -1,7 +1,5 @@
 package secretAgent.view.renderer.gui
 
-import cz.wa.secretagent.view.renderer.gui.ComponentRenderer
-import cz.wa.secretagent.view.renderer.gui.FrameRenderer
 import cz.wa.secretagent.worldinfo.WorldHolder
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.secretagent.worldinfo.graphics.TilesInfo

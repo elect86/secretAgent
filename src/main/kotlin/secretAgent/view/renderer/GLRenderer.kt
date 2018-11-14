@@ -1,14 +1,14 @@
 package secretAgent.view.renderer
 
-import cz.wa.secretagent.utils.lwjgl.FullScreenSwitcher
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.apache.commons.io.IOUtils
 import org.lwjgl.LWJGLException
 import org.lwjgl.opengl.Display
 import org.lwjgl.opengl.DisplayMode
+import org.lwjgl.opengl.GL11.*
 import org.newdawn.slick.opengl.PNGDecoder
 import org.slf4j.LoggerFactory
-import org.lwjgl.opengl.GL11.*
+import secretAgent.utils.FullScreenSwitcher
 import secretAgent.view.SamRenderer
 import secretAgent.view.Settings2D
 import java.awt.Color

@@ -1,6 +1,6 @@
 package secretAgent.game.controller
 
-import cz.wa.secretagent.simulation.GameController
+import secretAgent.GameController
 import secretAgent.game.PlayerHolder
 
 /**

@@ -62,7 +62,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
 
     fun aimY(dir: EntityYDirection) {
         val agent = agent!!
-        if (agent.isControlable && agent.capabilities.canAim() && agent.secondType == AgentType.HUMAN) {
+        if (agent.isControlable && agent.capabilities.canAim && agent.secondType == AgentType.HUMAN) {
             val human = agent as HumanAgent
             val weapon = human.weapon ?: return
             human.aiming = when {
@@ -132,7 +132,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
                     return
                 }
             }
-            if (agent.capabilities.canActivate())
+            if (agent.capabilities.canActivate)
                 agent.entityToUse?.let(activateAction::useEntity)
         }
     }

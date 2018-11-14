@@ -62,7 +62,7 @@
 		</property>
 	</bean>
 
-	<bean id="worldHudRenderer" class="cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer">
+	<bean id="worldHudRenderer" class="secretAgent.view.renderer.hud.WorldHudRenderer">
 		<property name="primitivesDrawer" ref="primitivesDrawer" />
 		<property name="textSize" value="8" />
 	</bean>
@@ -88,7 +88,7 @@
 		</property>
 	</bean>
 
-	<bean id="componentRenderer" class="cz.wa.secretagent.view.renderer.gui.ComponentRenderer">
+	<bean id="componentRenderer" class="secretAgent.view.renderer.gui.ComponentRenderer">
 		<property name="componentDrawers">
 			<map>
 				<entry>
@@ -114,12 +114,12 @@
 						<property name="componentRenderer" ref="componentRenderer" />
 						<property name="borderWidthSH" value="0.004" />
 						<property name="selectedColor">
-							<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+							<bean class="secretAgent.utils.MiscKt" factory-method="parseColor">
 								<constructor-arg value="#FFFFFF" />
 							</bean>
 						</property>
 						<property name="notSelectedColor">
-							<bean class="cz.wa.secretagent.utils.ColorUtils" factory-method="parseColor">
+							<bean class="secretAgent.utils.MiscKt" factory-method="parseColor">
 								<constructor-arg value="#80808080" />
 							</bean>
 						</property>

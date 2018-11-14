@@ -1,9 +1,9 @@
 package secretAgent.view.renderer
 
-import cz.wa.secretagent.utils.lwjgl.Texture
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
+import secretAgent.utils.Texture
 import secretAgent.view.SamGraphics
 import java.io.IOException
 import java.io.ObjectInputStream

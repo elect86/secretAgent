@@ -1,12 +1,10 @@
 package secretAgent.view.renderer.gui
 
-import cz.wa.secretagent.view.renderer.gui.FrameRenderer
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.menu.MenuHolder
 import secretAgent.view.DrawPosition
-import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.Renderer
 import secretAgent.view.Settings2D
+import secretAgent.view.renderer.PrimitivesDrawer
 import java.io.Serializable
 
 /**

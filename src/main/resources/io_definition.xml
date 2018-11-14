@@ -135,10 +135,10 @@
 				<property name="playerHolder" ref="playerHolder" />
 				<property name="capabilities">
 					<bean
-						class="cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities">
+						class="secretAgent.world.entity.agent.AgentCapabilities">
 						<constructor-arg>
 							<bean
-								class="cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilitiesTmp">
+								class="secretAgent.world.entity.agent.AgentCapabilitiesTmp">
 								<property name="maxHealth" value="100" />
 								<property name="canActivate" value="true" />
 								<property name="canAim" value="true" />
@@ -147,7 +147,7 @@
 								<property name="maxSpeed" value="80" />
 								<property name="inventoryLimits">
 									<bean
-										class="cz.wa.secretagent.world.entity.agent.capabilities.InventoryLimits">
+										class="secretAgent.world.entity.agent.InventoryLimits">
 										<property name="picksItems">
 											<null />
 										</property>

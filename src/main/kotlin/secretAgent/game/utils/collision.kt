@@ -1,6 +1,5 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.utils.raycaster.RayCaster
 import cz.wa.secretagent.utils.raycaster.RayHit
 import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.EntityType
@@ -14,6 +13,7 @@ import org.apache.commons.math3.geometry.euclidean.threed.Rotation
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
+import secretAgent.utils.RayCaster
 import secretAgent.world.SamWorld
 
 /**

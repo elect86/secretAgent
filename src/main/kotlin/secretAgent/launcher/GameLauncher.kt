@@ -1,15 +1,11 @@
 package secretAgent.launcher
 
-import cz.wa.secretagent.simulation.GameRunner
-import cz.wa.secretagent.utils.ContextWrapper
-import cz.wa.secretagent.utils.PropertiesLoader
-import cz.wa.secretagent.utils.lwjgl.KeysUtils
-import cz.wa.secretagent.utils.lwjgl.TextureLoader
 import cz.wa.wautils.collection.TypedKey
 import cz.wa.wautils.io.FileObjectUtils
 import org.apache.commons.io.FileUtils
 import org.slf4j.LoggerFactory
 import org.springframework.context.support.FileSystemXmlApplicationContext
+import secretAgent.GameRunner
 import secretAgent.game.PlayerHolder
 import secretAgent.game.PlayerKeys
 import secretAgent.game.starter.MapStarter
@@ -17,6 +13,10 @@ import secretAgent.io.FileSettings
 import secretAgent.io.SamIO
 import secretAgent.menu.MenuHolder
 import secretAgent.menu.MenuKeys
+import secretAgent.utils.ContextWrapper
+import secretAgent.utils.KeysUtils
+import secretAgent.utils.PropertiesLoader
+import secretAgent.utils.TextureLoader
 import java.awt.BorderLayout
 import java.awt.Color
 import java.awt.Font
@@ -106,13 +106,13 @@ class GameLauncher(private val appContext: String) {
 
         val gameRunner = context.gameRunner
         gameRunner.init()
-        gameRunner.setRunFirst {
+        gameRunner.setRunFirst(Runnable {
             logger.info("Loading initial data...")
-            TextureLoader.setBgColor(Color(0, 0, 0, 0))
+            TextureLoader.bgColor = Color(0, 0, 0, 0)
             loadDefaultGraphics(context.samIO)
             context.mapStarter.startMainMenu()
             logger.info("Game initialized.")
-        }
+        })
     }
 
     private fun loadPlayerKeys(playerHolder: PlayerHolder, fileSettings: FileSettings) {

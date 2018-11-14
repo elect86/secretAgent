@@ -1,22 +1,14 @@
 package cz.wa.secretagent.utils.raycaster;
 
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
+import cz.wa.wautils.math.Vector2I;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
+import secretAgent.utils.RayCaster;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.utils.raycaster.RayCaster;
-import cz.wa.secretagent.utils.raycaster.RayHit;
-import cz.wa.wautils.math.Vector2I;
 
 /**
  * Test raycast.

@@ -1,15 +1,15 @@
 package secretAgent.io.tiles
 
-import cz.wa.secretagent.utils.lwjgl.TextureLoader
 import cz.wa.wautils.math.Vector2I
 import org.slf4j.LoggerFactory
+import secretAgent.utils.TextureLoader
 import secretAgent.io.campaign.model.ModelFactory
 import secretAgent.view.renderer.GLTileSet
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
 import java.io.File
 import java.io.IOException
-import java.util.HashMap
+import java.util.*
 
 /**
  * Loads image with multiple tiles.

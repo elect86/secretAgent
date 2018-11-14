@@ -73,7 +73,7 @@ class AgentEntitySimulator : AbstractEntitySimulator<AgentEntity>() {
 
     /** Finds and processes usables */
     private fun findUsables(agent: AgentEntity) {
-        if (agent.capabilities.canActivate()) {
+        if (agent.capabilities.canActivate) {
             val usable = EntitiesFinder(worldHolder.world).findUsableEntity(agent,
                     MAX_DIST_FROM_USABLE)
             agent.entityToUse = usable

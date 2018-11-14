@@ -1,10 +1,10 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities
-import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilitiesTmp
-import cz.wa.secretagent.world.entity.agent.capabilities.InventoryLimits
 import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.weapon.Weapon
+import secretAgent.world.entity.agent.AgentCapabilities
+import secretAgent.world.entity.agent.AgentCapabilitiesTmp
+import secretAgent.world.entity.agent.InventoryLimits
 import java.io.Serializable
 
 /**
@@ -24,7 +24,7 @@ class EnemyHumanPropertiesCreator : Serializable {
         val capabilities = AgentCapabilitiesTmp()
 
         val inventoryLimits = InventoryLimits()
-        inventoryLimits.picksItems.add(ItemType.JUNK)
+        inventoryLimits.picksItems!!.add(ItemType.JUNK)
 
         capabilities.inventoryLimits = inventoryLimits
         capabilities.isCanAim = true

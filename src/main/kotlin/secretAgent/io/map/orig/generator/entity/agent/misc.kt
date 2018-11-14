@@ -1,7 +1,7 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.world.entity.agent.capabilities.AgentCapabilities
 import cz.wa.secretagent.world.weapon.Weapon
+import secretAgent.world.entity.agent.AgentCapabilities
 
 /**
  * Weapons and capabilities for enemy human agent.

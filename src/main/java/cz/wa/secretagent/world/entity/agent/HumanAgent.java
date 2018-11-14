@@ -1,5 +1,5 @@
 package cz.wa.secretagent.world.entity.agent;
-import cz.wa.secretagent.world.entity.agent.inventory.AgentInventory;
+
 import cz.wa.secretagent.world.entity.laser.LineLaser;
 import cz.wa.secretagent.world.weapon.Weapon;
 import cz.wa.wautils.math.Rectangle2D;
@@ -8,6 +8,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.entity.EntityXDirection;
 import secretAgent.world.entity.EntityYDirection;
+import secretAgent.world.entity.agent.AgentInventory;
 
 /**
  * Single human agent (player or enemy), can jump.

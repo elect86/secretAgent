@@ -1,6 +1,5 @@
 package secretAgent.view.renderer.gui
 
-import cz.wa.secretagent.view.renderer.gui.ComponentRenderer
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.springframework.beans.factory.annotation.Required
@@ -107,7 +106,7 @@ class SelectedComponentDrawer : AbstractComponentDrawer<GSelectable>() {
         rect = rect.scalarMultiply(screenHeight).move(camera.pos)
         primitivesDrawer.drawRect(rect, borderWidthSH * screenHeight, color)
         // the sub component
-        componentRenderer!!.renderComponent(component.displayComponent, frame, camera)
+        componentRenderer!!.renderComponent(component.displayComponent!!, frame, camera)
     }
 
     companion object {

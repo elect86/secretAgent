@@ -1,6 +1,5 @@
 package secretAgent.view.renderer
 
-import cz.wa.secretagent.view.renderer.hud.WorldHUDRenderer
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.slf4j.LoggerFactory
 import secretAgent.game.player.Camera
@@ -9,6 +8,7 @@ import secretAgent.view.Renderer
 import secretAgent.view.Settings2D
 import secretAgent.view.renderer.gui.GuiRenderer
 import secretAgent.view.renderer.hud.ScreenHudRenderer
+import secretAgent.view.renderer.hud.WorldHudRenderer
 import java.io.Serializable
 
 /**
@@ -23,7 +23,7 @@ class GeneralRenderer : Renderer, Serializable {
     lateinit var primitivesDrawer: PrimitivesDrawer
     lateinit var levelRenderer: LevelRenderer
     lateinit var entitiesRenderer: EntitiesRenderer
-    lateinit var worldHudRenderer: WorldHUDRenderer
+    lateinit var worldHudRenderer: WorldHudRenderer
     lateinit var screenHudRenderer: ScreenHudRenderer
     lateinit var guiRenderer: GuiRenderer
 
@@ -71,7 +71,7 @@ class GeneralRenderer : Renderer, Serializable {
 
     private fun drawHudByCamera(world: WorldHolder) {
         val playerHolder = world.playerHolder
-        worldHudRenderer.drawHUD(world.world, playerHolder, playerHolder.camera)
+        worldHudRenderer.drawHud(world.world, playerHolder, playerHolder.camera)
     }
 
     private fun drawHudOnScreen(world: WorldHolder) {

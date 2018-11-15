@@ -1,8 +1,5 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.laser.LaserEntity
-import cz.wa.secretagent.world.entity.laser.LaserType
-import cz.wa.secretagent.world.entity.laser.LineLaser
 import cz.wa.secretagent.worldinfo.WorldHolder
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.VectorUtils
@@ -12,6 +9,9 @@ import secretAgent.view.model.LaserModel
 import secretAgent.view.renderer.DrawBounds
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.world.entity.Entity
+import secretAgent.world.entity.LaserEntity
+import secretAgent.world.entity.LaserType
+import secretAgent.world.entity.LineLaser
 
 /**
  * Draws simple not animated model.

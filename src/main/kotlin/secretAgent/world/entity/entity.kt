@@ -2,7 +2,6 @@ package secretAgent.world.entity
 
 import cz.wa.secretagent.Constants
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.entity.laser.LineLaser
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D

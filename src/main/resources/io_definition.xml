@@ -263,21 +263,21 @@
 			<map>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.JUNK" />
+						<util:constant static-field="secretAgent.world.entity.ItemType.JUNK" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.JunkEntityCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.KEY" />
+						<util:constant static-field="secretAgent.world.entity.ItemType.KEY" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.KeyEntityCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.item.ItemType.AMMO" />
+						<util:constant static-field="secretAgent.world.entity.ItemType.AMMO" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.AmmoEntityCreator">

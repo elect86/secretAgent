@@ -1,7 +1,5 @@
 package secretAgent.view.renderer.hud
 
-import cz.wa.secretagent.world.entity.item.ItemType
-import cz.wa.secretagent.world.entity.item.KeyItem
 import cz.wa.secretagent.world.weapon.WeaponOrder
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.wautils.math.Rectangle2D
@@ -15,14 +13,17 @@ import secretAgent.view.DrawPosition
 import secretAgent.view.Renderer
 import secretAgent.view.Settings2D
 import secretAgent.view.model.HealthBarModel
-import secretAgent.view.renderer.*
+import secretAgent.view.renderer.DrawBounds
+import secretAgent.view.renderer.PrimitivesDrawer
+import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.ItemType
+import secretAgent.world.entity.KeyItem
 import secretAgent.world.entity.agent.AgentEntity
 import java.awt.Color
-import java.util.ArrayList
-import java.util.LinkedHashMap
+import java.util.*
 
 /**
  * Renders health, weapons, keys on the screen

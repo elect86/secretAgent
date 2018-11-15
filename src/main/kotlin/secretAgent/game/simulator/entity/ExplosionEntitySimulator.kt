@@ -1,9 +1,9 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.explosion.Explosion
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.game.utils.AgentHurter
 import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.Explosion
 import secretAgent.world.entity.agent.AgentEntity
 
 /**

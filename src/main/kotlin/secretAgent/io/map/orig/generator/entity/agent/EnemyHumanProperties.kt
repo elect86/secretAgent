@@ -1,7 +1,7 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.weapon.Weapon
+import secretAgent.world.entity.ItemType
 import secretAgent.world.entity.agent.AgentCapabilities
 import secretAgent.world.entity.agent.AgentCapabilitiesTmp
 import secretAgent.world.entity.agent.InventoryLimits

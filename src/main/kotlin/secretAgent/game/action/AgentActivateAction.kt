@@ -1,15 +1,10 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.world.entity.item.ItemType
-import cz.wa.secretagent.world.entity.item.KeyItem
 import cz.wa.secretagent.world.entity.usable.*
 import org.slf4j.LoggerFactory
 import secretAgent.game.ProjectileFactory
 import secretAgent.game.starter.MapStarter
-import secretAgent.world.entity.Entity
-import secretAgent.world.entity.EntityType
-import secretAgent.world.entity.HumanAgent
-import secretAgent.world.entity.LockedEntity
+import secretAgent.world.entity.*
 import secretAgent.world.entity.bgSwitch.SwitchEntity
 
 /**

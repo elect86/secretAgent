@@ -1,8 +1,8 @@
 package secretAgent.world.entity.agent
 
-import cz.wa.secretagent.world.entity.item.ItemEntity
-import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.weapon.Weapon
+import secretAgent.world.entity.ItemEntity
+import secretAgent.world.entity.ItemType
 import java.io.Serializable
 
 /**

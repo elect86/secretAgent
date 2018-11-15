@@ -1,15 +1,13 @@
 package secretAgent.world.entity.agent
 
-import cz.wa.secretagent.world.entity.item.AmmoItem
-import cz.wa.secretagent.world.entity.item.ItemEntity
-import cz.wa.secretagent.world.entity.item.ItemType
-import cz.wa.secretagent.world.entity.item.WeaponItem
 import cz.wa.secretagent.world.weapon.Weapon
 import org.apache.commons.lang.Validate
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
-import java.util.ArrayList
-import java.util.LinkedHashMap
-import java.util.LinkedHashSet
+import secretAgent.world.entity.AmmoItem
+import secretAgent.world.entity.ItemEntity
+import secretAgent.world.entity.ItemType
+import secretAgent.world.entity.WeaponItem
+import java.util.*
 
 /**
  * Backpack of an agent. Can contain weapons, ammo and items.
@@ -41,12 +39,12 @@ class AgentInventory {
     fun addItem(item: ItemEntity) {
         item.pos = Vector2D.NaN
         item.speed = Vector2D.ZERO
-        val type = item.secondType
+        val type = item.secondType!!
         when (type) {
-            ItemType.WEAPON -> weapons.add((item as WeaponItem).weapon)
+            ItemType.WEAPON -> weapons.add((item as WeaponItem).weapon!!)
             ItemType.AMMO -> {
                 val ammoItem = item as AmmoItem
-                addAmmo(ammoItem.weapon, ammoItem.count)
+                addAmmo(ammoItem.weapon!!, ammoItem.count)
             }
             // item
             else -> items.getOrPut(type) { ArrayList(3) } += item
@@ -59,7 +57,7 @@ class AgentInventory {
      * @throws IllegalArgumentException if the item is not in the inventory
      */
     fun removeItem(item: ItemEntity) {
-        val type = item.secondType
+        val type = item.secondType!!
         val list = items[type]
         if (list == null || !list.remove(item))
             throw IllegalArgumentException("Item is not in the inventory: $item")

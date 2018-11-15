@@ -33,7 +33,7 @@ abstract class Entity @JvmOverloads constructor(val model: ObjectModel,
     abstract val type: EntityType
 
     /** secondary type of the entity (never use instanceof !)     */
-    abstract val secondType: EntityType2
+    abstract val secondType: EntityType2?
 
     companion object {
 

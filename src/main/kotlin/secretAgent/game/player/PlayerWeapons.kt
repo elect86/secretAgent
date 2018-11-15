@@ -1,12 +1,10 @@
 package secretAgent.game.player
 
-import cz.wa.secretagent.world.entity.item.ItemEntity
 import cz.wa.secretagent.world.weapon.Weapon
+import secretAgent.world.entity.ItemEntity
 import secretAgent.world.entity.agent.AgentInventory
 import java.io.Serializable
-import java.util.ArrayList
-import java.util.HashMap
-import java.util.HashSet
+import java.util.*
 
 /**
  * Class holding weapons and ammo of an player.

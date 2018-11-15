@@ -1,6 +1,6 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.item.ItemEntity
+import secretAgent.world.entity.ItemEntity
 
 /**
  * Simulates an item (item can only fall).

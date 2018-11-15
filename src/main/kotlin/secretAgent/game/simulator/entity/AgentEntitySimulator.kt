@@ -1,8 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.item.AmmoItem
-import cz.wa.secretagent.world.entity.item.ItemEntity
-import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.entity.projectile.BulletProjectile
 import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import cz.wa.secretagent.world.entity.usable.DoorUsable

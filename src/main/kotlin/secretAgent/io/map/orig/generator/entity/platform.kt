@@ -1,6 +1,5 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.world.entity.item.ItemEntity
 import cz.wa.secretagent.world.entity.platform.MovableCan
 import cz.wa.secretagent.world.entity.platform.PlatformLift
 import cz.wa.secretagent.world.entity.platform.PlatformType
@@ -10,6 +9,7 @@ import org.slf4j.LoggerFactory
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
 import secretAgent.world.entity.EntityDirection
+import secretAgent.world.entity.ItemEntity
 
 /**
  * Creates movable can.

@@ -190,7 +190,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.usable.UsableType.BUILDING" />
+							static-field="secretAgent.world.entity.UsableType.BUILDING" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.BuildingEntityCreator" />
@@ -198,7 +198,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.usable.UsableType.FENCE" />
+							static-field="secretAgent.world.entity.UsableType.FENCE" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.FenceEntityCreator" />
@@ -206,7 +206,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.usable.UsableType.DOOR" />
+							static-field="secretAgent.world.entity.UsableType.DOOR" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.DoorEntityCreator" />
@@ -214,7 +214,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.usable.UsableType.EXIT" />
+							static-field="secretAgent.world.entity.UsableType.EXIT" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.ExitEntityCreator" />
@@ -222,7 +222,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.usable.UsableType.EXIT_DOOR" />
+							static-field="secretAgent.world.entity.UsableType.EXIT_DOOR" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.ExitDoorEntityCreator">
@@ -232,7 +232,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.usable.UsableType.TELEPORT" />
+							static-field="secretAgent.world.entity.UsableType.TELEPORT" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.TeleportEntityCreator" />

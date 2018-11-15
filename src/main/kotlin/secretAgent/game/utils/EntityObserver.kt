@@ -1,7 +1,5 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.collection.Array2D
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Vector2I
@@ -9,8 +7,11 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
+import secretAgent.world.Tile
+import secretAgent.world.TileType
 import secretAgent.world.entity.Entity
-import java.util.ArrayList
+import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Finds some info about an entity.
@@ -151,7 +152,7 @@ class EntityObserver(private val entity: Entity, private val world: SamWorld) {
     }
 
     /** Finds and adds to the list tiles at the position with specified ids     */
-    private fun findTiles(tileIds: Collection<TileId>, background: Array2D<List<Tile>>, tileSize: Vector2D,
+    private fun findTiles(tileIds: Collection<TileId>, background: Array2D<MutableList<Tile>>, tileSize: Vector2D,
                           ret: MutableList<TileWithPosition>, i: Vector2I) {
         for (tile in background.get(i))
             for (tileId in tileIds)
@@ -160,6 +161,6 @@ class EntityObserver(private val entity: Entity, private val world: SamWorld) {
     }
 
     companion object {
-        val FLOOR_MAX_DIST_STAND = 0.1
+        const val FLOOR_MAX_DIST_STAND = 0.1
     }
 }

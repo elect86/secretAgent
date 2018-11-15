@@ -1,9 +1,9 @@
 package secretAgent.game
 
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.wautils.collection.Array2DView
 import secretAgent.world.SamWorld
+import secretAgent.world.TileType
 import secretAgent.world.entity.HumanAgent
 import secretAgent.world.entity.agent.AgentEntity
 import java.util.*

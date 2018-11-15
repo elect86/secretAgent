@@ -1,13 +1,13 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.world.entity.usable.*
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.io.SamIO
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
+import secretAgent.world.Tile
+import secretAgent.world.TileType
+import secretAgent.world.entity.*
 import java.util.*
 
 /**
@@ -40,7 +40,6 @@ class BuildingEntityCreator : EntityCreator<BuildingUsable> {
         private const val FINAL_BUILDING = "FINAL"
     }
 }
-
 
 /**
  * Creates door that is opened by a key.

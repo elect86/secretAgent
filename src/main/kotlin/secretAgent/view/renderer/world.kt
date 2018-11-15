@@ -1,8 +1,6 @@
 package secretAgent.view.renderer
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.map.LevelMap
-import cz.wa.secretagent.world.map.Tile
 import cz.wa.wautils.collection.Array2D
 import cz.wa.wautils.math.Vector2I
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
@@ -12,7 +10,9 @@ import secretAgent.game.player.Camera
 import secretAgent.view.Renderer
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
+import secretAgent.world.LevelMap
 import secretAgent.world.ObjectModel
+import secretAgent.world.Tile
 import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityOrder
 
@@ -94,7 +94,7 @@ class LevelRenderer : AbstractWorldRenderer() {
      */
     fun drawForeground(level: LevelMap, camera: Camera) = drawInternal(level, camera, level.foreground)
 
-    private fun drawInternal(level: LevelMap, camera: Camera, map: Array2D<List<Tile>>) {
+    private fun drawInternal(level: LevelMap, camera: Camera, map: Array2D<MutableList<Tile>>) {
         val bounds = camera.worldBounds
         val tileSize = level.tileSize
 
@@ -118,7 +118,7 @@ class LevelRenderer : AbstractWorldRenderer() {
     /**
      * Draw tiles at single cell
      */
-    private fun drawTiles(level: LevelMap, map: Array2D<List<Tile>>, camera: Camera, p: Vector2I, pos: Vector2D) {
+    private fun drawTiles(level: LevelMap, map: Array2D<MutableList<Tile>>, camera: Camera, p: Vector2I, pos: Vector2D) {
         for (tile in map.get(p))
             renderModel(null, camera, tile.model, pos)
     }

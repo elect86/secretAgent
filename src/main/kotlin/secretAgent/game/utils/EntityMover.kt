@@ -1,12 +1,12 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.map.LevelMap
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Vector2I
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
+import secretAgent.world.LevelMap
 import secretAgent.world.SamWorld
+import secretAgent.world.TileType
 import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.HumanAgent

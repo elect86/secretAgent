@@ -198,7 +198,7 @@ interface LockedEntity {
 
     val type: EntityType
 
-    val secondType: EntityType2
+    val secondType: EntityType2?
 
     fun unlock()
 }

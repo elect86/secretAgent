@@ -1,10 +1,9 @@
 package secretAgent.io.tiles
 
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Vector2I
-import org.apache.commons.lang.Validate
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
+import secretAgent.world.TileType
 import java.util.*
 
 /**

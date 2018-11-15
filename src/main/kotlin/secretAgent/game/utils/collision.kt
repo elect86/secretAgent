@@ -1,8 +1,6 @@
 package secretAgent.game.utils
 
 import cz.wa.secretagent.utils.raycaster.RayHit
-import cz.wa.secretagent.world.map.LevelMap
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Vector2I
 import cz.wa.wautils.math.VectorUtils
 import org.apache.commons.math3.geometry.euclidean.threed.Rotation
@@ -10,7 +8,9 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.utils.RayCaster
+import secretAgent.world.LevelMap
 import secretAgent.world.SamWorld
+import secretAgent.world.TileType
 import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.ProjectileEntity

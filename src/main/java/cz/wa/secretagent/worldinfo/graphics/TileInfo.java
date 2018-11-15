@@ -1,6 +1,6 @@
 package cz.wa.secretagent.worldinfo.graphics;
 
-import cz.wa.secretagent.world.map.TileType;
+import secretAgent.world.TileType;
 
 /**
  * Info about tile from a tile set.

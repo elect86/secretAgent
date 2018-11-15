@@ -1,7 +1,5 @@
 package secretAgent.io.map.orig.generator
 
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.wautils.math.Vector2I
 import org.slf4j.LoggerFactory
@@ -12,6 +10,8 @@ import secretAgent.io.map.orig.generator.mapping.TileMap
 import secretAgent.view.model.SimpleModel
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
+import secretAgent.world.Tile
+import secretAgent.world.TileType
 import secretAgent.world.entity.Entity
 import java.util.*
 

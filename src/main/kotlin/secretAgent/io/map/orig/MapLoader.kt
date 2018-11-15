@@ -1,14 +1,6 @@
 package secretAgent.io.map.orig
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.entity.usable.BuildingUsable
-import cz.wa.secretagent.world.entity.usable.TeleportUsable
-import cz.wa.secretagent.world.entity.usable.UsableEntity
-import cz.wa.secretagent.world.entity.usable.UsableType
-import cz.wa.secretagent.world.map.LevelMap
-import cz.wa.secretagent.world.map.StoredTile
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.wautils.collection.Array2D
 import cz.wa.wautils.math.Rectangle2D
@@ -20,7 +12,7 @@ import secretAgent.io.map.orig.generator.MapGenerator
 import secretAgent.io.map.orig.generator.entity.EntityFactory
 import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TileId
-import secretAgent.world.SamWorld
+import secretAgent.world.*
 import secretAgent.world.entity.*
 import secretAgent.world.entity.bgSwitch.AddTilesSwitchAction
 import secretAgent.world.entity.bgSwitch.SimpleSwitch
@@ -28,6 +20,7 @@ import secretAgent.world.entity.bgSwitch.SwitchType
 import java.io.File
 import java.io.IOException
 import java.util.*
+import kotlin.collections.ArrayList
 
 /**
  * Loads map from file to SAMWorld.
@@ -67,7 +60,7 @@ class MapLoader(private val file: File,
         val entities = ArrayList<LevelLaserProjectile>()
         for (entity in ArrayList(entityMap.getEntities(EntityType.PROJECTILE)))
             if (entity.secondType == ProjectileType.LEVEL_LASER) {
-                entities.add(entity as LevelLaserProjectile)
+                entities += entity as LevelLaserProjectile
                 entityMap.removeEntity(entity)
             }
         Collections.sort(entities, EntityComparator)
@@ -167,7 +160,7 @@ class MapLoader(private val file: File,
             // foreground
             tiles += removeTiles(map.foreground.get(i), tileIds)
             for (tile in tiles)
-                map.storedTiles.add(StoredTile(i, tile))
+                map.storedTiles += StoredTile(i, tile)
             // update type
             if (tiles.isNotEmpty())
                 map.updateType(i)
@@ -282,7 +275,7 @@ class MapLoader(private val file: File,
 
         // BACKGROUND
         if (lastSolid >= 0)
-            bg = emptyList()
+            bg = mutableListOf()
         else {
             lastSolid = findLastSolid(bg)
 
@@ -299,9 +292,9 @@ class MapLoader(private val file: File,
     }
 
     /** Creates list with minimal memory usage.     */
-    private fun createMinimalList(list: List<Tile>): List<Tile> = when {
-        list.isEmpty() -> emptyList()
-        list.size == 1 -> listOf(list[0])
+    private fun createMinimalList(list: MutableList<Tile>): MutableList<Tile> = when {
+        list.isEmpty() -> mutableListOf()
+        list.size == 1 -> mutableListOf(list[0])
         else -> list
     }
 
@@ -312,7 +305,7 @@ class MapLoader(private val file: File,
         return -1
     }
 
-    private fun linkTextures(map: Array2D<List<Tile>>, i: Vector2I) {
+    private fun linkTextures(map: Array2D<MutableList<Tile>>, i: Vector2I) {
         val tiles = map.get(i)
         for (tile in tiles) {
             val model = tile.model

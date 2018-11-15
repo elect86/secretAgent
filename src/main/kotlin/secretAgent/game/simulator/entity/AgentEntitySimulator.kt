@@ -1,7 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.usable.DoorUsable
-import cz.wa.secretagent.world.entity.usable.UsableType
 import cz.wa.wautils.math.VectorUtils
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath

@@ -1,9 +1,6 @@
 package secretAgent.io.map.orig.generator
 
 import cz.wa.secretagent.Constants
-import cz.wa.secretagent.world.map.AnimatedTile
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo
 import cz.wa.secretagent.worldinfo.graphics.ModelInfo
 import cz.wa.secretagent.worldinfo.graphics.TileInfo
@@ -13,6 +10,9 @@ import secretAgent.io.map.orig.generator.entity.EntityFactory
 import secretAgent.view.model.AnimatedModel
 import secretAgent.view.model.SimpleModel
 import secretAgent.view.renderer.TileId
+import secretAgent.world.AnimatedTile
+import secretAgent.world.Tile
+import secretAgent.world.TileType
 import java.util.*
 
 /**

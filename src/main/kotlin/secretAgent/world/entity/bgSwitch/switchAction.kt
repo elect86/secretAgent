@@ -1,8 +1,8 @@
 package secretAgent.world.entity.bgSwitch
 
-import cz.wa.secretagent.world.map.StoredTile
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
+import secretAgent.world.StoredTile
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.LaserEntity
 import secretAgent.world.entity.agent.AgentEntity

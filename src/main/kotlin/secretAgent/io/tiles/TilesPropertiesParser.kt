@@ -1,16 +1,15 @@
 package secretAgent.io.tiles
 
 import cz.wa.secretagent.Constants
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.io.AbstractParser
 import cz.wa.wautils.math.Vector2I
 import cz.wa.wautils.string.StringUtilsWa
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ModelType
+import secretAgent.world.TileType
 import java.io.File
 import java.io.IOException
-import java.util.ArrayList
-import java.util.HashMap
+import java.util.*
 
 /**
  * Parses tiles info file. For each tile id there is tile info,

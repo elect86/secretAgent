@@ -1,16 +1,13 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.usable.ExitDoorUsable
-import cz.wa.secretagent.world.entity.usable.ExitUsable
-import cz.wa.secretagent.world.entity.usable.UsableType
-import cz.wa.secretagent.world.map.StoredTile
-import cz.wa.secretagent.world.map.TileType
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.game.ProjectileFactory
 import secretAgent.game.starter.MapStarter
 import secretAgent.game.utils.EntityObserver
 import secretAgent.game.utils.ProjectileMover
 import secretAgent.io.SamIO
+import secretAgent.world.StoredTile
+import secretAgent.world.TileType
 import secretAgent.world.entity.*
 import java.util.*
 
@@ -94,7 +91,7 @@ class DynamiteEntitySimulator : AbstractEntitySimulator<DynamiteProjectile>() {
         for (sensing in EntityObserver(exitDoor, worldHolder.world).get9TilesAround(replaceTiles.keys)) {
             val pos = sensing.pos
             map.removeTile(pos, sensing.tile)
-            map.addTile(StoredTile(pos, replaceTiles[sensing.tileId]))
+            map.addTile(StoredTile(pos, replaceTiles[sensing.tileId]!!))
             map.updateType(pos)
         }
     }

@@ -1,11 +1,11 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Vector2I
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.view.renderer.TileId
+import secretAgent.world.Tile
+import secretAgent.world.TileType
 
 /**
  * Class from sensor about a tile.

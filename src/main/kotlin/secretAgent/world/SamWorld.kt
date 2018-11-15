@@ -1,8 +1,6 @@
 package secretAgent.world
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.map.LevelMap
-import cz.wa.secretagent.world.map.Tile
 import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.Vector2I
 

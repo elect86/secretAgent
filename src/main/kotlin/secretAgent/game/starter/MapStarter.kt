@@ -1,10 +1,5 @@
 package secretAgent.game.starter
 
-import cz.wa.secretagent.world.entity.usable.BuildingUsable
-import cz.wa.secretagent.world.entity.usable.UsableType
-import cz.wa.secretagent.world.map.StoredTile
-import cz.wa.secretagent.world.map.Tile
-import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.world.weapon.WeaponOrder
 import org.slf4j.LoggerFactory
 import secretAgent.game.PlayerHolder
@@ -13,8 +8,13 @@ import secretAgent.game.SensorFactory
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.controller.menuCreator.MainMenuCreator
 import secretAgent.io.SamIO
+import secretAgent.world.StoredTile
+import secretAgent.world.Tile
+import secretAgent.world.TileType
+import secretAgent.world.entity.BuildingUsable
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.UsableType
 import java.io.IOException
 import java.io.Serializable
 import java.util.*

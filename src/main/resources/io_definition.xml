@@ -248,7 +248,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.bgswitch.SwitchType.SIMPLE" />
+							static-field="secretAgent.world.entity.bgSwitch.SwitchType.SIMPLE" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.SimpleSwitchEntityCreator" />

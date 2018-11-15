@@ -1,8 +1,6 @@
 package secretAgent.io.map.orig
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.entity.bgswitch.SimpleSwitch
-import cz.wa.secretagent.world.entity.bgswitch.SwitchType
 import cz.wa.secretagent.world.entity.laser.LaserEntity
 import cz.wa.secretagent.world.entity.laser.RectLaser
 import cz.wa.secretagent.world.entity.projectile.LevelLaserProjectile
@@ -30,6 +28,8 @@ import secretAgent.world.SamWorld
 import secretAgent.world.entity.EntityComparator
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.bgSwitch.AddTilesSwitchAction
+import secretAgent.world.entity.bgSwitch.SimpleSwitch
+import secretAgent.world.entity.bgSwitch.SwitchType
 import java.io.File
 import java.io.IOException
 import java.util.*

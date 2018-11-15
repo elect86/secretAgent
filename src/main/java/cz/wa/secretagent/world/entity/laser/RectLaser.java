@@ -22,5 +22,4 @@ public class RectLaser extends LaserEntity {
     public LaserType getSecondType() {
         return LaserType.RECTANGULAR;
     }
-
 }

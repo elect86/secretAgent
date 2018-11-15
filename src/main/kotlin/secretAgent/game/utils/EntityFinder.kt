@@ -1,7 +1,6 @@
 package secretAgent.game.utils
 
 import cz.wa.secretagent.Constants
-import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.platform.PlatformEntity
 import cz.wa.secretagent.world.entity.platform.PlatformType
 import cz.wa.secretagent.world.entity.usable.UsableEntity
@@ -14,7 +13,8 @@ import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.agent.AgentEntity
 import secretAgent.world.entity.agent.AgentType
-import java.util.ArrayList
+import secretAgent.world.entity.bgSwitch.SwitchEntity
+import java.util.*
 
 /**
  * Finds specific collections of entities from all entities.

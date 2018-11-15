@@ -1,6 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.item.AmmoItem
 import cz.wa.secretagent.world.entity.item.ItemEntity
 import cz.wa.secretagent.world.entity.item.ItemType
@@ -21,6 +20,7 @@ import secretAgent.world.entity.*
 import secretAgent.world.entity.agent.AgentAction
 import secretAgent.world.entity.agent.AgentEntity
 import secretAgent.world.entity.agent.AgentType
+import secretAgent.world.entity.bgSwitch.SwitchEntity
 
 /**
  * Simulates an agent.

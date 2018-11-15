@@ -1,6 +1,5 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.entity.item.KeyItem
 import cz.wa.secretagent.world.entity.usable.*
@@ -11,6 +10,7 @@ import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityType
 import secretAgent.world.entity.HumanAgent
 import secretAgent.world.entity.LockedEntity
+import secretAgent.world.entity.bgSwitch.SwitchEntity
 
 /**
  * Action performing activating items. Only humans can do that.
@@ -45,7 +45,7 @@ class AgentActivateAction : AgentAction<HumanAgent>() {
 
     private fun useSwitch(entity: SwitchEntity) {
         if (tryUnlock(entity))
-            entity.activate(agent, world)
+            entity.activate(agent!!, world!!)
     }
 
     private fun useUsable(usable: UsableEntity) {

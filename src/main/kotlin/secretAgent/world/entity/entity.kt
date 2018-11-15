@@ -195,7 +195,7 @@ interface LockedEntity {
 
     val isLocked: Boolean
 
-    val lockType: String
+    val lockType: String?
 
     val type: EntityType
 

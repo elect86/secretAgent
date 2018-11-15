@@ -1,16 +1,11 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.world.entity.bgswitch.SimpleSwitch
-import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
-import cz.wa.secretagent.world.entity.bgswitch.SwitchType
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
-import secretAgent.world.entity.bgSwitch.AddTilesSwitchAction
-import secretAgent.world.entity.bgSwitch.DisableLaserSwitchAction
-import secretAgent.world.entity.bgSwitch.SwitchAction
-import java.util.LinkedHashSet
+import secretAgent.world.entity.bgSwitch.*
+import java.util.*
 
 /**
  * Creates switches.

@@ -1,13 +1,13 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.HasDuration
-import cz.wa.secretagent.world.entity.HasModelAngle
-import cz.wa.secretagent.world.entity.HasTime
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.view.model.AnimatedModel
 import secretAgent.view.renderer.DrawBounds
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.HasDuration
+import secretAgent.world.entity.HasModelAngle
+import secretAgent.world.entity.HasTime
 
 /**
  * Draws animated model.

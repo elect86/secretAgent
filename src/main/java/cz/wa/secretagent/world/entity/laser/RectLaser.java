@@ -1,9 +1,9 @@
 package cz.wa.secretagent.world.entity.laser;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import cz.wa.secretagent.world.entity.agent.Team;
 import cz.wa.wautils.math.Rectangle2D;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.agent.Team;
 
 /**
  * Rectangular perpendicular laser. 

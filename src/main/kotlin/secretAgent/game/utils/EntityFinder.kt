@@ -1,10 +1,6 @@
 package secretAgent.game.utils
 
 import cz.wa.secretagent.Constants
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.AgentType
 import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.platform.PlatformEntity
 import cz.wa.secretagent.world.entity.platform.PlatformType
@@ -14,6 +10,10 @@ import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.agent.AgentEntity
+import secretAgent.world.entity.agent.AgentType
 import java.util.ArrayList
 
 /**
@@ -71,7 +71,7 @@ class EntitiesFinder(private val world: SamWorld) {
             val entityBounds = entity.sizeBounds.move(entity.pos)
             if ((entity as SwitchEntity).isActive)
                 if (bounds.intersectsOrTouches(entityBounds) && isBySide(entityBounds, agent.pos))
-                    if (ret == null || pos.distance(entity.getPos()) < pos.distance(ret.pos))
+                    if (ret == null || pos.distance(entity.pos) < pos.distance(ret.pos))
                         ret = entity
         }
         return ret

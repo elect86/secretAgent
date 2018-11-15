@@ -1,13 +1,14 @@
 package cz.wa.secretagent.world.entity.bgswitch;
-import cz.wa.secretagent.world.entity.Entity;
-import cz.wa.secretagent.world.entity.EntityType;
-import cz.wa.secretagent.world.entity.LockedEntity;
-import cz.wa.secretagent.world.entity.agent.AgentEntity;
-import cz.wa.secretagent.world.entity.bgswitch.switchaction.SwitchAction;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import secretAgent.world.ObjectModel;
 import secretAgent.world.SamWorld;
+import secretAgent.world.entity.Entity;
+import secretAgent.world.entity.EntityType;
+import secretAgent.world.entity.LockedEntity;
+import secretAgent.world.entity.agent.AgentEntity;
+import secretAgent.world.entity.bgSwitch.SwitchAction;
 
 import java.util.List;
 

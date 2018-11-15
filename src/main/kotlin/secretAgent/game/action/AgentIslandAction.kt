@@ -1,12 +1,10 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.world.entity.agent.HumanAgent
-import org.apache.commons.lang.Validate
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.plus
-import secretAgent.times
 import secretAgent.world.entity.EntityXDirection
 import secretAgent.world.entity.EntityYDirection
+import secretAgent.world.entity.HumanAgent
 
 /**
  * Action to control an agent on island map.
@@ -23,7 +21,7 @@ class AgentIslandAction : AgentAction<HumanAgent>() {
 
     fun moveX(dir: EntityXDirection) {
         val agent = agent!!
-        if (agent.isControlable) {
+        if (agent.isControllable) {
             val maxSpeed = agent.capabilities.maxSpeed
             val addSpeed = dir * maxSpeed
             agent.moveSpeed = Vector2D(0.0, agent.moveSpeed.y) + addSpeed
@@ -34,7 +32,7 @@ class AgentIslandAction : AgentAction<HumanAgent>() {
 
     fun moveY(dir: EntityYDirection) {
         val agent = agent!!
-        if (agent.isControlable) {
+        if (agent.isControllable) {
             val maxSpeed = agent.capabilities.maxSpeed
             agent.moveSpeed = Vector2D(agent.moveSpeed.x, 0.0) + dir * maxSpeed
         }
@@ -46,7 +44,7 @@ class AgentIslandAction : AgentAction<HumanAgent>() {
             return
         }
         val agent = agent!!
-        if (agent.isControlable && agent.capabilities.canActivate)
+        if (agent.isControllable && agent.capabilities.canActivate)
             agent.entityToUse?.let(activateAction::useEntity)
     }
 }

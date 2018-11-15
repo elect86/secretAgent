@@ -1,12 +1,12 @@
 package secretAgent.game
 
-import cz.wa.secretagent.world.entity.agent.HumanAgent
-import cz.wa.secretagent.world.entity.agent.Team
 import org.lwjgl.input.Keyboard
 import secretAgent.game.controller.GameIslandController
 import secretAgent.game.controller.GameLevelController
 import secretAgent.game.player.Camera
 import secretAgent.game.player.PlayerStats
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.Team
 import java.io.Serializable
 
 /**

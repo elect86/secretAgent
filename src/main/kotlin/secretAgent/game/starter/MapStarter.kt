@@ -1,7 +1,5 @@
 package secretAgent.game.starter
 
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.usable.BuildingUsable
 import cz.wa.secretagent.world.entity.usable.UsableType
 import cz.wa.secretagent.world.map.StoredTile
@@ -15,6 +13,8 @@ import secretAgent.game.SensorFactory
 import secretAgent.game.action.ActionFactory
 import secretAgent.game.controller.menuCreator.MainMenuCreator
 import secretAgent.io.SamIO
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.HumanAgent
 import java.io.IOException
 import java.io.Serializable
 import java.util.*
@@ -61,7 +61,7 @@ class MapStarter : Serializable {
             if (stats.islandPos == null)
                 stats.islandPos = agent.pos
              else
-                agent.pos = stats.islandPos
+                agent.pos = stats.islandPos!!
             // create and set game classes
             val worldHolder = io.worldHolder
             val world = worldHolder.world

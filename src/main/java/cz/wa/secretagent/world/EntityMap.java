@@ -1,15 +1,9 @@
 package cz.wa.secretagent.world;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import secretAgent.world.entity.Entity;
+import secretAgent.world.entity.EntityType;
 
-import cz.wa.secretagent.world.entity.Entity;
-import cz.wa.secretagent.world.entity.EntityType;
+import java.util.*;
 
 /**
  * Map holding all entities. Entities are mapped by type.

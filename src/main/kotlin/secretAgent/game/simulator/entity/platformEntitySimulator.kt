@@ -1,8 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.platform.MovableCan
 import cz.wa.secretagent.world.entity.platform.PlatformEntity
 import cz.wa.secretagent.world.entity.platform.PlatformLift
@@ -13,6 +10,9 @@ import org.apache.commons.math3.util.FastMath
 import secretAgent.game.utils.EntitiesFinder
 import secretAgent.game.utils.EntityMover
 import secretAgent.game.utils.EntityObserver
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.agent.AgentEntity
 
 /**
  * Simulates a pushable can.

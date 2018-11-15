@@ -1,8 +1,5 @@
 package secretAgent.game
 
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.AgentType
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.explosion.Explosion
 import cz.wa.secretagent.world.entity.laser.LineLaser
 import cz.wa.secretagent.world.entity.projectile.DynamiteProjectile
@@ -16,6 +13,9 @@ import secretAgent.plus
 import secretAgent.view.model.ExplosionModel
 import secretAgent.view.model.LaserModel
 import secretAgent.world.entity.EntityXDirection
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentEntity
+import secretAgent.world.entity.agent.AgentType
 import java.awt.Color
 import java.io.IOException
 import java.io.ObjectInputStream

@@ -1,10 +1,10 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.HasModelAngle
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.view.model.SimpleModel
 import secretAgent.view.renderer.DrawBounds
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.HasModelAngle
 
 /**
  * Draws simple not animated model.

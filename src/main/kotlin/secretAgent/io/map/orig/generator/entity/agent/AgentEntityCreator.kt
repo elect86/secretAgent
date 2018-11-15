@@ -1,13 +1,13 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.AgentType
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.io.map.orig.generator.entity.EntityCreator
 import secretAgent.io.map.orig.generator.entity.TypeEntityCreator
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentEntity
+import secretAgent.world.entity.agent.AgentType
 
 /**
  * Creates agents.

@@ -1,11 +1,5 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentAction
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.AgentType
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.map.LevelMap
 import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Rectangle2D
@@ -13,6 +7,12 @@ import cz.wa.wautils.math.Vector2I
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentAction
+import secretAgent.world.entity.agent.AgentEntity
+import secretAgent.world.entity.agent.AgentType
 
 /**
  * Class with useful methods for simulators and sensors.
@@ -75,8 +75,8 @@ class EntityMover(private val world: SamWorld) {
                 val jumpTimeS = FastMath.min(human.jumpRemainingS, timeS)
                 human.jumpRemainingS = human.jumpRemainingS - timeS
 
-                val jumpAdd = Vector2D(0.0, -agent.getCapabilities().jumpStrength * jumpTimeS)
-                agent.setSpeed(agent.getSpeed().add(jumpAdd))
+                val jumpAdd = Vector2D(0.0, -agent.capabilities.jumpStrength * jumpTimeS)
+                agent.speed = agent.speed.add(jumpAdd)
                 if (human.jumpRemainingS <= 0)
                     human.isJumping = false
             }

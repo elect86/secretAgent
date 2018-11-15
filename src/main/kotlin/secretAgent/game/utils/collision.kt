@@ -1,9 +1,6 @@
 package secretAgent.game.utils
 
 import cz.wa.secretagent.utils.raycaster.RayHit
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import cz.wa.secretagent.world.map.LevelMap
 import cz.wa.secretagent.world.map.TileType
@@ -15,6 +12,9 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.utils.RayCaster
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.agent.AgentEntity
 
 /**
  * Class describing collision of projectile with entity.
@@ -167,7 +167,7 @@ class ProjectileCollider(
             pos = VectorUtils.getVector2D(r.applyTo(VectorUtils.getVector3D(pos)))
             val size = entity.sizeBounds.y2
             if (pos.x < minDist && pos.x > 0 && pos.x < moveDist && FastMath.abs(pos.y) < size || pos.norm < size) {
-                nearestEntity = entity
+                nearestEntity = entity!!
                 minDist = pos.x
                 rotatedPos = pos
                 entitySize = size

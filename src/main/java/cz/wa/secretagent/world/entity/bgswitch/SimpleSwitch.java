@@ -1,10 +1,10 @@
 package cz.wa.secretagent.world.entity.bgswitch;
 
-import java.util.List;
-
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import cz.wa.secretagent.world.entity.bgswitch.switchaction.SwitchAction;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.bgSwitch.SwitchAction;
+
+import java.util.List;
 
 /**
  * Simple switch to activate/deactivate something.

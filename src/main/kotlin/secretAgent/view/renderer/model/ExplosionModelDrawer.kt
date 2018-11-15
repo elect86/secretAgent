@@ -1,14 +1,13 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.explosion.Explosion
 import cz.wa.secretagent.worldinfo.WorldHolder
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.view.model.ExplosionModel
 import secretAgent.view.renderer.DrawBounds
+import secretAgent.world.entity.Entity
 
 /**
  * Draws explosion model.

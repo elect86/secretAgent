@@ -1,9 +1,5 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.LockedEntity
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.entity.item.KeyItem
@@ -11,6 +7,10 @@ import cz.wa.secretagent.world.entity.usable.*
 import org.slf4j.LoggerFactory
 import secretAgent.game.ProjectileFactory
 import secretAgent.game.starter.MapStarter
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.LockedEntity
 
 /**
  * Action performing activating items. Only humans can do that.

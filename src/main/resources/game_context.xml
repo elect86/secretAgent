@@ -60,10 +60,10 @@
 		<property name="levelController" ref="levelController" />
 	</bean>
 
-	<bean id="playerTeam" class="cz.wa.secretagent.world.entity.agent.Team">
+	<bean id="playerTeam" class="secretAgent.world.entity.agent.Team">
 		<constructor-arg value="Players" />
 	</bean>
-	<bean id="enemyTeam" class="cz.wa.secretagent.world.entity.agent.Team">
+	<bean id="enemyTeam" class="secretAgent.world.entity.agent.Team">
 		<constructor-arg value="Enemies" />
 	</bean>
 
@@ -140,13 +140,13 @@
 			<map>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.ITEM" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.ITEM" />
 					</key>
 					<bean class="secretAgent.game.simulator.entity.ItemEntitySimulator" parent="abstractEntitySimulator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PLATFORM" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.PLATFORM" />
 					</key>
 					<bean class="secretAgent.game.simulator.entity.MultipleEntitySimulator">
 						<property name="simulators">
@@ -172,7 +172,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.AGENT" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.AGENT" />
 					</key>
 					<bean class="secretAgent.game.simulator.entity.AgentEntitySimulator" parent="abstractEntitySimulator">
 						<property name="projectileFactory" ref="projectileFactory" />
@@ -185,7 +185,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PROJECTILE" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.PROJECTILE" />
 					</key>
 					<bean class="secretAgent.game.simulator.entity.MultipleEntitySimulator">
 						<property name="simulators">
@@ -236,7 +236,7 @@
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.EXPLOSION" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.EXPLOSION" />
 					</key>
 					<bean class="secretAgent.game.simulator.entity.ExplosionEntitySimulator" parent="abstractEntitySimulator">
 						<property name="blastStrength" value="150" />

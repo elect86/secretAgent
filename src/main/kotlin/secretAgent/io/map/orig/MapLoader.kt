@@ -1,11 +1,8 @@
 package secretAgent.io.map.orig
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.entity.EntityComparator
-import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.bgswitch.SimpleSwitch
 import cz.wa.secretagent.world.entity.bgswitch.SwitchType
-import cz.wa.secretagent.world.entity.bgswitch.switchaction.AddTilesSwitchAction
 import cz.wa.secretagent.world.entity.laser.LaserEntity
 import cz.wa.secretagent.world.entity.laser.RectLaser
 import cz.wa.secretagent.world.entity.projectile.LevelLaserProjectile
@@ -30,6 +27,9 @@ import secretAgent.io.map.orig.generator.entity.EntityFactory
 import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.EntityComparator
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.bgSwitch.AddTilesSwitchAction
 import java.io.File
 import java.io.IOException
 import java.util.*
@@ -75,7 +75,7 @@ class MapLoader(private val file: File,
                 entities.add(entity as LevelLaserProjectile)
                 entityMap.removeEntity(entity)
             }
-        Collections.sort(entities, EntityComparator.INSTANCE)
+        Collections.sort(entities, EntityComparator)
 
         // create lasers
         var lastBegin: LevelLaserProjectile? = null
@@ -227,7 +227,7 @@ class MapLoader(private val file: File,
         for (entity in usables)
             if (entity.secondType == UsableType.TELEPORT)
                 teleports.add(entity as TeleportUsable)
-        Collections.sort(teleports, EntityComparator.INSTANCE)
+        Collections.sort(teleports, EntityComparator)
 
         // link them
         var last: TeleportUsable? = null
@@ -249,7 +249,7 @@ class MapLoader(private val file: File,
         for (entity in usables)
             if (entity.secondType == UsableType.BUILDING)
                 buildings += entity as BuildingUsable
-        Collections.sort(buildings, EntityComparator.INSTANCE)
+        Collections.sort(buildings, EntityComparator)
 
         // fill level ids
         var i = 0

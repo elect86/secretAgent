@@ -1,11 +1,11 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.game.player.Camera
 import secretAgent.world.GLModel
 import secretAgent.world.ModelType
+import secretAgent.world.entity.Entity
 import java.io.Serializable
 
 /**

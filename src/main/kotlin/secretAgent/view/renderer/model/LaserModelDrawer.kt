@@ -1,6 +1,5 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.entity.laser.LaserEntity
 import cz.wa.secretagent.world.entity.laser.LaserType
 import cz.wa.secretagent.world.entity.laser.LineLaser
@@ -9,10 +8,10 @@ import cz.wa.wautils.math.Rectangle2D
 import cz.wa.wautils.math.VectorUtils
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.view.model.LaserModel
 import secretAgent.view.renderer.DrawBounds
 import secretAgent.view.renderer.TextureToDraw
+import secretAgent.world.entity.Entity
 
 /**
  * Draws simple not animated model.

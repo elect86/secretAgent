@@ -1,11 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentAction
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.AgentType
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.bgswitch.SwitchEntity
 import cz.wa.secretagent.world.entity.item.AmmoItem
 import cz.wa.secretagent.world.entity.item.ItemEntity
@@ -17,16 +11,16 @@ import cz.wa.secretagent.world.entity.usable.UsableType
 import cz.wa.wautils.math.VectorUtils
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
-import org.springframework.beans.factory.annotation.Required
 import secretAgent.game.ProjectileFactory
 import secretAgent.game.utils.EntitiesFinder
 import secretAgent.game.utils.EntityMover
 import secretAgent.game.utils.EntityObserver
 import secretAgent.game.utils.ProjectileCollider
 import secretAgent.view.model.EmptyModel
-import secretAgent.world.entity.EntityXDirection
-import secretAgent.world.entity.EntityYDirection
-import java.util.ArrayList
+import secretAgent.world.entity.*
+import secretAgent.world.entity.agent.AgentAction
+import secretAgent.world.entity.agent.AgentEntity
+import secretAgent.world.entity.agent.AgentType
 
 /**
  * Simulates an agent.
@@ -155,7 +149,7 @@ class AgentEntitySimulator : AbstractEntitySimulator<AgentEntity>() {
                 if (reload <= 0)
                     fireWeapon(human, timeS)
             } else
-                agent.setFiring(false)
+                agent.isFiring = false
         }
     }
 
@@ -199,7 +193,7 @@ class AgentEntitySimulator : AbstractEntitySimulator<AgentEntity>() {
 
     private fun processLaserSights(human: HumanAgent) {
         val laser = human.laserSights ?: return
-        val weapon = human.weapon
+        val weapon = human.weapon!!
         val dist = weapon.range
         var angle = human.aimAngle
         var pos = human.weaponCenter
@@ -232,7 +226,7 @@ class AgentEntitySimulator : AbstractEntitySimulator<AgentEntity>() {
      * Can fail if projectile factory does not create a projectile because of environment.
      */
     private fun fireWeapon(human: HumanAgent, timeS: Double) {
-        val weapon = human.weapon
+        val weapon = human.weapon!!
         val reloadTimeS = weapon.reloadTimeS
         if (tryFireWeapon(human)) {
             human.inventory.removeOneAmmo(weapon)
@@ -250,7 +244,7 @@ class AgentEntitySimulator : AbstractEntitySimulator<AgentEntity>() {
      * @return success
      */
     private fun tryFireWeapon(human: HumanAgent): Boolean {
-        val weapon = human.weapon
+        val weapon = human.weapon!!
         val entityMap = worldHolder.world.entityMap
         var lastProjectile: ProjectileEntity? = null
         // create projectiles
@@ -286,8 +280,8 @@ class AgentEntitySimulator : AbstractEntitySimulator<AgentEntity>() {
         if (item.secondType == ItemType.AMMO) {
             val ammo = item as AmmoItem
             if (ammo.weapon == null) {
-                if (agent.weapon != null) {
-                    inventory.addAmmo(agent.weapon, ammo.count)
+                agent.weapon?.let {
+                    inventory.addAmmo(it, ammo.count)
                     worldHolder.world.entityMap.removeEntity(item)
                 }
                 return

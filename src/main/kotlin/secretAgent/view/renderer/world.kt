@@ -1,8 +1,6 @@
 package secretAgent.view.renderer
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityOrder
 import cz.wa.secretagent.world.map.LevelMap
 import cz.wa.secretagent.world.map.Tile
 import cz.wa.wautils.collection.Array2D
@@ -15,6 +13,8 @@ import secretAgent.view.Renderer
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
 import secretAgent.world.ObjectModel
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityOrder
 
 /**
  * Abstract world renderer.

@@ -1,10 +1,10 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.view.model.WeaponModel
 import secretAgent.view.renderer.DrawBounds
+import secretAgent.world.entity.Entity
 
 /**
  * Draws weapon model, used when drawing on screen only!

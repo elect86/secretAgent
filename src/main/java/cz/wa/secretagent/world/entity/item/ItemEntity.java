@@ -1,9 +1,9 @@
 package cz.wa.secretagent.world.entity.item;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import cz.wa.secretagent.world.entity.Entity;
-import cz.wa.secretagent.world.entity.EntityType;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.Entity;
+import secretAgent.world.entity.EntityType;
 
 /**
  * Pickable item 

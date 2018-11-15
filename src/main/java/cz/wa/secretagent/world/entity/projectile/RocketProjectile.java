@@ -1,8 +1,8 @@
 package cz.wa.secretagent.world.entity.projectile;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import cz.wa.secretagent.world.entity.agent.Team;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.agent.Team;
 
 /**
  * Rocket that flies like bullet and then explodes. 

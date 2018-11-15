@@ -1,11 +1,11 @@
 package secretAgent.game
 
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.map.TileType
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.wautils.collection.Array2DView
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentEntity
 import java.util.*
 
 
@@ -39,10 +39,8 @@ class AgentWeaponSensor internal constructor() : AgentSensor<HumanAgent>() {
     val weapons: Set<Weapon>
         get() = Collections.unmodifiableSet(entity.inventory.weapons)
 
-    /**
-     * @return active weapon or null
-     */
-    val activeWeapon: Weapon
+    /** active weapon or null     */
+    val activeWeapon: Weapon?
         get() = entity.weapon
 
     override fun init() {} // empty

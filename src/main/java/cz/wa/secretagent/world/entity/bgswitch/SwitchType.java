@@ -1,6 +1,6 @@
 package cz.wa.secretagent.world.entity.bgswitch;
 
-import cz.wa.secretagent.world.entity.EntityType2;
+import secretAgent.world.entity.EntityType2;
 
 /**
  * Type of a switch. 

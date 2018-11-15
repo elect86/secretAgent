@@ -1,10 +1,10 @@
 package cz.wa.secretagent.world.entity.explosion;
 
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-import cz.wa.secretagent.world.entity.Entity;
-import cz.wa.secretagent.world.entity.EntityType;
-import cz.wa.secretagent.world.entity.EntityType2;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.Entity;
+import secretAgent.world.entity.EntityType;
+import secretAgent.world.entity.EntityType2;
 
 /**
  * Explosion, has no second type, there is only one explosion.

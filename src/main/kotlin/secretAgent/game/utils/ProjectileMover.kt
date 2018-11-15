@@ -1,10 +1,10 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import secretAgent.game.simulator.entity.ProjectileHitTypes
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.agent.AgentEntity
 
 /**
  * Util class to move and collide projectile.

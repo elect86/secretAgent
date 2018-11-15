@@ -1,15 +1,13 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.worldinfo.graphics.EntityInfo
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType
 import java.io.Serializable
-import java.util.*
-import kotlin.collections.ArrayList
 
 /**
  * Creates an entity for some EntityType.

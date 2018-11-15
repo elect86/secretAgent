@@ -1,6 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.EntityType
 import cz.wa.secretagent.world.entity.projectile.BulletFallProjectile
 import cz.wa.secretagent.world.entity.projectile.BulletProjectile
 import cz.wa.secretagent.world.entity.projectile.DynamiteProjectile
@@ -16,6 +15,7 @@ import secretAgent.game.starter.MapStarter
 import secretAgent.game.utils.EntityObserver
 import secretAgent.game.utils.ProjectileMover
 import secretAgent.io.SamIO
+import secretAgent.world.entity.EntityType
 import java.util.*
 
 /**
@@ -118,7 +118,7 @@ class DynamiteEntitySimulator : AbstractEntitySimulator<DynamiteProjectile>() {
                 entityMap.removeEntity(usable)
                 // add exit switch
                 val model = samIO.worldHolder.graphicsInfo.getModel(exitDoor.openModel)
-                val exit = ExitUsable(model, usable.getPos())
+                val exit = ExitUsable(model, usable.pos)
                 entityMap.addEntity(exit)
                 val pos = levelMap.getNearestTilePos(exit.pos)
                 levelMap.updateType(pos)

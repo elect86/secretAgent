@@ -1,6 +1,6 @@
 package cz.wa.secretagent.world.entity.item;
 
-import cz.wa.secretagent.world.entity.EntityType2;
+import secretAgent.world.entity.EntityType2;
 
 /**
  * Type of item. 

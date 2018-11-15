@@ -79,39 +79,39 @@
 			<map>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.AGENT" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.AGENT" />
 					</key>
 					<ref bean="agentEntityCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.USABLE" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.USABLE" />
 					</key>
 					<ref bean="usableEntityCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.SWITCH" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.SWITCH" />
 					</key>
 					<ref bean="switchEntityCreator" />
 				</entry>
 				<entry>
 					<key>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.ITEM" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.ITEM" />
 					</key>
 					<ref bean="itemEntityCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.EntityType.PLATFORM" />
+							static-field="secretAgent.world.entity.EntityType.PLATFORM" />
 					</key>
 					<ref bean="platformEntityCreator" />
 				</entry>
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.EntityType.PROJECTILE" />
+							static-field="secretAgent.world.entity.EntityType.PROJECTILE" />
 					</key>
 					<ref bean="projectileEntityCreator" />
 				</entry>
@@ -166,7 +166,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.agent.AgentType.HUMAN" />
+							static-field="secretAgent.world.entity.agent.AgentType.HUMAN" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.agent.HumanEntityCreator">

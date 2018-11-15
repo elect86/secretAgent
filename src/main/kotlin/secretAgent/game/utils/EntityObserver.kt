@@ -1,6 +1,5 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.entity.Entity
 import cz.wa.secretagent.world.map.Tile
 import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.collection.Array2D
@@ -10,6 +9,7 @@ import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.Entity
 import java.util.ArrayList
 
 /**
@@ -52,7 +52,7 @@ class EntityObserver(private val entity: Entity, private val world: SamWorld) {
             val bounds = entity.sizeBounds.move(entity.pos)
             for (solid in EntitiesFinder(world).solidEntities)
                 if (solid !== entity) {
-                    val solidBounds = solid.getSizeBounds().move(solid.getPos())
+                    val solidBounds = solid.sizeBounds.move(solid.pos)
                     if (bounds.intersects(solidBounds))
                         return solidBounds
                 }

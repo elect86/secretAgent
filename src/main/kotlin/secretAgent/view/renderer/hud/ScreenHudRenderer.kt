@@ -1,7 +1,5 @@
 package secretAgent.view.renderer.hud
 
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.entity.item.ItemType
 import cz.wa.secretagent.world.entity.item.KeyItem
 import cz.wa.secretagent.world.weapon.WeaponOrder
@@ -20,6 +18,8 @@ import secretAgent.view.model.HealthBarModel
 import secretAgent.view.renderer.*
 import secretAgent.view.renderer.model.ModelRenderer
 import secretAgent.world.GLModel
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentEntity
 import java.awt.Color
 import java.util.ArrayList
 import java.util.LinkedHashMap

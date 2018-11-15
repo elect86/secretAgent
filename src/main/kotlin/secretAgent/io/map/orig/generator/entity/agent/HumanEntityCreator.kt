@@ -1,7 +1,5 @@
 package secretAgent.io.map.orig.generator.entity.agent
 
-import cz.wa.secretagent.world.entity.agent.HumanAgent
-import cz.wa.secretagent.world.entity.agent.Team
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
@@ -10,6 +8,8 @@ import secretAgent.view.model.AgentModel
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
 import secretAgent.world.entity.EntityXDirection
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.Team
 
 /**
  * Creates player start position.

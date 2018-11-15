@@ -1,8 +1,5 @@
 package secretAgent.game.action
 
-import cz.wa.secretagent.world.entity.agent.AgentEntity
-import cz.wa.secretagent.world.entity.agent.AgentType
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.weapon.Weapon
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
@@ -11,6 +8,9 @@ import secretAgent.game.utils.EntityObserver
 import secretAgent.plus
 import secretAgent.world.entity.EntityXDirection
 import secretAgent.world.entity.EntityYDirection
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentEntity
+import secretAgent.world.entity.agent.AgentType
 
 /**
  * Action to control agent in level map.
@@ -47,7 +47,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
 
     fun moveX(dir: EntityXDirection) {
         val agent = agent!!
-        if (agent.isControlable) {
+        if (agent.isControllable) {
             agent.moveSpeed = when {
                 isAimingWeapon -> Vector2D.ZERO
                 else -> {
@@ -62,7 +62,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
 
     fun aimY(dir: EntityYDirection) {
         val agent = agent!!
-        if (agent.isControlable && agent.capabilities.canAim && agent.secondType == AgentType.HUMAN) {
+        if (agent.isControllable && agent.capabilities.canAim && agent.secondType == AgentType.HUMAN) {
             val human = agent as HumanAgent
             val weapon = human.weapon ?: return
             human.aiming = when {
@@ -100,7 +100,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
         if (agent!!.secondType == AgentType.HUMAN) {
             val agent = agent as HumanAgent
             val jumpStrength = agent.capabilities.jumpStrength
-            if (agent.isControlable && jumpStrength > 0 && !isAimingWeapon) {
+            if (agent.isControllable && jumpStrength > 0 && !isAimingWeapon) {
                 agent.isJumping = when {
                     b && (agent.isJumping || posSensor.isOnGround) -> {
                         if (!agent.isJumping)
@@ -119,10 +119,10 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
             return
         }
         val agent = agent!!
-        if (agent.isControlable) {
+        if (agent.isControllable) {
             if (agent.secondType == AgentType.HUMAN) {
-                val human = agent as HumanAgent?
-                if (fireDown && human!!.weapon != null && human.weapon.isAimRotate) {
+                val human = agent as HumanAgent
+                if (fireDown && human.weapon?.isAimRotate == true) {
                     // cancel aiming
                     human.aimAngle = 0.0
                     human.aiming = EntityYDirection.NONE
@@ -142,7 +142,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
         if (!b) {
             canRepeatFire = true
         }
-        if (agent.isControlable && agent.secondType == AgentType.HUMAN) {
+        if (agent.isControllable && agent.secondType == AgentType.HUMAN) {
             val human = agent as HumanAgent
             val weapon = human.weapon
             if (weapon == null) {
@@ -189,7 +189,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
     }
 
     fun switchWeapon(weapon: Weapon?) {
-        if (agent!!.isControlable) {
+        if (agent!!.isControllable) {
             val agent = agent as HumanAgent
             if (agent.isFiring || agent.reloadTimeRemainingS > 0) {
                 return
@@ -203,7 +203,7 @@ class AgentLevelAction : AgentAction<AgentEntity>() {
     }
 
     fun dropWeapon() {
-        if (agent!!.isControlable) {
+        if (agent!!.isControllable) {
             // TODO drop weapon
         }
     }

@@ -1,14 +1,13 @@
 package cz.wa.secretagent.world.entity.projectile;
 
-import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
-
-import cz.wa.secretagent.world.entity.Entity;
-import cz.wa.secretagent.world.entity.EntityType;
-import cz.wa.secretagent.world.entity.HasModelAngle;
-import cz.wa.secretagent.world.entity.agent.Team;
 import cz.wa.wautils.math.Rectangle2D;
 import cz.wa.wautils.math.VectorUtils;
+import org.apache.commons.math3.geometry.euclidean.twod.Vector2D;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.Entity;
+import secretAgent.world.entity.EntityType;
+import secretAgent.world.entity.HasModelAngle;
+import secretAgent.world.entity.agent.Team;
 
 /**
  * Fired projectile, mine or spikes 

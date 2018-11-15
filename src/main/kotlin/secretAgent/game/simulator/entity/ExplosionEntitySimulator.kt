@@ -1,10 +1,10 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.EntityType
-import cz.wa.secretagent.world.entity.agent.AgentEntity
 import cz.wa.secretagent.world.entity.explosion.Explosion
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.game.utils.AgentHurter
+import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.agent.AgentEntity
 
 /**
  * Simulates a platform.
@@ -34,7 +34,7 @@ class ExplosionEntitySimulator : AbstractEntitySimulator<Explosion>() {
                 // hurt him
                 AgentHurter(world, agent).hurt((1 - dist) * explosion.damage)
                 // blast him
-                var distV = entity.getPos().subtract(explosion.pos)
+                var distV = entity.pos.subtract(explosion.pos)
                 if (distV == Vector2D.ZERO)
                     distV = Vector2D(0.0, -0.1)
                 val blast = distV.normalize().scalarMultiply(blastStrength * (1 - dist))

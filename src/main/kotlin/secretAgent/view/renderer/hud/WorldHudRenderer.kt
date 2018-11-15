@@ -1,6 +1,5 @@
 package secretAgent.view.renderer.hud
 
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import org.apache.commons.lang.StringUtils
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.game.PlayerHolder
@@ -8,6 +7,7 @@ import secretAgent.game.player.Camera
 import secretAgent.view.renderer.PrimitivesDrawer
 import secretAgent.view.Renderer
 import secretAgent.world.SamWorld
+import secretAgent.world.entity.HumanAgent
 import java.awt.Color
 
 /**

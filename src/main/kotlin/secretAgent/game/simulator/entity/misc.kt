@@ -1,9 +1,9 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.EntityType2
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.slf4j.LoggerFactory
+import secretAgent.world.entity.Entity
+import secretAgent.world.entity.EntityType2
 import java.io.Serializable
 
 /**

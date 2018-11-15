@@ -1,8 +1,5 @@
 package secretAgent.view.renderer.model
 
-import cz.wa.secretagent.world.entity.Entity
-import cz.wa.secretagent.world.entity.agent.AgentAction
-import cz.wa.secretagent.world.entity.agent.HumanAgent
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.secretagent.worldinfo.WorldHolder
 import cz.wa.wautils.math.Rectangle2D
@@ -13,7 +10,10 @@ import secretAgent.view.model.AgentModel
 import secretAgent.view.model.WeaponModel
 import secretAgent.view.renderer.DrawBounds
 import secretAgent.view.renderer.TextureToDraw
+import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityXDirection
+import secretAgent.world.entity.HumanAgent
+import secretAgent.world.entity.agent.AgentAction
 
 /**
  * Draws agent and his weapon.
@@ -78,7 +78,7 @@ class AgentModelDrawer : AbstractModelDrawer<AgentModel>() {
             if (entity.direction == EntityXDirection.LEFT)
                 weaponPos = Vector2D(-weaponPos.x, weaponPos.y)
             weaponPos = weaponPos.add(pos)
-            drawWeapon(entity, entity.weapon, weaponPos, scale)
+            drawWeapon(entity, entity.weapon!!, weaponPos, scale)
         }
     }
 

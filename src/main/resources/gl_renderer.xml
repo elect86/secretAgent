@@ -36,26 +36,26 @@
 	<bean id="entitiesRenderer" class="secretAgent.view.renderer.EntitiesRenderer">
 		<property name="modelRenderer" ref="modelRenderer" />
 		<property name="entityOrder">
-			<bean class="cz.wa.secretagent.world.entity.EntityOrder">
+			<bean class="secretAgent.world.entity.EntityOrder">
 				<constructor-arg>
 					<list>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.SWITCH" />
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.LASER" />
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PROJECTILE" />
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.ITEM" />
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.AGENT" />
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.USABLE" />
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.PLATFORM" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.SWITCH" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.LASER" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.PROJECTILE" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.ITEM" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.AGENT" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.USABLE" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.PLATFORM" />
 					</list>
 				</constructor-arg>
 			</bean>
 		</property>
 
 		<property name="entityOverOrder">
-			<bean class="cz.wa.secretagent.world.entity.EntityOrder">
+			<bean class="secretAgent.world.entity.EntityOrder">
 				<constructor-arg>
 					<list>
-						<util:constant static-field="cz.wa.secretagent.world.entity.EntityType.EXPLOSION" />
+						<util:constant static-field="secretAgent.world.entity.EntityType.EXPLOSION" />
 					</list>
 				</constructor-arg>
 			</bean>

@@ -1,10 +1,10 @@
 package secretAgent.view.model
 
 import cz.wa.secretagent.view.model.AbstractModel
-import cz.wa.secretagent.world.entity.agent.AgentAction
 import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TextureToDraw
 import secretAgent.view.renderer.TileId
+import secretAgent.world.entity.agent.AgentAction
 import java.util.ArrayList
 
 /**

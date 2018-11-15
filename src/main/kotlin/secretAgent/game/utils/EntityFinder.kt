@@ -1,8 +1,6 @@
 package secretAgent.game.utils
 
 import cz.wa.secretagent.Constants
-import cz.wa.secretagent.world.entity.platform.PlatformEntity
-import cz.wa.secretagent.world.entity.platform.PlatformType
 import cz.wa.secretagent.world.entity.usable.UsableEntity
 import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Rectangle2D
@@ -11,6 +9,8 @@ import org.apache.commons.math3.util.FastMath
 import secretAgent.world.SamWorld
 import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.PlatformEntity
+import secretAgent.world.entity.PlatformType
 import secretAgent.world.entity.agent.AgentEntity
 import secretAgent.world.entity.agent.AgentType
 import secretAgent.world.entity.bgSwitch.SwitchEntity

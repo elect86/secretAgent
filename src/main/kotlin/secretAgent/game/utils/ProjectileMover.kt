@@ -1,9 +1,9 @@
 package secretAgent.game.utils
 
-import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import secretAgent.game.simulator.entity.ProjectileHitTypes
 import secretAgent.world.SamWorld
 import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.ProjectileEntity
 import secretAgent.world.entity.agent.AgentEntity
 
 /**

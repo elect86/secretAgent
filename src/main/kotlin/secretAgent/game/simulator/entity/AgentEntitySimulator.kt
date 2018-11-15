@@ -1,7 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.projectile.BulletProjectile
-import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import cz.wa.secretagent.world.entity.usable.DoorUsable
 import cz.wa.secretagent.world.entity.usable.UsableType
 import cz.wa.wautils.math.VectorUtils

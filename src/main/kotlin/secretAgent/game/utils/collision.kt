@@ -1,7 +1,6 @@
 package secretAgent.game.utils
 
 import cz.wa.secretagent.utils.raycaster.RayHit
-import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import cz.wa.secretagent.world.map.LevelMap
 import cz.wa.secretagent.world.map.TileType
 import cz.wa.wautils.math.Vector2I
@@ -14,6 +13,7 @@ import secretAgent.utils.RayCaster
 import secretAgent.world.SamWorld
 import secretAgent.world.entity.Entity
 import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.ProjectileEntity
 import secretAgent.world.entity.agent.AgentEntity
 
 /**

@@ -1,15 +1,11 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.world.entity.platform.MovableCan
-import cz.wa.secretagent.world.entity.platform.PlatformLift
-import cz.wa.secretagent.world.entity.platform.PlatformType
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.slf4j.LoggerFactory
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
-import secretAgent.world.entity.EntityDirection
-import secretAgent.world.entity.ItemEntity
+import secretAgent.world.entity.*
 
 /**
  * Creates movable can.

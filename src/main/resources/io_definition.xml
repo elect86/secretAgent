@@ -299,7 +299,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.platform.PlatformType.LIFT" />
+							static-field="secretAgent.world.entity.PlatformType.LIFT" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.PlatformLiftEntityCreator">
@@ -318,7 +318,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.platform.PlatformType.CAN" />
+							static-field="secretAgent.world.entity.PlatformType.CAN" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.MovableCanEntityCreator">
@@ -340,7 +340,7 @@
 				<entry>
 					<key>
 						<util:constant
-							static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.LEVEL_LASER" />
+							static-field="secretAgent.world.entity.ProjectileType.LEVEL_LASER" />
 					</key>
 					<bean
 						class="secretAgent.io.map.orig.generator.entity.LevelLaserEntityCreator" />

@@ -1,9 +1,5 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.projectile.BulletFallProjectile
-import cz.wa.secretagent.world.entity.projectile.BulletProjectile
-import cz.wa.secretagent.world.entity.projectile.DynamiteProjectile
-import cz.wa.secretagent.world.entity.projectile.RocketProjectile
 import cz.wa.secretagent.world.entity.usable.ExitDoorUsable
 import cz.wa.secretagent.world.entity.usable.ExitUsable
 import cz.wa.secretagent.world.entity.usable.UsableType
@@ -15,7 +11,7 @@ import secretAgent.game.starter.MapStarter
 import secretAgent.game.utils.EntityObserver
 import secretAgent.game.utils.ProjectileMover
 import secretAgent.io.SamIO
-import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.*
 import java.util.*
 
 /**

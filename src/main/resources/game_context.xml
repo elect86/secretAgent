@@ -153,13 +153,13 @@
 							<map>
 								<entry>
 									<key>
-										<util:constant static-field="cz.wa.secretagent.world.entity.platform.PlatformType.LIFT" />
+										<util:constant static-field="secretAgent.world.entity.PlatformType.LIFT" />
 									</key>
 									<bean class="secretAgent.game.simulator.entity.LiftEntitySimulator" parent="abstractEntitySimulator" />
 								</entry>
 								<entry>
 									<key>
-										<util:constant static-field="cz.wa.secretagent.world.entity.platform.PlatformType.CAN" />
+										<util:constant static-field="secretAgent.world.entity.PlatformType.CAN" />
 									</key>
 									<bean class="secretAgent.game.simulator.entity.CanEntitySimulator" parent="abstractEntitySimulator">
 										<property name="canFallG" value="500" />
@@ -192,7 +192,7 @@
 							<map>
 								<entry>
 									<key>
-										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.DYNAMITE" />
+										<util:constant static-field="secretAgent.world.entity.ProjectileType.DYNAMITE" />
 									</key>
 									<bean class="secretAgent.game.simulator.entity.DynamiteEntitySimulator" parent="abstractEntitySimulator">
 										<property name="mapStarter" ref="mapStarter" />
@@ -206,13 +206,13 @@
 								</entry>
 								<entry>
 									<key>
-										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+										<util:constant static-field="secretAgent.world.entity.ProjectileType.BULLET" />
 									</key>
 									<bean class="secretAgent.game.simulator.entity.BulletEntitySimulator" parent="abstractEntitySimulator" />
 								</entry>
 								<entry>
 									<key>
-										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET_FALL" />
+										<util:constant static-field="secretAgent.world.entity.ProjectileType.BULLET_FALL" />
 									</key>
 									<bean class="secretAgent.game.simulator.entity.BulletFallEntitySimulator" parent="abstractEntitySimulator">
 										<property name="fallG" value="200" />
@@ -220,7 +220,7 @@
 								</entry>
 								<entry>
 									<key>
-										<util:constant static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.ROCKET" />
+										<util:constant static-field="secretAgent.world.entity.ProjectileType.ROCKET" />
 									</key>
 									<bean class="secretAgent.game.simulator.entity.RocketEntitySimulator" parent="abstractEntitySimulator">
 										<property name="projectileFactory" ref="projectileFactory" />

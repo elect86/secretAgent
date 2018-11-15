@@ -26,7 +26,7 @@
 				<property name="ammoModelName" value="pistolSilencedAmmo" />
 				<property name="projectileType">
 					<util:constant
-						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+						static-field="secretAgent.world.entity.ProjectileType.BULLET" />
 				</property>
 				<property name="projectileModelName" value="bulletOrig" />
 				<property name="projectileDamage" value="35" />
@@ -47,7 +47,7 @@
 				<property name="ammoModelName" value="pistolAmmo" />
 				<property name="projectileType">
 					<util:constant
-						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+						static-field="secretAgent.world.entity.ProjectileType.BULLET" />
 				</property>
 				<property name="projectileModelName" value="bulletSmall" />
 				<property name="projectileDamage" value="35" />
@@ -68,7 +68,7 @@
 				<property name="ammoModelName" value="shotgunAmmo" />
 				<property name="projectileType">
 					<util:constant
-						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET_FALL" />
+						static-field="secretAgent.world.entity.ProjectileType.BULLET_FALL" />
 				</property>
 				<property name="projectileModelName" value="bulletSmall" />
 				<property name="projectileDamage" value="20" />
@@ -91,7 +91,7 @@
 				<property name="ammoModelName" value="sniperRifleAmmo" />
 				<property name="projectileType">
 					<util:constant
-						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+						static-field="secretAgent.world.entity.ProjectileType.BULLET" />
 				</property>
 				<property name="projectileModelName" value="bulletLong" />
 				<property name="projectileDamage" value="80" />
@@ -119,7 +119,7 @@
 				<property name="ammoModelName" value="machinegunAmmo" />
 				<property name="projectileType">
 					<util:constant
-						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.BULLET" />
+						static-field="secretAgent.world.entity.ProjectileType.BULLET" />
 				</property>
 				<property name="projectileModelName" value="bulletMG" />
 				<property name="projectileDamage" value="7" />
@@ -141,7 +141,7 @@
 				<property name="ammoModelName" value="rocketLauncherAmmo" />
 				<property name="projectileType">
 					<util:constant
-						static-field="cz.wa.secretagent.world.entity.projectile.ProjectileType.ROCKET" />
+						static-field="secretAgent.world.entity.ProjectileType.ROCKET" />
 				</property>
 				<property name="projectileModelName" value="rocket" />
 				<property name="projectileDamage" value="15" />

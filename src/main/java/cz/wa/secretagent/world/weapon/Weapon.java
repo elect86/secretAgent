@@ -4,9 +4,9 @@ import java.awt.Color;
 import java.io.Serializable;
 
 import org.apache.commons.lang.Validate;
-import cz.wa.secretagent.world.entity.projectile.ProjectileType;
 import cz.wa.secretagent.worldinfo.graphics.GraphicsInfo;
 import secretAgent.world.ObjectModel;
+import secretAgent.world.entity.ProjectileType;
 
 /**
  * Weapon immutable class containing parameters and model.

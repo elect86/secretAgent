@@ -1,11 +1,11 @@
 package secretAgent.io.map.orig.generator.entity
 
-import cz.wa.secretagent.world.entity.projectile.LevelLaserProjectile
-import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
-import cz.wa.secretagent.world.entity.projectile.ProjectileType
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import secretAgent.view.renderer.TileId
 import secretAgent.world.ObjectModel
+import secretAgent.world.entity.LevelLaserProjectile
+import secretAgent.world.entity.ProjectileEntity
+import secretAgent.world.entity.ProjectileType
 
 /**
  * Creates level laser entity that will be replaced by laser.

@@ -1,7 +1,5 @@
 package secretAgent.game
 
-import cz.wa.secretagent.world.entity.projectile.DynamiteProjectile
-import cz.wa.secretagent.world.entity.projectile.ProjectileEntity
 import cz.wa.secretagent.world.weapon.Weapon
 import cz.wa.secretagent.worldinfo.WorldHolder
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
@@ -10,10 +8,7 @@ import org.slf4j.LoggerFactory
 import secretAgent.plus
 import secretAgent.view.model.ExplosionModel
 import secretAgent.view.model.LaserModel
-import secretAgent.world.entity.EntityXDirection
-import secretAgent.world.entity.Explosion
-import secretAgent.world.entity.HumanAgent
-import secretAgent.world.entity.LineLaser
+import secretAgent.world.entity.*
 import secretAgent.world.entity.agent.AgentEntity
 import secretAgent.world.entity.agent.AgentType
 import java.awt.Color
@@ -69,7 +64,7 @@ class ProjectileFactory : Serializable {
     private fun createEntity(weapon: Weapon, agent: AgentEntity): ProjectileEntity {
         val model = worldHolder!!.graphicsInfo.getModel(weapon.projectileModelName)
         val type = weapon.projectileType
-        return type.createEntity(model, agent.team)
+        return type.createEntity(model, agent.team)!!
     }
 
     /**

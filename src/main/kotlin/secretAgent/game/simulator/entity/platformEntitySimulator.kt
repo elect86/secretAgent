@@ -1,17 +1,12 @@
 package secretAgent.game.simulator.entity
 
-import cz.wa.secretagent.world.entity.platform.MovableCan
-import cz.wa.secretagent.world.entity.platform.PlatformEntity
-import cz.wa.secretagent.world.entity.platform.PlatformLift
-import cz.wa.secretagent.world.entity.platform.PlatformType
 import cz.wa.wautils.math.Rectangle2D
 import org.apache.commons.math3.geometry.euclidean.twod.Vector2D
 import org.apache.commons.math3.util.FastMath
 import secretAgent.game.utils.EntitiesFinder
 import secretAgent.game.utils.EntityMover
 import secretAgent.game.utils.EntityObserver
-import secretAgent.world.entity.Entity
-import secretAgent.world.entity.EntityType
+import secretAgent.world.entity.*
 import secretAgent.world.entity.agent.AgentEntity
 
 /**

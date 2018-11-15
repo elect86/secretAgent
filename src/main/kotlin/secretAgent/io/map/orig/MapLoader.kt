@@ -1,8 +1,6 @@
 package secretAgent.io.map.orig
 
 import cz.wa.secretagent.world.EntityMap
-import cz.wa.secretagent.world.entity.projectile.LevelLaserProjectile
-import cz.wa.secretagent.world.entity.projectile.ProjectileType
 import cz.wa.secretagent.world.entity.usable.BuildingUsable
 import cz.wa.secretagent.world.entity.usable.TeleportUsable
 import cz.wa.secretagent.world.entity.usable.UsableEntity
@@ -23,10 +21,7 @@ import secretAgent.io.map.orig.generator.entity.EntityFactory
 import secretAgent.view.SamGraphics
 import secretAgent.view.renderer.TileId
 import secretAgent.world.SamWorld
-import secretAgent.world.entity.EntityComparator
-import secretAgent.world.entity.EntityType
-import secretAgent.world.entity.LaserEntity
-import secretAgent.world.entity.RectLaser
+import secretAgent.world.entity.*
 import secretAgent.world.entity.bgSwitch.AddTilesSwitchAction
 import secretAgent.world.entity.bgSwitch.SimpleSwitch
 import secretAgent.world.entity.bgSwitch.SwitchType

@@ -1,10 +1,9 @@
 package cz.wa.secretagent.world.weapon;
 
-import java.awt.Color;
-
 import org.springframework.beans.factory.annotation.Required;
+import secretAgent.world.entity.ProjectileType;
 
-import cz.wa.secretagent.world.entity.projectile.ProjectileType;
+import java.awt.*;
 
 /**
  * Temporary mutable class used by spring to define the weapon.
